@@ -4,7 +4,7 @@
 
 <script>
 import CampaignOverview from './components/CampaignOverview.vue'
-import Leaderboard from './components/Leaderboard.vue'
+import LeaderBoard from './components/Leaderboard.vue'
 
 export default {
   name: 'App',
