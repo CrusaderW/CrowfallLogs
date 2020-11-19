@@ -10,14 +10,14 @@
             <th>Captures</th>
             <th>Crafting</th>
         </tr>
-        <tr v-for="item in data.Scores" :key="item.playerName">
-            <td class="name">{{ item.playerName }}</td> 
-            <td class="score">{{ item.Score }}</td> 
-            <td class="kills">{{ item.Kills }}</td>
-            <td class="deaths">{{ item.Deaths }}</td>
-            <td class="assists">{{ item.Assists }}</td>
-            <td class="captures">{{ item.Captures }}</td>
-            <td class="crafting">{{ item.Crafting }}</td>
+        <tr v-for="scores in data.Scores" :key="scores.playerName">
+            <td class="name">{{ scores.playerName }}</td> 
+            <td class="score">{{ scores.Score }}</td> 
+            <td class="kills">{{ scores.Kills }}</td>
+            <td class="deaths">{{ scores.Deaths }}</td>
+            <td class="assists">{{ scores.Assists }}</td>
+            <td class="captures">{{ scores.Captures }}</td>
+            <td class="crafting">{{ scores.Crafting }}</td>
         </tr>
     </table>
 
