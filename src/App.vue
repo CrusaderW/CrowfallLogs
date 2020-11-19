@@ -1,5 +1,6 @@
 <template>
   <CampaignOverview />
+  <LeaderBoard />
 </template>
 
 <script>
@@ -9,7 +10,8 @@ import LeaderBoard from './components/LeaderBoard.vue'
 export default {
   name: 'App',
   components: {
-    CampaignOverview
+    CampaignOverview,
+    LeaderBoard
   }
 }
 </script>
