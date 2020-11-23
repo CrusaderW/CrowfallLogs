@@ -1,24 +1,33 @@
 <template>
-  <CampaignOverview />
-  <LeaderBoard />
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/campaign_overview">Campaign Overview</router-link> |
+    <router-link to="/leader_board">LeaderBoard</router-link> |
+    <router-link to="/personal_logs">Personal Logs</router-link>
+  </div>
+  <router-view/>
 </template>
 
-<script>
-import CampaignOverview from './components/CampaignOverview.vue'
-import LeaderBoard from './components/LeaderBoard.vue'
-
-export default {
-  name: 'App',
-  components: {
-    CampaignOverview,
-    LeaderBoard
-  }
-}
-</script>
-
 <style>
-* {
-  padding: 0;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css?family=Asul");
+#app {
+  font-family: "Asul", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
