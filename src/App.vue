@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/campaign_overview">Campaign Overview</router-link> |
     <router-link to="/leader_board">LeaderBoard</router-link> |
-    <router-link to="/personal_logs">Personal Logs</router-link>
+    <router-link to="/personal_logs">Personal Logs</router-link> |
+    <router-link to="/fights">Fights</router-link> |
   </div>
   <router-view/>
 </template>
