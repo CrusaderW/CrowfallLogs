@@ -8,12 +8,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "crossfilter2": "^1.5.4",
+    "d3-scale": "^2.2.2",
+    "d3": "^5.16.0",
+    "dc": "^3.2.2",
+    "element-plus": "^1.0.1-beta.3",
+    "element-ui": "^2.14.1",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "chart.js": "^2.9.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.9",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
