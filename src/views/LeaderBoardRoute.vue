@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import LeaderBoard from '@/components/LeaderBoard.vue'
+import LeaderBoard from "@/components/LeaderBoard.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    LeaderBoard
-  }
-}
+    LeaderBoard,
+  },
+};
 </script>

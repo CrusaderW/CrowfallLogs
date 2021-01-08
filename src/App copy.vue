@@ -1,19 +1,22 @@
 <template>
   <CampaignOverview />
   <LeaderBoard />
+  <CharacterPlanner />
 </template>
 
 <script>
-import CampaignOverview from './components/CampaignOverview.vue'
-import LeaderBoard from './components/LeaderBoard.vue'
+import CampaignOverview from "./components/CampaignOverview.vue";
+import LeaderBoard from "./components/LeaderBoard.vue";
+import CharacterPlanner from "./components/CharacterPlanner.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CampaignOverview,
-    LeaderBoard
-  }
-}
+    LeaderBoard,
+    CharacterPlanner,
+  },
+};
 </script>
 
 <style>

@@ -5,6 +5,7 @@
     <router-link to="/leader_board">LeaderBoard</router-link> |
     <router-link to="/personal_logs">Personal Logs</router-link> |
     <router-link to="/fights">Fights</router-link> |
+    <router-link to="/character_planner">Character Planner</router-link>
   </div>
   <router-view/>
 </template>

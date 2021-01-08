@@ -20,6 +20,7 @@
             <td class="crafting">{{ scores.Crafting }}</td>
         </tr>
     </table>
+    <p> this is a test </p>
 
   </div>
 </template>
