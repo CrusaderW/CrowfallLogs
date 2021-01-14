@@ -42,7 +42,6 @@ export default {
   name: "CharacterPlanner",
   data() {
     return {
-      //START - TEST DATA STRUCTURE
       classes_fulldata: {
         Knight: {
           classname: "Knight",
@@ -52,14 +51,107 @@ export default {
             "High-Elf",
             "Stoneborn",
             "Elken",
-            "Centuar",
+            "Centaur",
             "Guinecean",
           ],
           promotions: ["Swordsman", "Secutor", "Sentinel"],
         },
+        Confessor: {
+          classname: "Confessor",
+          classraces: [
+            "Nethari",
+            "High-Elf",
+            "Elken"
+          ],
+          promotions: ["Fanatic", "Sanctifier", "Inquisitor"],
+        },
+        Templar: {
+          classname: "Templar",
+          classraces: [
+            "Human",
+            "Nethari",
+            "Elken"
+          ],
+          promotions: ["Vindicator", "Paladin", "Fury"],
+        },
+        Ranger: {
+          classname: "Ranger",
+          classraces: [
+            "Human",
+            "Half-Elf",
+            "Wood-Elf",
+            "Elken",
+            "Minotaur"
+          ],
+          promotions: ["Archer", "Warden", "Brigand"],
+        },
+        Assassin: {
+          classname: "Assassin",
+          classraces: [
+            "Half-Elf",
+            "Nethari",
+            "Fae",
+            "High-Elf"
+          ],
+          promotions: ["Swordsman", "Secutor", "Sentinel"],
+        },
+        Druid: {
+          classname: "Druid",
+          classraces: [
+            "Half-Elf",
+            "Fae",
+            "Wood-Elf"
+          ],
+          promotions: ["Stormcaller", "Archdruid", "Earthkeeper"],
+        },
+        Frostweaver: {
+          classname: "Frostweaver",
+          classraces: [
+            "Fae",
+            "Wood-Elf",
+            "High-Elf"
+          ],
+          promotions: ["Frostguard", "Icecaller", "Archmage"],
+        },
+        Champion: {
+          classname: "Champion",
+          classraces: [
+            "Stoneborn",
+            "Half-Giant",
+            "Minotaur",
+            "Centaur"
+          ],
+          promotions: ["Frostguard", "Icecaller", "Archmage"],
+        },
+        Myrmidon: {
+          classname: "Myrmidon",
+          classraces: [
+            "Stoneborn",
+            "Half-Giant",
+            "Minotaur"
+          ],
+          promotions: ["Titan", "Battle Rager", "Conqueror"],
+        },
+        Cleric: {
+          classname: "Cleric",
+          classraces: [
+            "Human",
+            "Stoneborn",
+            "Half-Giant",
+            "Elken",
+            "Centaur",
+            "Guinecean"
+          ],
+          promotions: ["Radical", "Crusader", "Arbiter"],
+        },
+        Duelist: {
+          classname: "Duelist",
+          classraces: [
+            "Guinecean"
+          ],
+          promotions: ["Slayer", "Vanguard Scout", "Dirge"],
+        },
       },
-
-      //END - TEST DATA STRUCTURE
 
       classes: [
         "Knight",
@@ -74,6 +166,7 @@ export default {
         "Cleric",
         "Duelist",
       ],
+
       races: [
         "Human",
         "Half-Elf",
@@ -88,6 +181,7 @@ export default {
         "Centaur",
         "Guinecean",
       ],
+
       promotions: [
         "Conqueror",
         "Frostguard",
@@ -121,6 +215,7 @@ export default {
         "Blackguard",
         "Battle Rager",
       ],
+
       selectedClass: "",
       selectedRace: "",
       selectedPromotion: "",
