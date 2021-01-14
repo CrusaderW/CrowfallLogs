@@ -14,7 +14,7 @@ export default {
   components: {
     CampaignOverview,
     LeaderBoard,
-    CharacterPlanner,
+    CharacterPlanner
   },
 };
 </script>
