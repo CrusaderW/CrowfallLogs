@@ -1,14 +1,14 @@
 <template>
-  <character-planner-passives />
+  <character-planner-talents />
 </template>
 
 <script>
-import CharacterPlannerPassives from "@/components/CharacterPlannerPassives.vue";
+import CharacterPlannerTalents from "@/components/CharacterPlannerTalents.vue";
 
 export default {
   name: "Home",
   components: {
-    CharacterPlannerPassives,
+    CharacterPlannerTalents
   },
 };
 </script>
