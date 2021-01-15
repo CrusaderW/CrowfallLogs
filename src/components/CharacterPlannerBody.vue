@@ -4,15 +4,18 @@
     <div class="instruct">PLEASE SELECT YOUR CLASS, RACE AND PROMOTION.</div>
   </div>
   <CharacterPlannerAttributes />
+  <CharacterPlannerDisciplines />
 </template>
 
 
 <script>
 import CharacterPlannerAttributes from '@/components/CharacterPlannerAttributes'
+import CharacterPlannerDisciplines from '@/components/CharacterPlannerDisciplines'
 export default {
   name: "CharacterPlannerBody",
   components: {
-    CharacterPlannerAttributes
+    CharacterPlannerAttributes,
+    CharacterPlannerDisciplines
   },
   data() {},
 };
