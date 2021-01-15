@@ -6,6 +6,9 @@
       <div class="attributes">
       <CharacterPlannerAttributes />
       </div>
+      <div class="passives">
+      <CharacterPlannerPassives />
+      </div>
       <div class="disciplines">
       <CharacterPlannerDisciplines />
       </div>
@@ -17,11 +20,13 @@
 <script>
 import CharacterPlannerAttributes from "@/components/CharacterPlannerAttributes";
 import CharacterPlannerDisciplines from "@/components/CharacterPlannerDisciplines";
+import CharacterPlannerPassives from "@/components/CharacterPlannerPassives";
 export default {
   name: "CharacterPlannerBody",
   components: {
     CharacterPlannerAttributes,
     CharacterPlannerDisciplines,
+    CharacterPlannerPassives
   },
   data() {},
 };
