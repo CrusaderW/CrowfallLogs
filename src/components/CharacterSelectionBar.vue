@@ -1,7 +1,6 @@
 <template>
   <div id="root">
     <nav>
-      <ul>
         <select v-model="selectedClass">
           <option disabled value="">Choose Class</option>
           <option v-for="item in classes" :key="item">{{ item }}</option>
@@ -16,7 +15,6 @@
             {{ promotion }}
           </option>
         </select>
-      </ul>
     </nav>
   </div>
 </template>
@@ -228,43 +226,13 @@ export default {
 <style scoped>
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   background-color: black;
-}
-nav ul {
-  display: flex;
-  background-color: grey;
-  list-style-type: none;
-}
-nav li {
-  list-style: none;
-  background-color: white;
-  padding: 0.2em;
-  margin: 0.2em;
-}
-nav a {
-  display: inline-block;
-  padding: 0.5em;
-  margin: 0.2em;
-  color: var(--clr-primary);
-  text-decoration: none;
-}
-nav a:hover {
-  color: grey;
-}
-nav img {
-  width: 3em;
-  height: 3em;
-}
-.logo {
-  display: block;
-  justify-content: flex-start;
-  background-color: hotpink;
-}
-nav button {
   padding: 0.5em;
   margin: 0.5em;
-  border-radius: 10%;
+}
+select {
+  padding: 0.5em;
 }
 </style> 

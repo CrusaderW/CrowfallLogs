@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <nav>
-      <div class="logo"><img src="..\assets\dummy-crest.png" /></div>
+      <div class="playername">CRUSADERW</div>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/">Tools</a></li>
@@ -29,7 +29,7 @@ export default {
 <style scoped>
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
 }
@@ -37,6 +37,8 @@ nav ul {
   display: flex;
   background-color: grey;
   list-style-type: none;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 nav li {
   background-color: white;
@@ -55,10 +57,12 @@ nav img {
   width: 3em;
   height: 3em;
 }
-.logo {
+.playername {
   display: block;
   justify-content: flex-start;
   background-color: hotpink;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 nav button {
   padding: 0.5em;

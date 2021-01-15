@@ -1,6 +1,5 @@
 <template>
   <div id="root">
-    Hello There!
     <CharacterSelectionBar />
     <CharacterPlannerBody />
   </div>
