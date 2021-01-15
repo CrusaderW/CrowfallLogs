@@ -2,16 +2,19 @@
   <div id="root">
     Hello There!
     <CharacterSelectionBar />
+    <CharacterPlannerBody />
   </div>
 </template>
 
 
 <script>
 import CharacterSelectionBar from '@/components/CharacterSelectionBar'
+import CharacterPlannerBody from '@/components/CharacterPlannerBody'
 export default {
   name: "CharacterPlanner",
   components: {
-    CharacterSelectionBar
+    CharacterSelectionBar,
+    CharacterPlannerBody
     },
   data() {
   },

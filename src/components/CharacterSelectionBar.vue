@@ -18,16 +18,13 @@
         </select>
       </ul>
     </nav>
-    <div class="instruct">
-      PLEASE SELECT YOUR CLASS, RACE AND PROMOTION.
-    </div>
   </div>
 </template>
 
 
 <script>
 export default {
-  name: "CharacterPlanner",
+  name: "CharacterSelectionBar",
   data() {
     return {
       classes_fulldata: {
@@ -269,10 +266,5 @@ nav button {
   padding: 0.5em;
   margin: 0.5em;
   border-radius: 10%;
-}
-.instruct {
-  background-color: cadetblue;
-  padding: 0.5em;
-  margin: 0.5em;
 }
 </style> 
