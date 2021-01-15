@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import data from '../../data/LB_PlayerScores.json'
+import data from '../../data/LB_PlayerScores.json';
 
 export default {
   name: "LeaderBoard",

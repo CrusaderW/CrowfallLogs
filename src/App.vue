@@ -6,9 +6,21 @@
     <router-link to="/personal_logs">Personal Logs</router-link> |
     <router-link to="/fights">Fights</router-link> |
     <router-link to="/character_planner">Character Planner</router-link>
+    <NavigationBar />
   </div>
   <router-view/>
 </template>
+
+<script>
+import NavigationBar from '@/components/NavigationBar'
+
+export default {
+  name: 'App',
+  components: {
+    NavigationBar
+  }
+}
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Asul");
