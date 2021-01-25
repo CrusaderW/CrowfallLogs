@@ -1,6 +1,5 @@
 <template>
   <div id="root">
-    I'm the Charatcher Planner Body (in pink)
     <div class="instruct">PLEASE SELECT YOUR CLASS, RACE AND PROMOTION.</div>
     <div class="overall">
       <div class="attributes">
@@ -50,7 +49,7 @@ export default {
   justify-content: space-between;
 }
 .attributes {
-  background-color: saddlebrown;
+  background-color: rgb(58, 36, 20);
 }
 .disciplines {
   background-color: rgb(58, 36, 20);
