@@ -3,7 +3,7 @@
     <nav>
         <select v-model="selectedClass">
           <option disabled value="">Choose Class</option>
-          <option v-for="item in classes" :key="item">{{ item }}</option>
+          <option v-for="item in data.classes_fulldata" :key="item">{{ item.classname }}</option>
         </select>
         <select v-model="selectedRace">
           <option disabled value="">Choose Race</option>
@@ -21,184 +21,14 @@
 
 
 <script>
+import data from '../../data/CPSB_ClassesRacesPromotions.json';
+
+
 export default {
   name: "CharacterSelectionBar",
   data() {
     return {
-      classes_fulldata: {
-        Knight: {
-          classname: "Knight",
-          classraces: [
-            "Human",
-            "Fae",
-            "High-Elf",
-            "Stoneborn",
-            "Elken",
-            "Centaur",
-            "Guinecean",
-          ],
-          promotions: ["Swordsman", "Secutor", "Sentinel"],
-        },
-        Confessor: {
-          classname: "Confessor",
-          classraces: [
-            "Nethari",
-            "High-Elf",
-            "Elken"
-          ],
-          promotions: ["Fanatic", "Sanctifier", "Inquisitor"],
-        },
-        Templar: {
-          classname: "Templar",
-          classraces: [
-            "Human",
-            "Nethari",
-            "Elken"
-          ],
-          promotions: ["Vindicator", "Paladin", "Fury"],
-        },
-        Ranger: {
-          classname: "Ranger",
-          classraces: [
-            "Human",
-            "Half-Elf",
-            "Wood-Elf",
-            "Elken",
-            "Minotaur"
-          ],
-          promotions: ["Archer", "Warden", "Brigand"],
-        },
-        Assassin: {
-          classname: "Assassin",
-          classraces: [
-            "Half-Elf",
-            "Nethari",
-            "Fae",
-            "High-Elf"
-          ],
-          promotions: ["Swordsman", "Secutor", "Sentinel"],
-        },
-        Druid: {
-          classname: "Druid",
-          classraces: [
-            "Half-Elf",
-            "Fae",
-            "Wood-Elf"
-          ],
-          promotions: ["Stormcaller", "Archdruid", "Earthkeeper"],
-        },
-        Frostweaver: {
-          classname: "Frostweaver",
-          classraces: [
-            "Fae",
-            "Wood-Elf",
-            "High-Elf"
-          ],
-          promotions: ["Frostguard", "Icecaller", "Archmage"],
-        },
-        Champion: {
-          classname: "Champion",
-          classraces: [
-            "Stoneborn",
-            "Half-Giant",
-            "Minotaur",
-            "Centaur"
-          ],
-          promotions: ["Frostguard", "Icecaller", "Archmage"],
-        },
-        Myrmidon: {
-          classname: "Myrmidon",
-          classraces: [
-            "Stoneborn",
-            "Half-Giant",
-            "Minotaur"
-          ],
-          promotions: ["Titan", "Battle Rager", "Conqueror"],
-        },
-        Cleric: {
-          classname: "Cleric",
-          classraces: [
-            "Human",
-            "Stoneborn",
-            "Half-Giant",
-            "Elken",
-            "Centaur",
-            "Guinecean"
-          ],
-          promotions: ["Radical", "Crusader", "Arbiter"],
-        },
-        Duelist: {
-          classname: "Duelist",
-          classraces: [
-            "Guinecean"
-          ],
-          promotions: ["Slayer", "Vanguard Scout", "Dirge"],
-        },
-      },
-
-      classes: [
-        "Knight",
-        "Confessor",
-        "Templar",
-        "Ranger",
-        "Assasin",
-        "Druid",
-        "Frostweaver",
-        "Champion",
-        "Myrmidon",
-        "Cleric",
-        "Duelist",
-      ],
-
-      races: [
-        "Human",
-        "Half-Elf",
-        "Nethar",
-        "Fae",
-        "Wood-Elf",
-        "High-Elf",
-        "Stoneborn",
-        "Half-Giant",
-        "Elken",
-        "Minotaur",
-        "Centaur",
-        "Guinecean",
-      ],
-
-      promotions: [
-        "Conqueror",
-        "Frostguard",
-        "Archmage",
-        "Stormcaller",
-        "Crusader",
-        "Paladin",
-        "Fury",
-        "Fanatic",
-        "Inquisitor",
-        "Archer",
-        "Titan",
-        "Swordsman",
-        "Sentinel",
-        "Secutor",
-        "Radical",
-        "Arbiter",
-        "Pit Fighter",
-        "Barbarian",
-        "Vandal",
-        "Cutthroat",
-        "Vindicator",
-        "Brigand",
-        "Icecaller",
-        "Vanguard Scout",
-        "Slayer",
-        "Dirge",
-        "Archdruid",
-        "Sanctifier",
-        "Alpha Warrior",
-        "Blackguard",
-        "Battle Rager",
-      ],
-
+      data,
       selectedClass: "",
       selectedRace: "",
       selectedPromotion: "",
@@ -207,16 +37,16 @@ export default {
   computed: {
     races_filtered() {
       if (this.selectedClass !== "") {
-        return this.classes_fulldata[this.selectedClass].classraces;
+        return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
-        return this.races;
+        return this.data.races_list;
       }
     },
     promotions_filtered() {
       if (this.selectedClass !== "") {
-        return this.classes_fulldata[this.selectedClass].promotions;
+        return this.data.classes_fulldata[this.selectedClass].promotions;
       } else {
-        return this.promotions;
+        return this.data.promotions_list;
       }
     }
   },

@@ -6,28 +6,28 @@
         <table>
           <tr>
             <td>STR</td>
-            <td><input type="text" value="Current" /></td>
-            <td><input type="text" value="Cap" /></td>
+            <td><input type="text" placeholder="Current"/></td>
+            <td><input type="text" placeholder="Cap" /></td>
           </tr>
           <tr>
             <td>DEX</td>
-            <td><input type="text" value="Current" /></td>
-            <td><input type="text" value="Cap" /></td>
+            <td><input type="text" placeholder="Current" /></td>
+            <td><input type="text" placeholder="Cap" /></td>
           </tr>
           <tr>
             <td>INT</td>
-            <td><input type="text" value="Current" /></td>
-            <td><input type="text" value="Cap" /></td>
+            <td><input type="text" placeholder="Current" /></td>
+            <td><input type="text" placeholder="Cap" /></td>
           </tr>
           <tr>
             <td>SPR</td>
-            <td><input type="text" value="Current" /></td>
-            <td><input type="text" value="Cap" /></td>
+            <td><input type="text" placeholder="Current" /></td>
+            <td><input type="text" placeholder="Cap" /></td>
           </tr>
           <tr>
             <td>CON</td>
-            <td><input type="text" value="Current" /></td>
-            <td><input type="text" value="Cap" /></td>
+            <td><input type="text" placeholder="Current" /></td>
+            <td><input type="text" placeholder="Cap" /></td>
           </tr>
         </table>
       </div>
@@ -82,6 +82,9 @@ export default {
 input {
   background-color: crimson;
   max-width: 4em;
+}
+:-ms-input-placeholder {
+  color: black;
 }
 table {
   padding: 0.5em;
