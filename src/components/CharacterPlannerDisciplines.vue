@@ -10,7 +10,7 @@
             <td><img src="@\assets\dummy-crest.png" /></td>
             <td>
               <select v-model="selectedMajor">
-                <option v-for="major in majorList" :key="major.majorname">
+                <option v-for="major in data.majors_list" :key="major.majorname">
                   {{ major.majorname }}
                 </option>
               </select>
@@ -40,24 +40,15 @@
 </template>
 
 <script>
+import data from '../../data/CPD_MinorsMajors.json';
+
 export default {
   name: "CharacterPlannerDisciplines",
   data() {
     return {
+      data,
       isOpen: true,
       buttonLook: ">>",
-      majorList: {
-        Adjudicator: {
-          majorname: "Adjudicator",
-          classesPossible: ["Cleric", "Templar"],
-          domainsPossible: [""],
-        },
-        Abominable_Snowman: {
-          majorname: "Abominable Snowman",
-          classesPossible: [""],
-          domainsPossible: ["Frost", "Death"],
-        },
-      },
       selectedMajor: "",
     };
   },

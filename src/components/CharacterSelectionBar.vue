@@ -1,28 +1,29 @@
 <template>
   <div id="root">
     <nav>
-        <select v-model="selectedClass">
-          <option disabled value="">Choose Class</option>
-          <option v-for="item in data.classes_fulldata" :key="item">{{ item.classname }}</option>
-        </select>
-        <select v-model="selectedRace">
-          <option disabled value="">Choose Race</option>
-          <option v-for="race in races_filtered" :key="race">{{ race }}</option>
-        </select>
-        <select v-model="selectedPromotion">
-          <option disabled value="">Choose Promotion</option>
-          <option v-for="promotion in promotions_filtered" :key="promotion">
-            {{ promotion }}
-          </option>
-        </select>
+      <select v-model="selectedClass">
+        <option disabled value="">Choose Class</option>
+        <option v-for="item in data.classes_fulldata" :key="item">
+          {{ item.classname }}
+        </option>
+      </select>
+      <select v-model="selectedRace">
+        <option disabled value="">Choose Race</option>
+        <option v-for="race in races_filtered" :key="race">{{ race }}</option>
+      </select>
+      <select v-model="selectedPromotion">
+        <option disabled value="">Choose Promotion</option>
+        <option v-for="promotion in promotions_filtered" :key="promotion">
+          {{ promotion }}
+        </option>
+      </select>
     </nav>
   </div>
 </template>
 
 
 <script>
-import data from '../../data/CPSB_ClassesRacesPromotions.json';
-
+import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
 export default {
   name: "CharacterSelectionBar",
@@ -48,7 +49,7 @@ export default {
       } else {
         return this.data.promotions_list;
       }
-    }
+    },
   },
 };
 </script>

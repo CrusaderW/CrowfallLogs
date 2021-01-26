@@ -1,0 +1,88 @@
+{
+    "majors_list": {
+        "Adjudicator": {
+            "majorname": "Adjudicator",
+            "classes_possible": [
+                "Cleric",
+                "Templar"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Abominable_Snowman": {
+            "majorname": "Abominable Snowman",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Frost",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Agent_Provocateur": {
+            "majorname": "Agent Provocateur",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Guinecean",
+                "Shadow"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Arcane_Archer": {
+            "majorname": "Arcane Archer",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Assassin",
+                "Myrmidon"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Arkons_Disciple": {
+            "majorname": "Arkon's Disciple",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Confessor",
+                "Fire"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Avatar_of_Storms": {
+            "majorname": "Avatar of Storms",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Confessor",
+                "Fire"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        }
+    }
+}
