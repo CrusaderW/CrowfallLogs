@@ -7,19 +7,20 @@
     <router-link to="/fights">Fights</router-link> |
     <router-link to="/character_planner">Character Planner</router-link>
     <NavigationBar />
+      <p class="text-sm font-bold text-red-500">Test</p>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import NavigationBar from '@/components/NavigationBar'
+import NavigationBar from "@/components/NavigationBar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavigationBar
-  }
-}
+    NavigationBar,
+  },
+};
 </script>
 
 <style>
@@ -45,3 +46,4 @@ export default {
   color: #42b983;
 }
 </style>
+<style src="./assets/tailwind.css"></style>
