@@ -34,22 +34,22 @@
                 ""
             ],
             "domains_possible": [
-                "Guinecean",
                 "Shadow"
             ],
             "races_possible": [
-                ""
+                "Guinecean"
             ],
             "Description": ""
         },
         "Arcane_Archer": {
             "majorname": "Arcane Archer",
             "classes_possible": [
-                ""
+                "Assassin",
+                "Myrmidon",
+                "Ranger"
             ],
             "domains_possible": [
-                "Assassin",
-                "Myrmidon"
+                ""
             ],
             "races_possible": [
                 ""
@@ -59,10 +59,9 @@
         "Arkons_Disciple": {
             "majorname": "Arkon's Disciple",
             "classes_possible": [
-                ""
+                "Confessor"
             ],
             "domains_possible": [
-                "Confessor",
                 "Fire"
             ],
             "races_possible": [
@@ -76,8 +75,2455 @@
                 ""
             ],
             "domains_possible": [
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Banshee": {
+            "majorname": "Banshee",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Black_Mask": {
+            "majorname": "Black Mask",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Blade_Dancer": {
+            "majorname": "Blade Dancer",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Blade_Master": {
+            "majorname": "",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Blitzer": {
+            "majorname": "Blitzer",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Blood_Feeder": {
+            "majorname": "Blood Feeder",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Bloodletter": {
+            "majorname": "Bloodletter",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Bringer_of_Life": {
+            "majorname": "Bringer of Life",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Butcher": {
+            "majorname": "Butcher",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War",
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Cloisterer": {
+            "majorname": "Cloisterer",
+            "classes_possible": [
                 "Confessor",
+                "Templar"
+            ],
+            "domains_possible": [
+                "Light"
+            ],
+            "races_possible": [
+                "Human"
+            ],
+            "Description": ""
+        },
+        "Commander": {
+            "majorname": "Commander",
+            "classes_possible": [
+                "Templar"
+            ],
+            "domains_possible": [
+                "Protection",
+                "Music"
+            ],
+            "races_possible": [
+                "High-Elf"
+            ],
+            "Description": ""
+        },
+        "Convictor": {
+            "majorname": "Convictor",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Corrupted_Soul": {
+            "majorname": "Corrupted Soul",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dazzler": {
+            "majorname": "Dazzler",
+            "classes_possible": [
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dead_Eye": {
+            "majorname": "Dead Eye",
+            "classes_possible": [
+                "Ranger"
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Deadly_Infector": {
+            "majorname": "Deadly Infector",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Defender": {
+            "majorname": "Defender",
+            "classes_possible": [
+                "Duelist"
+            ],
+            "domains_possible": [
+                "Justice",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Demolisher": {
+            "majorname": "Demolisher",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Destroyer": {
+            "majorname": "Destroyer",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dirty_Fighter": {
+            "majorname": "Dirty Fighter",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dryad": {
+            "majorname": "Dryad",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature"
+            ],
+            "races_possible": [
+                "Elken"
+            ],
+            "Description": ""
+        },
+        "Elementalist": {
+            "majorname": "Elementalist",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Fire",
+                "Frost",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Entertainer": {
+            "majorname": "Entertainer",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Escape_Artist": {
+            "majorname": "Escape Artist",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Exorcist": {
+            "majorname": "Exorcist",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light"
+            ],
+            "races_possible": [
+                "Elken"
+            ],
+            "Description": ""
+        },
+        "Faerie_Trapper": {
+            "majorname": "Faerie Trapper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Fae"
+            ],
+            "Description": ""
+        },
+        "Fencer": {
+            "majorname": "Fencer",
+            "classes_possible": [
+                "Assassin",
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Field_Surgeon": {
+            "majorname": "Field Surgeon",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Flow_Controller": {
+            "majorname": "Flow Controller",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Storm",
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Force_Mage": {
+            "majorname": "Force Mage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Frost",
+                "Protection"
+            ],
+            "races_possible": [
+                "High-Elf"
+            ],
+            "Description": ""
+        },
+        "Forest_Creature": {
+            "majorname": "Forest Creature",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature"
+            ],
+            "races_possible": [
+                "Wood-Elf"
+            ],
+            "Description": ""
+        },
+        "Fortifier": {
+            "majorname": "Fortifier",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Protection",
+                "Battle"
+            ],
+            "races_possible": [
+                "Stoneborn"
+            ],
+            "Description": ""
+        },
+        "Freedom_Fighter": {
+            "majorname": "Freedom Fighter",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Wind"
+            ],
+            "races_possible": [
+                "Human"
+            ],
+            "Description": ""
+        },
+        "Friar": {
+            "majorname": "Friar",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                "Light",
+                "Fire",
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Frostbiter": {
+            "majorname": "Frostbiter",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Frozen_Dancer": {
+            "majorname": "Frozen Dancer",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Gapfinder": {
+            "majorname": "Gapfinder",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Grim_Reaper": {
+            "majorname": "Grim Reaper",
+            "classes_possible": [
+                "Duelist"
+            ],
+            "domains_possible": [
+                "Plague",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Heavy_Hitter": {
+            "majorname": "Heavy Hitter",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Battle",
+                "Music"
+            ],
+            "races_possible": [
+                "Half-Giant"
+            ],
+            "Description": ""
+        },
+        "Hellraiser": {
+            "majorname": "Hellraiser",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War",
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Holy_Avenger": {
+            "majorname": "Holy Avenger",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Fire",
+                "Protection"
+            ],
+            "races_possible": [
+                "Nethari"
+            ],
+            "Description": ""
+        },
+        "Holy_Warrior": {
+            "majorname": "Holy_Warrior",
+            "classes_possible": [
+                "Templar"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Hydrologist": {
+            "majorname": "Hydrologist",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Ice_Armorer": {
+            "majorname": "Ice Armorer",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Intimidator": {
+            "majorname": "Intimidator",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Kanes_Apostle": {
+            "majorname": "Kane's Apostle",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Kinetic_Bloomer": {
+            "majorname": "Kinetic Bloomer",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Knife_Grinder": {
+            "majorname": "Knife Grinder",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Lazarus_Disciple": {
+            "majorname": "Lazaru's Disciple",
+            "classes_possible": [
+                "Cleric"
+            ],
+            "domains_possible": [
                 "Fire"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Leecher": {
+            "majorname": "Leecher",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Lightfoot": {
+            "majorname": "Lightfoot",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Lord_of_the_Forest": {
+            "majorname": "Lord of the Forest",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Axes": {
+            "majorname": "Master of Axes",
+            "classes_possible": [
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Daggers": {
+            "majorname": "Master of Daggers",
+            "classes_possible": [
+                "Assassin"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Darkness": {
+            "majorname": "Master of Darkness",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Focus": {
+            "majorname": "Master of Focus",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Fire",
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Maces": {
+            "majorname": "Master of Maces",
+            "classes_possible": [
+                "Cleric",
+                "Knight",
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Master_of_Swords": {
+            "majorname": "Master of Swords",
+            "classes_possible": [
+                "Assassin",
+                "Knight",
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Militant_Mage": {
+            "majorname": "Militant Mage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Protection",
+                "Justice"
+            ],
+            "races_possible": [
+                "Nethari"
+            ],
+            "Description": ""
+        },
+        "Minstrel": {
+            "majorname": "Minstrel",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Molten_Mage": {
+            "majorname": "Molten Mage",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Mudman": {
+            "majorname": "Mudman",
+            "classes_possible": [
+                "Knight"
+            ],
+            "domains_possible": [
+                "Plague",
+                "Nature"
+            ],
+            "races_possible": [
+                "Stoneborn"
+            ],
+            "Description": ""
+        },
+        "Naiad": {
+            "majorname": "Naiad",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light"
+            ],
+            "races_possible": [
+                "Wood-Elf"
+            ],
+            "Description": ""
+        },
+        "Natures_Guardian": {
+            "majorname": "Nature's Guardian",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Night_Terror": {
+            "majorname": "Night Terror",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Nightstalker": {
+            "majorname": "Nightstalker",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Pack_Leader": {
+            "majorname": "Pack Leader",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Nature"
+            ],
+            "races_possible": [
+                "Half-Elf"
+            ],
+            "Description": ""
+        },
+        "Paragon": {
+            "majorname": "Paragon",
+            "classes_possible": [
+                "Frostweaver",
+                "Templar"
+            ],
+            "domains_possible": [
+                "Battle"
+            ],
+            "races_possible": [
+                "Guinecean"
+            ],
+            "Description": ""
+        },
+        "Petrifier": {
+            "majorname": "Petrifier",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind",
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Pixie": {
+            "majorname": "Pixie",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                "Light",
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Plague_Lord": {
+            "majorname": "Plague Lord",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Poison_Sapper": {
+            "majorname": "Poison Sapper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Poison_Trapper": {
+            "majorname": "Poison Trapper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Poisoner": {
+            "majorname": "Poisoner",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Reality_Tripper": {
+            "majorname": "Reality Tripper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Reality_Wrapper": {
+            "majorname": "Reality Wrapper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Frost",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Reaver": {
+            "majorname": "Reaver",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Redeemer": {
+            "majorname": "Redeemer",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Rune_Caster": {
+            "majorname": "Rune Caster",
+            "classes_possible": [
+                "Cleric",
+                "Templar"
+            ],
+            "domains_possible": [
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Runescarred_Gladiator": {
+            "majorname": "Runescarred Gladiator",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Minotaur"
+            ],
+            "Description": ""
+        },
+        "Scrapper": {
+            "majorname": "Scrapper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Justice",
+                "Battle"
+            ],
+            "races_possible": [
+                "Half-Giant"
+            ],
+            "Description": ""
+        },
+        "Shadowmaster": {
+            "majorname": "Shadowmaster",
+            "classes_possible": [
+                "Assassin"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Sharpshooter": {
+            "majorname": "Sharpshooter",
+            "classes_possible": [
+                "Assassin",
+                "Champion",
+                "Knight",
+                "Myrmidon",
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Shield_Fighter": {
+            "majorname": "Shield Fighter",
+            "classes_possible": [
+                "Cleric",
+                "Druid"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Shieldmaster": {
+            "majorname": "Shieldmaster",
+            "classes_possible": [
+                "Knight"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Shock_Trooper": {
+            "majorname": "Shock Trooper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Siege_Engineer": {
+            "majorname": "Siege Engineer",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Human",
+                "Half-Elf",
+                "Nethar",
+                "Fae",
+                "Wood-Elf",
+                "High-Elf",
+                "Stoneborn",
+                "Half-Giant",
+                "Elken",
+                "Minotaur",
+                "Centaur",
+                "Guinecean"
+            ],
+            "Description": ""
+        },
+        "Speed_Deamon": {
+            "majorname": "Speed Deamon",
+            "classes_possible": [
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                "Wind"
+            ],
+            "races_possible": [
+                "Centaur"
+            ],
+            "Description": ""
+        },
+        "Spirit_Breaker": {
+            "majorname": "Spirit Breaker",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Stalker": {
+            "majorname": "Stalker",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War"
+            ],
+            "races_possible": [
+                "Minotaur"
+            ],
+            "Description": ""
+        },
+        "Standard_Beater": {
+            "majorname": "Standard Beater",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Justice"
+            ],
+            "races_possible": [
+                "Human",
+                "Half-Elf"
+            ],
+            "Description": ""
+        },
+        "Sun_Worshiper": {
+            "majorname": "Sun Worshiper",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Fire"
+            ],
+            "races_possible": [
+                "Centaur"
+            ],
+            "Description": ""
+        },
+        "Thorny_Warrior": {
+            "majorname": "Thorny Warrior",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Human",
+                "Ranger"
+            ],
+            "Description": ""
+        },
+        "Transcendent_Warrior": {
+            "majorname": "Transcendent Warrior",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Fire",
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Troubadour": {
+            "majorname": "Troubadour",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Tubthumper": {
+            "majorname": "Tubthumper",
+            "classes_possible": [
+                "Duelist"
+            ],
+            "domains_possible": [
+                "Wind",
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Tundra_Mage": {
+            "majorname": "Tundra Mage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Tunnel_King": {
+            "majorname": "Tunnel King",
+            "classes_possible": [
+                "Duelist"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Twister_of_Fate": {
+            "majorname": "Twister of Fate",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Protection",
+                "Battle"
+            ],
+            "races_possible": [
+                "Fae"
+            ],
+            "Description": ""
+        },
+        "Unholy_Beast": {
+            "majorname": "Unholy Beast",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Unstable_Mage": {
+            "majorname": "Unstable Mage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Storm",
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Waylayer": {
+            "majorname": "Waylayer",
+            "classes_possible": [
+                "Assassin"
+            ],
+            "domains_possible": [
+                "Shadow"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Windlord": {
+            "majorname": "Windlord",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        }
+    },
+    "minors_list": {
+        "All_Clear": {
+            "majorname": "All Clear",
+            "classes_possible": [
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Archery": {
+            "majorname": "Archery",
+            "classes_possible": [
+                "Duelist",
+                "Templar"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Banshee_Wail": {
+            "majorname": "Banshee Wail",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Wind",
+                "Storm"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Barbed_Stake": {
+            "majorname": "Barbed Stake",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                "Elken"
+            ],
+            "Description": ""
+        },
+        "Bearers_Insignia": {
+            "majorname": "Bearer's Insignia",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Blessed_Symbol": {
+            "majorname": "Blessed Symbol",
+            "classes_possible": [
+                "Cleric"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Stoneborn"
+            ],
+            "Description": ""
+        },
+        "Blood_Pact": {
+            "majorname": "Blood Pact",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "War",
+                "Death"
+            ],
+            "races_possible": [
+                "Nethari"
+            ],
+            "Description": ""
+        },
+        "Blood_Rose": {
+            "majorname": "Blood_Rose",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Justice",
+                "Death"
+            ],
+            "races_possible": [
+                "Human"
+            ],
+            "Description": ""
+        },
+        "Brutal_Slam": {
+            "majorname": "Brutal_Slam",
+            "classes_possible": [
+                "Knight"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Burning_Hatred": {
+            "majorname": "Burning Hatred",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind",
+                "Fire",
+                "Storm",
+                "Death"
+            ],
+            "races_possible": [
+                "Wood-Elf"
+            ],
+            "Description": ""
+        },
+        "Careless_Whisper": {
+            "majorname": "Careless Whisper",
+            "classes_possible": [
+                "Assassin"
+            ],
+            "domains_possible": [
+                "Justice",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Cold_Armor": {
+            "majorname": "Cold Armor",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Concussive_Trap": {
+            "majorname": "Concussive Trap",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Crazy_Pills": {
+            "majorname": "Crazy Pills",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Wind",
+                "Fire",
+                "Frost",
+                "Storm",
+                "Justice",
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Cripple": {
+            "majorname": "Cripple",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Critical_Dodge": {
+            "majorname": "Critical Dodge",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Wind",
+                "War"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dirge_of_Dissonance": {
+            "majorname": "Dirge of Dissonance",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Dispel": {
+            "majorname": "Dispel",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Emminently_Punchable": {
+            "majorname": "Emminently_Punchable",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Fire",
+                "Storm",
+                "Battle"
+            ],
+            "races_possible": [
+                "Minotaur"
+            ],
+            "Description": ""
+        },
+        "Explosive_Trap": {
+            "majorname": "Explosive Trap",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Faerie_Flames": {
+            "majorname": "Faerie Flames",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Faerie_Trap": {
+            "majorname": "Faerie Trap",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Finih_Him": {
+            "majorname": "Finih Him",
+            "classes_possible": [
+                "Knight",
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                "Frost",
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "First_Wind": {
+            "majorname": "First Wind",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Storm",
+                "Death"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Fortified_Stakes": {
+            "majorname": "Fortified Stakes",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Nature",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Furious": {
+            "majorname": "Furious",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Glamour_Weapon": {
+            "majorname": "Glamour Weapon",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Protection",
+                "Music"
+            ],
+            "races_possible": [
+                "High-Elf"
+            ],
+            "Description": ""
+        },
+        "Glass_Cannon": {
+            "majorname": "Glass Cannon",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadown",
+                "Fire",
+                "Storm"
+            ],
+            "races_possible": [
+                "Guinecean"
+            ],
+            "Description": ""
+        },
+        "Gods_Reach": {
+            "majorname": "God's Reach",
+            "classes_possible": [
+                "Cleric"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Guardian_Rhythms": {
+            "majorname": "Guardian Rhythms",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                "Human"
+            ],
+            "Description": ""
+        },
+        "Heads_Up": {
+            "majorname": "Heads Up",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Music",
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Hunter": {
+            "majorname": "Hunter",
+            "classes_possible": [
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Illusory_Shield": {
+            "majorname": "Illusory Shield",
+            "classes_possible": [
+                "Cleric",
+                "Druid",
+                "Knight"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Indulgence": {
+            "majorname": "Indulgence",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Fire"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Lament_of_Sadness": {
+            "majorname": "Lament of Sadness",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                "Fae"
+            ],
+            "Description": ""
+        },
+        "Last_Resort": {
+            "majorname": "Last Resort",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Fire",
+                "War",
+                "Music"
+            ],
+            "races_possible": [
+                "Minotaur"
+            ],
+            "Description": ""
+        },
+        "Marked_for_Death": {
+            "majorname": "Marked for Death",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "War",
+                "Battle"
+            ],
+            "races_possible": [
+                "Nethari"
+            ],
+            "Description": ""
+        },
+        "Meditation": {
+            "majorname": "Meditation",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light"
+            ],
+            "races_possible": [
+                "Fae"
+            ],
+            "Description": ""
+        },
+        "Minor_Accompainment": {
+            "majorname": "Minor Accompainment",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Moon_Elf_Heritage": {
+            "majorname": "Moon Elf Heritage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Half-Elf",
+                "Wood-Elf"
+            ],
+            "Description": ""
+        },
+        "Pack_Avatar": {
+            "majorname": "Pack Avatar",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Elken",
+                "Centaur"
+            ],
+            "Description": ""
+        },
+        "Payback": {
+            "majorname": "Payback",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Wind",
+                "Frost",
+                "Justice",
+                "Battle"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Phantom_Armor": {
+            "majorname": "Phantom Armor",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Protection",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Pound_of_Flesh": {
+            "majorname": "Pound of Flesh",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague",
+                "Battle",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Reactionary": {
+            "majorname": "Reactionary",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Nature",
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Reaper": {
+            "majorname": "Reaper",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Recon": {
+            "majorname": "Recon",
+            "classes_possible": [
+                "Assassin",
+                "Duelist"
+            ],
+            "domains_possible": [
+                "Dark",
+                "Stealth"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Resurection": {
+            "majorname": "Resurection",
+            "classes_possible": [
+                "Druid",
+                "Templar"
+            ],
+            "domains_possible": [
+                "Light",
+                "Nature",
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Restoration_Strike": {
+            "majorname": "Restoration Strike",
+            "classes_possible": [
+                "Knight",
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Revenge": {
+            "majorname": "Revenge",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Frost"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Rune_Shield": {
+            "majorname": "Rune Shield",
+            "classes_possible": [
+                "Frostweaver"
+            ],
+            "domains_possible": [
+                "Protection",
+                "Justice"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Rupture_Barrier": {
+            "majorname": "Rupture Barrier",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague",
+                "Frost",
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Serrated_Trap": {
+            "majorname": "Serrated Trap",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Shadow_Linger": {
+            "majorname": "Shadow Linger",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Shadow"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Skullcracker": {
+            "majorname": "Skullcracker",
+            "classes_possible": [
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Song_of_Speed": {
+            "majorname": "Song of Speed",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Music"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Sparring": {
+            "majorname": "Sparring",
+            "classes_possible": [
+                "Assassin",
+                "Duelist"
+            ],
+            "domains_possible": [
+                "War",
+                "Battle",
+                "Death"
+            ],
+            "races_possible": [
+                "Human",
+                "Half-Giant"
+            ],
+            "Description": ""
+        },
+        "Speedy_Retaliate": {
+            "majorname": "Speedy_Retaliate",
+            "classes_possible": [
+                "Champion"
+            ],
+            "domains_possible": [
+                "Wind"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Spirit_Whip": {
+            "majorname": "Spirit Whip",
+            "classes_possible": [
+                "Assassin"
+            ],
+            "domains_possible": [
+                "Frost",
+                "War",
+                "Battle"
+            ],
+            "races_possible": [
+                "Half-Giant"
+            ],
+            "Description": ""
+        },
+        "Spreading_Flame": {
+            "majorname": "Spreading_Flame",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Stayin_the_Fight": {
+            "majorname": "Stay in the Fight",
+            "classes_possible": [
+                "Champion",
+                "Cleric",
+                "Confessor",
+                "Druid",
+                "Frostweaver",
+                "Myrmidon",
+                "Ranger"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Sturdy": {
+            "majorname": "Sturdy",
+            "classes_possible": [
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                "Plague",
+                "Wind",
+                "Fire",
+                "Frost",
+                "Death"
+            ],
+            "races_possible": [
+                "Stoneborn"
+            ],
+            "Description": ""
+        },
+        "Sun_Elf_Heritage": {
+            "majorname": "Sun Elf Heritage",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Half-Elf",
+                "High-Elf"
+            ],
+            "Description": ""
+        },
+        "Supreme_Element": {
+            "majorname": "Supreme Element",
+            "classes_possible": [
+                "Druid"
+            ],
+            "domains_possible": [
+                "Wind"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Take_Root": {
+            "majorname": "Take Root",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Light",
+                "Nature",
+                "Storm",
+                "Protection"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Taste_of_Poison": {
+            "majorname": "Taste of Poison",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Thornshield": {
+            "majorname": "Thornshield",
+            "classes_possible": [
+                "Assassin",
+                "Champion",
+                "Cleric",
+                "Confessor",
+                "Druid",
+                "Duelist",
+                "Frostweaver",
+                "Knight",
+                "Myrmidon",
+                "Ranger",
+                "Templar"
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Touch_of_Rot": {
+            "majorname": "Touch of Rot",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Plague"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Toughness": {
+            "majorname": "Toughness",
+            "classes_possible": [
+                "Templar"
+            ],
+            "domains_possible": [
+                "Fire",
+                "Music"
+            ],
+            "races_possible": [
+                "Centaur"
+            ],
+            "Description": ""
+        },
+        "Toxic_Trap": {
+            "majorname": "Toxic Trap",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                "Dark"
+            ],
+            "races_possible": [
+                ""
+            ],
+            "Description": ""
+        },
+        "Tunnel": {
+            "majorname": "Tunnel",
+            "classes_possible": [
+                ""
+            ],
+            "domains_possible": [
+                ""
+            ],
+            "races_possible": [
+                "Guinecean"
+            ],
+            "Description": ""
+        },
+        "Underdog": {
+            "majorname": "Underdog",
+            "classes_possible": [
+                "Myrmidon"
+            ],
+            "domains_possible": [
+                "War",
+                "Death"
+            ],
+            "races_possible": [
+                "Human"
+            ],
+            "Description": ""
+        },
+        "Weapon_Finesse": {
+            "majorname": "Weapon Finesse",
+            "classes_possible": [
+                "Confessor"
+            ],
+            "domains_possible": [
+                "Shadow",
+                "Nature",
+                "Storm",
+                "Protection"
             ],
             "races_possible": [
                 ""
