@@ -17,6 +17,12 @@
           {{ promotion }}
         </option>
       </select>
+      <select v-model="selectedDomain">
+        <option disabled value="">Choose Domain</option>
+        <option v-for="domain in data.domains_list" :key="domain">
+          {{ domain }}
+        </option>
+      </select>
     </nav>
   </div>
 </template>
@@ -33,6 +39,7 @@ export default {
       selectedClass: "",
       selectedRace: "",
       selectedPromotion: "",
+      selectedDomain: ""
     };
   },
   computed: {

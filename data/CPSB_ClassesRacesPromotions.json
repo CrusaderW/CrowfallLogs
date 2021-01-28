@@ -46,6 +46,24 @@
         "Blackguard",
         "Battle Rager"
     ],
+    "domains_list": [
+        "Battle",
+        "Dark",
+        "Death",
+        "Fire",
+        "Frost",
+        "Justice",
+        "Light",
+        "Music",
+        "Nature",
+        "Plague",
+        "Protection",
+        "Shadow",
+        "Storm",
+        "War",
+        "Wind",
+        "Stealth"
+    ],
     "classes_fulldata": {
         "Knight": {
             "classname": "Knight",
