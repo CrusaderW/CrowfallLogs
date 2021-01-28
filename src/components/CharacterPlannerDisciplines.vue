@@ -16,7 +16,6 @@
                 </option>
               </select>
             </td>
-            <td class="discipline">Major</td>
           </tr>
           <tr>
             <td><img src="@\assets\dummy-crest.png" /></td>
@@ -28,7 +27,6 @@
                 </option>
               </select>
             </td>
-            <td class="discipline">Major</td>
           </tr>
           <tr>
             <td><img src="@\assets\dummy-crest.png" /></td>
@@ -40,7 +38,6 @@
                 </option>
               </select>
             </td>
-            <td class="discipline">Minor</td>
           </tr>
           <tr>
             <td><img src="@\assets\dummy-crest.png" /></td>
@@ -52,7 +49,6 @@
                 </option>
               </select>
             </td>
-            <td class="discipline">Minor</td>
           </tr>
           <tr>
             <td><img src="@\assets\dummy-crest.png" /></td>
@@ -64,13 +60,12 @@
                 </option>
               </select>
             </td>
-            <td class="discipline">Minor</td>
           </tr>
         </table>
       </div>
     </transition>
   </div>
-  <CharacterPlannerDisciplinesSelection />
+  <CharacterPlannerDisciplinesSelection disciplineType="Major"/>
 </template>
 
 <script>

@@ -1,26 +1,28 @@
 <template>
-  <div id="root2">
-        <table>
-          <tr>
-            <td><img src="@/assets/pic/Major_Disciplines/Icons/Icon_Disc_Major_Blank.png" /></td>
-            <td>
-              <select v-model="selectedMajor">
-                <option disabled value="">Choose Major</option>
-                <option v-for="major in data.majors_list" :key="major.majorname">
-                  {{ major.majorname }}
-                </option>
-              </select>
-            </td>
-            <td class="discipline">Major</td>
-          </tr>
-        </table>
+  <div id="root">
+    <div>
+      <img
+        src="@/assets/pic/Major_Disciplines/Icons/Icon_Disc_Major_Blank.png"
+      />
+    </div>
+    <div>
+      <select v-model="selectedMajor">
+        <option disabled value="">Choose {{disciplineType}}</option>
+        <option v-for="major in data.majors_list" :key="major.majorname">
+          {{ major.majorname }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 
 <script>
-import data from '../../data/CPD_MinorsMajors.json';
+import data from "../../data/CPD_MinorsMajors.json";
 
 export default {
+  props: {
+    disciplineType: String
+  },
   name: "CharacterPlannerDisciplinesSelection",
   data() {
     return {
@@ -28,7 +30,7 @@ export default {
       isOpen: true,
       buttonLook: ">>",
       selectedMajor: "",
-      selectedMinor: ""
+      selectedMinor: "",
     };
   },
   methods: {
@@ -39,44 +41,20 @@ export default {
       } else {
         this.buttonLook = "<<";
       }
-    },
+    }
   },
 };
 </script>
 
 <style scoped>
-#root2 {
+#root {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: blue;
   color: white;
   flex-basis: 12em;
   overflow: hidden;
-}
-.slide-leave-active,
-.slide-enter-active {
-  transition: 1s;
-}
-.slide-leave-to,
-.slide-enter-from {
-  transform: translate(100%, 0);
-}
-.title {
-  background-color: chocolate;
-  padding: 0.5em;
-}
-input {
-  background-color: crimson;
-  max-width: 4em;
-}
-table {
-  padding: 0.5em;
-}
-button {
-  background-color: orange;
-  flex-basis: 3em;
-}
-.discipline {
-  text-align: left;
 }
 img {
   max-width: 2em;
