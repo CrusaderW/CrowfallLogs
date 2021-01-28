@@ -6,7 +6,7 @@
 import CharacterPlannerBody from "@/components/CharacterPlannerBody.vue";
 
 export default {
-  name: "Home",
+  name: "CharacterPlannerBody",
   components: {
     CharacterPlannerBody,
   },

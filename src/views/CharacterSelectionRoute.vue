@@ -6,7 +6,7 @@
 import CharacterSelectionBar from '@/components/CharacterSelectionBar.vue';
 
 export default {
-  name: "Home",
+  name: "CharacterSelectionBar",
   components: {
     CharacterSelectionBar
   },

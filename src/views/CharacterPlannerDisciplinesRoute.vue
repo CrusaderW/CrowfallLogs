@@ -6,7 +6,7 @@
 import CharacterPlannerDisciplines from "@/components/CharacterPlannerDisciplines.vue";
 
 export default {
-  name: "Home",
+  name: "CharacterPlannerDisciplines",
   components: {
     CharacterPlannerDisciplines,
   },

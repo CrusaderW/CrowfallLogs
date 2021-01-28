@@ -6,7 +6,7 @@
 import CharacterPlannerTalents from "@/components/CharacterPlannerTalents.vue";
 
 export default {
-  name: "Home",
+  name: "CharacterPlannerTalents",
   components: {
     CharacterPlannerTalents
   },

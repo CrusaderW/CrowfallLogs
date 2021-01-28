@@ -124,7 +124,7 @@
             "Description": ""
         },
         "Blade_Master": {
-            "majorname": "",
+            "majorname": "Blade Master",
             "classes_possible": [
                 ""
             ],
@@ -638,7 +638,7 @@
             "Description": ""
         },
         "Holy_Warrior": {
-            "majorname": "Holy_Warrior",
+            "majorname": "Holy Warrior",
             "classes_possible": [
                 "Templar"
             ],
@@ -1488,7 +1488,7 @@
     },
     "minors_list": {
         "All_Clear": {
-            "majorname": "All Clear",
+            "minorname": "All Clear",
             "classes_possible": [
                 "Ranger"
             ],
@@ -1501,7 +1501,7 @@
             "Description": ""
         },
         "Archery": {
-            "majorname": "Archery",
+            "minorname": "Archery",
             "classes_possible": [
                 "Duelist",
                 "Templar"
@@ -1515,7 +1515,7 @@
             "Description": ""
         },
         "Banshee_Wail": {
-            "majorname": "Banshee Wail",
+            "minorname": "Banshee Wail",
             "classes_possible": [
                 ""
             ],
@@ -1530,7 +1530,7 @@
             "Description": ""
         },
         "Barbed_Stake": {
-            "majorname": "Barbed Stake",
+            "minorname": "Barbed Stake",
             "classes_possible": [
                 ""
             ],
@@ -1543,7 +1543,7 @@
             "Description": ""
         },
         "Bearers_Insignia": {
-            "majorname": "Bearer's Insignia",
+            "minorname": "Bearer's Insignia",
             "classes_possible": [
                 "Champion"
             ],
@@ -1556,7 +1556,7 @@
             "Description": ""
         },
         "Blessed_Symbol": {
-            "majorname": "Blessed Symbol",
+            "minorname": "Blessed Symbol",
             "classes_possible": [
                 "Cleric"
             ],
@@ -1569,7 +1569,7 @@
             "Description": ""
         },
         "Blood_Pact": {
-            "majorname": "Blood Pact",
+            "minorname": "Blood Pact",
             "classes_possible": [
                 ""
             ],
@@ -1583,7 +1583,7 @@
             "Description": ""
         },
         "Blood_Rose": {
-            "majorname": "Blood_Rose",
+            "minorname": "Blood Rose",
             "classes_possible": [
                 ""
             ],
@@ -1598,7 +1598,7 @@
             "Description": ""
         },
         "Brutal_Slam": {
-            "majorname": "Brutal_Slam",
+            "minorname": "Brutal Slam",
             "classes_possible": [
                 "Knight"
             ],
@@ -1611,7 +1611,7 @@
             "Description": ""
         },
         "Burning_Hatred": {
-            "majorname": "Burning Hatred",
+            "minorname": "Burning Hatred",
             "classes_possible": [
                 ""
             ],
@@ -1627,7 +1627,7 @@
             "Description": ""
         },
         "Careless_Whisper": {
-            "majorname": "Careless Whisper",
+            "minorname": "Careless Whisper",
             "classes_possible": [
                 "Assassin"
             ],
@@ -1641,7 +1641,7 @@
             "Description": ""
         },
         "Cold_Armor": {
-            "majorname": "Cold Armor",
+            "minorname": "Cold Armor",
             "classes_possible": [
                 "Frostweaver"
             ],
@@ -1654,7 +1654,7 @@
             "Description": ""
         },
         "Concussive_Trap": {
-            "majorname": "Concussive Trap",
+            "minorname": "Concussive Trap",
             "classes_possible": [
                 ""
             ],
@@ -1667,7 +1667,7 @@
             "Description": ""
         },
         "Crazy_Pills": {
-            "majorname": "Crazy Pills",
+            "minorname": "Crazy Pills",
             "classes_possible": [
                 ""
             ],
@@ -1685,7 +1685,7 @@
             "Description": ""
         },
         "Cripple": {
-            "majorname": "Cripple",
+            "minorname": "Cripple",
             "classes_possible": [
                 ""
             ],
@@ -1698,7 +1698,7 @@
             "Description": ""
         },
         "Critical_Dodge": {
-            "majorname": "Critical Dodge",
+            "minorname": "Critical Dodge",
             "classes_possible": [
                 ""
             ],
@@ -1713,7 +1713,7 @@
             "Description": ""
         },
         "Dirge_of_Dissonance": {
-            "majorname": "Dirge of Dissonance",
+            "minorname": "Dirge of Dissonance",
             "classes_possible": [
                 ""
             ],
@@ -1726,7 +1726,7 @@
             "Description": ""
         },
         "Dispel": {
-            "majorname": "Dispel",
+            "minorname": "Dispel",
             "classes_possible": [
                 ""
             ],
@@ -1739,7 +1739,7 @@
             "Description": ""
         },
         "Emminently_Punchable": {
-            "majorname": "Emminently_Punchable",
+            "minorname": "Emminently Punchable",
             "classes_possible": [
                 ""
             ],
@@ -1754,7 +1754,7 @@
             "Description": ""
         },
         "Explosive_Trap": {
-            "majorname": "Explosive Trap",
+            "minorname": "Explosive Trap",
             "classes_possible": [
                 ""
             ],
@@ -1767,7 +1767,7 @@
             "Description": ""
         },
         "Faerie_Flames": {
-            "majorname": "Faerie Flames",
+            "minorname": "Faerie Flames",
             "classes_possible": [
                 ""
             ],
@@ -1781,7 +1781,7 @@
             "Description": ""
         },
         "Faerie_Trap": {
-            "majorname": "Faerie Trap",
+            "minorname": "Faerie Trap",
             "classes_possible": [
                 ""
             ],
@@ -1794,7 +1794,7 @@
             "Description": ""
         },
         "Finih_Him": {
-            "majorname": "Finih Him",
+            "minorname": "Finih Him",
             "classes_possible": [
                 "Knight",
                 "Frostweaver"
@@ -1809,7 +1809,7 @@
             "Description": ""
         },
         "First_Wind": {
-            "majorname": "First Wind",
+            "minorname": "First Wind",
             "classes_possible": [
                 ""
             ],
@@ -1824,7 +1824,7 @@
             "Description": ""
         },
         "Fortified_Stakes": {
-            "majorname": "Fortified Stakes",
+            "minorname": "Fortified Stakes",
             "classes_possible": [
                 ""
             ],
@@ -1838,7 +1838,7 @@
             "Description": ""
         },
         "Furious": {
-            "majorname": "Furious",
+            "minorname": "Furious",
             "classes_possible": [
                 "Champion"
             ],
@@ -1851,7 +1851,7 @@
             "Description": ""
         },
         "Glamour_Weapon": {
-            "majorname": "Glamour Weapon",
+            "minorname": "Glamour Weapon",
             "classes_possible": [
                 ""
             ],
@@ -1865,7 +1865,7 @@
             "Description": ""
         },
         "Glass_Cannon": {
-            "majorname": "Glass Cannon",
+            "minorname": "Glass Cannon",
             "classes_possible": [
                 ""
             ],
@@ -1880,7 +1880,7 @@
             "Description": ""
         },
         "Gods_Reach": {
-            "majorname": "God's Reach",
+            "minorname": "God's Reach",
             "classes_possible": [
                 "Cleric"
             ],
@@ -1893,7 +1893,7 @@
             "Description": ""
         },
         "Guardian_Rhythms": {
-            "majorname": "Guardian Rhythms",
+            "minorname": "Guardian Rhythms",
             "classes_possible": [
                 ""
             ],
@@ -1906,7 +1906,7 @@
             "Description": ""
         },
         "Heads_Up": {
-            "majorname": "Heads Up",
+            "minorname": "Heads Up",
             "classes_possible": [
                 ""
             ],
@@ -1921,7 +1921,7 @@
             "Description": ""
         },
         "Hunter": {
-            "majorname": "Hunter",
+            "minorname": "Hunter",
             "classes_possible": [
                 "Ranger"
             ],
@@ -1934,7 +1934,7 @@
             "Description": ""
         },
         "Illusory_Shield": {
-            "majorname": "Illusory Shield",
+            "minorname": "Illusory Shield",
             "classes_possible": [
                 "Cleric",
                 "Druid",
@@ -1949,7 +1949,7 @@
             "Description": ""
         },
         "Indulgence": {
-            "majorname": "Indulgence",
+            "minorname": "Indulgence",
             "classes_possible": [
                 ""
             ],
@@ -1963,7 +1963,7 @@
             "Description": ""
         },
         "Lament_of_Sadness": {
-            "majorname": "Lament of Sadness",
+            "minorname": "Lament of Sadness",
             "classes_possible": [
                 ""
             ],
@@ -1976,7 +1976,7 @@
             "Description": ""
         },
         "Last_Resort": {
-            "majorname": "Last Resort",
+            "minorname": "Last Resort",
             "classes_possible": [
                 ""
             ],
@@ -1991,7 +1991,7 @@
             "Description": ""
         },
         "Marked_for_Death": {
-            "majorname": "Marked for Death",
+            "minorname": "Marked for Death",
             "classes_possible": [
                 ""
             ],
@@ -2006,7 +2006,7 @@
             "Description": ""
         },
         "Meditation": {
-            "majorname": "Meditation",
+            "minorname": "Meditation",
             "classes_possible": [
                 ""
             ],
@@ -2019,7 +2019,7 @@
             "Description": ""
         },
         "Minor_Accompainment": {
-            "majorname": "Minor Accompainment",
+            "minorname": "Minor Accompainment",
             "classes_possible": [
                 ""
             ],
@@ -2032,7 +2032,7 @@
             "Description": ""
         },
         "Moon_Elf_Heritage": {
-            "majorname": "Moon Elf Heritage",
+            "minorname": "Moon Elf Heritage",
             "classes_possible": [
                 ""
             ],
@@ -2046,7 +2046,7 @@
             "Description": ""
         },
         "Pack_Avatar": {
-            "majorname": "Pack Avatar",
+            "minorname": "Pack Avatar",
             "classes_possible": [
                 ""
             ],
@@ -2060,7 +2060,7 @@
             "Description": ""
         },
         "Payback": {
-            "majorname": "Payback",
+            "minorname": "Payback",
             "classes_possible": [
                 ""
             ],
@@ -2077,7 +2077,7 @@
             "Description": ""
         },
         "Phantom_Armor": {
-            "majorname": "Phantom Armor",
+            "minorname": "Phantom Armor",
             "classes_possible": [
                 ""
             ],
@@ -2092,7 +2092,7 @@
             "Description": ""
         },
         "Pound_of_Flesh": {
-            "majorname": "Pound of Flesh",
+            "minorname": "Pound of Flesh",
             "classes_possible": [
                 ""
             ],
@@ -2107,7 +2107,7 @@
             "Description": ""
         },
         "Reactionary": {
-            "majorname": "Reactionary",
+            "minorname": "Reactionary",
             "classes_possible": [
                 ""
             ],
@@ -2122,7 +2122,7 @@
             "Description": ""
         },
         "Reaper": {
-            "majorname": "Reaper",
+            "minorname": "Reaper",
             "classes_possible": [
                 "Confessor"
             ],
@@ -2135,7 +2135,7 @@
             "Description": ""
         },
         "Recon": {
-            "majorname": "Recon",
+            "minorname": "Recon",
             "classes_possible": [
                 "Assassin",
                 "Duelist"
@@ -2150,7 +2150,7 @@
             "Description": ""
         },
         "Resurection": {
-            "majorname": "Resurection",
+            "minorname": "Resurection",
             "classes_possible": [
                 "Druid",
                 "Templar"
@@ -2166,7 +2166,7 @@
             "Description": ""
         },
         "Restoration_Strike": {
-            "majorname": "Restoration Strike",
+            "minorname": "Restoration Strike",
             "classes_possible": [
                 "Knight",
                 "Myrmidon"
@@ -2180,7 +2180,7 @@
             "Description": ""
         },
         "Revenge": {
-            "majorname": "Revenge",
+            "minorname": "Revenge",
             "classes_possible": [
                 ""
             ],
@@ -2194,7 +2194,7 @@
             "Description": ""
         },
         "Rune_Shield": {
-            "majorname": "Rune Shield",
+            "minorname": "Rune Shield",
             "classes_possible": [
                 "Frostweaver"
             ],
@@ -2208,7 +2208,7 @@
             "Description": ""
         },
         "Rupture_Barrier": {
-            "majorname": "Rupture Barrier",
+            "minorname": "Rupture Barrier",
             "classes_possible": [
                 ""
             ],
@@ -2223,7 +2223,7 @@
             "Description": ""
         },
         "Serrated_Trap": {
-            "majorname": "Serrated Trap",
+            "minorname": "Serrated Trap",
             "classes_possible": [
                 ""
             ],
@@ -2236,7 +2236,7 @@
             "Description": ""
         },
         "Shadow_Linger": {
-            "majorname": "Shadow Linger",
+            "minorname": "Shadow Linger",
             "classes_possible": [
                 ""
             ],
@@ -2249,7 +2249,7 @@
             "Description": ""
         },
         "Skullcracker": {
-            "majorname": "Skullcracker",
+            "minorname": "Skullcracker",
             "classes_possible": [
                 "Ranger"
             ],
@@ -2262,7 +2262,7 @@
             "Description": ""
         },
         "Song_of_Speed": {
-            "majorname": "Song of Speed",
+            "minorname": "Song of Speed",
             "classes_possible": [
                 ""
             ],
@@ -2275,7 +2275,7 @@
             "Description": ""
         },
         "Sparring": {
-            "majorname": "Sparring",
+            "minorname": "Sparring",
             "classes_possible": [
                 "Assassin",
                 "Duelist"
@@ -2292,7 +2292,7 @@
             "Description": ""
         },
         "Speedy_Retaliate": {
-            "majorname": "Speedy_Retaliate",
+            "minorname": "Speedy Retaliate",
             "classes_possible": [
                 "Champion"
             ],
@@ -2305,7 +2305,7 @@
             "Description": ""
         },
         "Spirit_Whip": {
-            "majorname": "Spirit Whip",
+            "minorname": "Spirit Whip",
             "classes_possible": [
                 "Assassin"
             ],
@@ -2320,7 +2320,7 @@
             "Description": ""
         },
         "Spreading_Flame": {
-            "majorname": "Spreading_Flame",
+            "minorname": "Spreading Flame",
             "classes_possible": [
                 "Confessor"
             ],
@@ -2333,7 +2333,7 @@
             "Description": ""
         },
         "Stayin_the_Fight": {
-            "majorname": "Stay in the Fight",
+            "minorname": "Stay in the Fight",
             "classes_possible": [
                 "Champion",
                 "Cleric",
@@ -2352,7 +2352,7 @@
             "Description": ""
         },
         "Sturdy": {
-            "majorname": "Sturdy",
+            "minorname": "Sturdy",
             "classes_possible": [
                 "Myrmidon"
             ],
@@ -2369,7 +2369,7 @@
             "Description": ""
         },
         "Sun_Elf_Heritage": {
-            "majorname": "Sun Elf Heritage",
+            "minorname": "Sun Elf Heritage",
             "classes_possible": [
                 ""
             ],
@@ -2383,7 +2383,7 @@
             "Description": ""
         },
         "Supreme_Element": {
-            "majorname": "Supreme Element",
+            "minorname": "Supreme Element",
             "classes_possible": [
                 "Druid"
             ],
@@ -2396,7 +2396,7 @@
             "Description": ""
         },
         "Take_Root": {
-            "majorname": "Take Root",
+            "minorname": "Take Root",
             "classes_possible": [
                 ""
             ],
@@ -2412,7 +2412,7 @@
             "Description": ""
         },
         "Taste_of_Poison": {
-            "majorname": "Taste of Poison",
+            "minorname": "Taste of Poison",
             "classes_possible": [
                 ""
             ],
@@ -2425,7 +2425,7 @@
             "Description": ""
         },
         "Thornshield": {
-            "majorname": "Thornshield",
+            "minorname": "Thornshield",
             "classes_possible": [
                 "Assassin",
                 "Champion",
@@ -2448,7 +2448,7 @@
             "Description": ""
         },
         "Touch_of_Rot": {
-            "majorname": "Touch of Rot",
+            "minorname": "Touch of Rot",
             "classes_possible": [
                 ""
             ],
@@ -2461,7 +2461,7 @@
             "Description": ""
         },
         "Toughness": {
-            "majorname": "Toughness",
+            "minorname": "Toughness",
             "classes_possible": [
                 "Templar"
             ],
@@ -2475,7 +2475,7 @@
             "Description": ""
         },
         "Toxic_Trap": {
-            "majorname": "Toxic Trap",
+            "minorname": "Toxic Trap",
             "classes_possible": [
                 ""
             ],
@@ -2488,7 +2488,7 @@
             "Description": ""
         },
         "Tunnel": {
-            "majorname": "Tunnel",
+            "minorname": "Tunnel",
             "classes_possible": [
                 ""
             ],
@@ -2501,7 +2501,7 @@
             "Description": ""
         },
         "Underdog": {
-            "majorname": "Underdog",
+            "minorname": "Underdog",
             "classes_possible": [
                 "Myrmidon"
             ],
@@ -2515,7 +2515,7 @@
             "Description": ""
         },
         "Weapon_Finesse": {
-            "majorname": "Weapon Finesse",
+            "minorname": "Weapon Finesse",
             "classes_possible": [
                 "Confessor"
             ],

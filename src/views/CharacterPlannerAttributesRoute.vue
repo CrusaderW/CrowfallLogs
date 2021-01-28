@@ -6,7 +6,7 @@
 import CharacterPlannerAttributes from "@/components/CharacterPlannerAttributes.vue";
 
 export default {
-  name: "Home",
+  name: "CharacterPlannerAttributes",
   components: {
     CharacterPlannerAttributes,
   },
