@@ -13,6 +13,7 @@
         </option>
       </select>
     </div>
+    <h3>{{ $store.state.counter }}</h3>
   </div>
 </template>
 
