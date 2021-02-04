@@ -13,7 +13,7 @@
         </option>
       </select>
     </div>
-    <h3>{{ finalClass }}</h3> <!-- BEST PRACTICE: don't get data directly from state but from getters -->
+    <h3>{{ finalClass }} - {{ finalRace }} - {{ finalDomain }}</h3> <!-- BEST PRACTICE: don't get data directly from state but from getters -->
   </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
     /* showClass() { // this function is there to get data from store via getter
       return this.$store.getters.finalClass; // finalClass is the getter defined in vuex store
     }, */
-    ...mapGetters('charPlanner', ['finalClass']) 
+    ...mapGetters('charPlanner', ['finalClass', 'finalRace', 'finalDomain']) 
     // Note 1: can input the getters in an array list if need more than one
     // Note 2: when you have 'namespaced' a module in the store, you need to first refer to this module ('charPlanner') and only then can you get the data
   },

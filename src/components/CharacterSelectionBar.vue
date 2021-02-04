@@ -7,7 +7,7 @@
           {{ item.classname }}
         </option>
       </select>
-      <select v-model="selectedRace">
+      <select v-model="selectedRace" @change="changeRace({racename: this.selectedRace})">
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -17,7 +17,7 @@
           {{ promotion }}
         </option>
       </select>
-      <select v-model="selectedDomain">
+      <select v-model="selectedDomain" @change="changeDomain({domainname: this.selectedDomain})">
         <option disabled value="">Choose Domain</option>
         <option v-for="domain in data.domains_list" :key="domain">
           {{ domain }}
@@ -64,7 +64,7 @@ export default {
       this.$store.dispatch("changeClass", this.selectedClass); // commit() takes the name of the mutation you want to commit, and also to payload (data to append) if there is any. 
       // BUT best practice is to use DISPATCH here, i.e. to go through actions (especialy needed if need asynchronous).
     }, */
-    ...mapActions('charPlanner', ['changeClass'])
+    ...mapActions('charPlanner', ['changeClass', 'changeRace', 'changeDomain'] )
   },
 };
 </script>
