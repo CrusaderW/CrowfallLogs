@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <nav>
-      <select v-model="selectedClass">
+      <select v-model="selectedClass" @change="changeClass({classname: this.selectedClass})">
         <option disabled value="">Choose Class</option>
         <option v-for="item in data.classes_fulldata" :key="item">
           {{ item.classname }}
@@ -30,6 +30,7 @@
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
+import {mapActions} from 'vuex';
 
 export default {
   name: "CharacterSelectionBar",
@@ -39,7 +40,7 @@ export default {
       selectedClass: "",
       selectedRace: "",
       selectedPromotion: "",
-      selectedDomain: ""
+      selectedDomain: "",
     };
   },
   computed: {
@@ -57,6 +58,13 @@ export default {
         return this.data.promotions_list;
       }
     },
+  },
+  methods: {
+    /* selectClass() {
+      this.$store.dispatch("changeClass", this.selectedClass); // commit() takes the name of the mutation you want to commit, and also to payload (data to append) if there is any. 
+      // BUT best practice is to use DISPATCH here, i.e. to go through actions (especialy needed if need asynchronous).
+    }, */
+    ...mapActions('charPlanner', ['changeClass'])
   },
 };
 </script>
