@@ -4,78 +4,24 @@
     <transition name="slide">
       <div v-if="isOpen">
         <div class="title">Disciplines</div>
-        <div>{{ tree }}</div>
-        <table>
-          <tr>
-            <td><img src="@\assets\dummy-crest.png" /></td>
-            <td>
-              <select v-model="selectedMajor">
-                <option disabled value="">Choose Major</option>
-                <option v-for="major in data.majors_list" :key="major.majorname">
-                  {{ major.majorname }}
-                </option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="@\assets\dummy-crest.png" /></td>
-            <td>
-              <select v-model="selectedMajor">
-                <option disabled value="">Choose Major</option>
-                <option v-for="major in data.majors_list" :key="major.majorname">
-                  {{ major.majorname }}
-                </option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="@\assets\dummy-crest.png" /></td>
-            <td>
-              <select v-model="selectedMinor">
-                <option disabled value="">Choose Minor</option>
-                <option v-for="minor in data.minors_list" :key="minor.minorname">
-                  {{ minor.minorname }}
-                </option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="@\assets\dummy-crest.png" /></td>
-            <td>
-              <select v-model="selectedMinor">
-                <option disabled value="">Choose Minor</option>
-                <option v-for="minor in data.minors_list" :key="minor.minorname">
-                  {{ minor.minorname }}
-                </option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="@\assets\dummy-crest.png" /></td>
-            <td>
-              <select v-model="selectedMinor">
-                <option disabled value="">Choose Minor</option>
-                <option v-for="minor in data.minors_list" :key="minor.minorname">
-                  {{ minor.minorname }}
-                </option>
-              </select>
-            </td>
-          </tr>
-        </table>
+        <CharacterPlannerDisciplinesSelection disciplineType="major" />
+        <CharacterPlannerDisciplinesSelection disciplineType="major" />
+        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
+        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
+        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
       </div>
     </transition>
   </div>
-  <CharacterPlannerDisciplinesSelection disciplineType="Major"/>
 </template>
 
 <script>
-import data from '../../data/CPD_MinorsMajors.json';
-import CharacterPlannerDisciplinesSelection from './CharacterPlannerDisciplinesSelection.vue';
+import data from "../../data/CPD_MinorsMajors.json";
+import CharacterPlannerDisciplinesSelection from "./CharacterPlannerDisciplinesSelection.vue";
 
 export default {
   name: "CharacterPlannerDisciplines",
   components: {
-    CharacterPlannerDisciplinesSelection
+    CharacterPlannerDisciplinesSelection,
   },
   data() {
     return {
@@ -83,7 +29,7 @@ export default {
       isOpen: true,
       buttonLook: ">>",
       selectedMajor: "",
-      selectedMinor: ""
+      selectedMinor: "",
     };
   },
   methods: {
