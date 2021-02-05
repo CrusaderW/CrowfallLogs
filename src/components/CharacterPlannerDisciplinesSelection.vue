@@ -6,7 +6,7 @@
       />
     </div>
     <div>
-      <select v-model="selectedMajor">
+      <select v-model="selectedDiscipline">
         <option disabled value="">Choose {{ disciplineType }}</option>
         <option v-for="discipline in data[pickList]" :key="discipline[pickKey]">
           {{ discipline[pickKey] }}
@@ -31,8 +31,7 @@ export default {
   data() {
     return {
       data,
-      selectedMajor: "",
-      selectedMinor: "",
+      selectedDiscipline: "",
     };
   },
   computed: {
