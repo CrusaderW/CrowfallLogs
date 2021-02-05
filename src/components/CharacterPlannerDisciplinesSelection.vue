@@ -30,8 +30,6 @@ export default {
   data() {
     return {
       data,
-      isOpen: true,
-      buttonLook: ">>",
       selectedMajor: "",
       selectedMinor: "",
     };
@@ -45,14 +43,6 @@ export default {
     // Note 2: when you have 'namespaced' a module in the store, you need to first refer to this module ('charPlanner') and only then can you get the data
   },
   methods: {
-    pressSlide() {
-      this.isOpen = !this.isOpen;
-      if (this.isOpen) {
-        this.buttonLook = ">>";
-      } else {
-        this.buttonLook = "<<";
-      }
-    },
   },
 };
 </script>
