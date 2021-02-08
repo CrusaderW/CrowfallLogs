@@ -4,11 +4,8 @@
     <transition name="slide">
       <div v-if="isOpen">
         <div class="title">Disciplines</div>
-        <CharacterPlannerDisciplinesSelection disciplineType="major" />
-        <CharacterPlannerDisciplinesSelection disciplineType="major" />
-        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
-        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
-        <CharacterPlannerDisciplinesSelection disciplineType="minor" />
+        <CharacterPlannerMajors />
+        <CharacterPlannerMajors />
       </div>
     </transition>
   </div>
@@ -16,12 +13,12 @@
 
 <script>
 import data from "../../data/CPD_MinorsMajors.json";
-import CharacterPlannerDisciplinesSelection from "./CharacterPlannerDisciplinesSelection.vue";
+import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
 
 export default {
   name: "CharacterPlannerDisciplines",
   components: {
-    CharacterPlannerDisciplinesSelection,
+    CharacterPlannerMajors,
   },
   data() {
     return {

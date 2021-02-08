@@ -7,13 +7,13 @@
     </div>
     <div>
       <select v-model="selectedDiscipline">
-        <option disabled value="">Choose {{ disciplineType }}</option>
-        <option v-for="discipline in data[pickList]" :key="discipline[pickKey]">
-          {{ discipline[pickKey] }}
+        <option disabled value="">Choose Major </option>
+        <option v-for="discipline in data.majors_list" :key="discipline.majorname">
+          {{ discipline.majorname }}
         </option>
       </select>
     </div>
-    <div>{{ pickList }}</div>
+    <div>{{ data.majors_list["Adjudicator"]["classes_possible"] }}</div>
     <h3>{{ finalClass }} - {{ finalRace }} - {{ finalDomain }}</h3> <!-- BEST PRACTICE: don't get data directly from state but from getters -->
   </div>
 </template>
@@ -24,10 +24,7 @@ import {mapGetters} from 'vuex'; // instead of using a computed function that on
 //we can use Mapper Helpers (in this case mapGetters) to receive getters from the store
 
 export default {
-  props: {
-    disciplineType: String,
-  },
-  name: "CharacterPlannerDisciplinesSelection",
+  name: "CharacterPlannerMajors",
   data() {
     return {
       data,
@@ -35,12 +32,6 @@ export default {
     };
   },
   computed: {
-    pickList() {
-      return this.disciplineType + "s_list";
-    },
-    pickKey() {
-      return this.disciplineType + "name";
-    },
     /* showClass() { // this function is there to get data from store via getter
       return this.$store.getters.finalClass; // finalClass is the getter defined in vuex store
     }, */
