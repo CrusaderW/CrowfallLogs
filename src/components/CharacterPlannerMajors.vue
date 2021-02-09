@@ -9,14 +9,13 @@
       <select v-model="selectedDiscipline">
         <option disabled value="">Choose Major</option>
         <option
-          v-for="discipline in data.majors_list"
-          :key="discipline.majorname"
+          v-for="discipline in getDisciplines"
+          :key="discipline"
         >
-          {{ discipline.majorname }}
+          {{ discipline }}
         </option>
       </select>
     </div>
-    <div>{{ findClasses() }}</div>
   </div>
 </template>
 
@@ -31,38 +30,90 @@ export default {
     return {
       data,
       selectedDiscipline: "",
-      filteredDisciplines: [],
+      arrayPerClass: [],
+      arrayPerRace: [],
+      arrayPerDomain: [],
     };
   },
   watch: {
     finalClass(newClass, oldClass) {
       if (newClass !== oldClass) {
-        this.filteredDisciplines = [];
+        this.arrayPerClass = [];
+        this.filterPerClass();
       }
-    }
+    },
+    finalRace(newRace, oldRace) {
+      if (newRace !== oldRace) {
+        this.arrayPerRace = [];
+        this.filterPerRace();
+      }
+    },
+    finalDomain(newDomain, oldDomain) {
+      if (newDomain !== oldDomain) {
+        this.arrayPerDomain = [];
+        this.filterPerDomain();
+      }
+    },
   },
   computed: {
-    /* testData() {
-          if(this.finalClass !== "") {
-              return this.filteredDisciplines;
-          }
-          return "Yiha";
-      }, */
+    getDisciplines() {
+      return this.arrayPerClass.concat(this.arrayPerRace, this.arrayPerDomain);
+    },
     ...mapGetters("charPlanner", ["finalClass", "finalRace", "finalDomain"]),
     // Note 1: can input the getters in an array list if need more than one
     // Note 2: when you have 'namespaced' a module in the store, you need to first refer to this module ('charPlanner') and only then can you get the data
   },
   methods: {
-    findClasses() {
+    filterPerClass() {
       if (this.finalClass !== "") {
         var discipline;
         for (discipline in this.data.majors_list) {
-          if (this.data.majors_list[discipline]["classes_possible"].indexOf(this.finalClass) >= 0) {
-            this.filteredDisciplines.push(this.data.majors_list[discipline]["majorname"]);
+          if (
+            this.data.majors_list[discipline]["classes_possible"].indexOf(
+              this.finalClass
+            ) >= 0
+          ) {
+            this.arrayPerClass.push(
+              this.data.majors_list[discipline]["majorname"]
+            );
           }
         }
       }
-      return this.filteredDisciplines;
+      return this.arrayPerClass;
+    },
+    filterPerRace() {
+      if (this.finalRace !== "") {
+        var discipline;
+        for (discipline in this.data.majors_list) {
+          if (
+            this.data.majors_list[discipline]["races_possible"].indexOf(
+              this.finalRace
+            ) >= 0
+          ) {
+            this.arrayPerRace.push(
+              this.data.majors_list[discipline]["majorname"]
+            );
+          }
+        }
+      }
+      return this.arrayPerRace;
+    },
+    filterPerDomain() {
+      if (this.finalDomain !== "") {
+        var discipline;
+        for (discipline in this.data.majors_list) {
+          if (
+            this.data.majors_list[discipline]["domains_possible"].indexOf(
+              this.finalDomain
+            ) >= 0
+          ) {
+            this.arrayPerDomain.push(
+              this.data.majors_list[discipline]["majorname"]
+            );
+          }
+        }
+      }
+      return this.arrayPerDomain;
     },
   },
 };
