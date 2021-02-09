@@ -6,6 +6,10 @@
         <div class="title">Disciplines</div>
         <CharacterPlannerMajors />
         <CharacterPlannerMajors />
+        <CharacterPlannerMinors />
+        <CharacterPlannerMinors />
+        <CharacterPlannerMinors />
+        <CharacterPlannerMinors v-if="finalRace === 'Human'" /> 
       </div>
     </transition>
   </div>
@@ -14,11 +18,14 @@
 <script>
 import data from "../../data/CPD_MinorsMajors.json";
 import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
+import CharacterPlannerMinors from "./CharacterPlannerMinors.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "CharacterPlannerDisciplines",
   components: {
     CharacterPlannerMajors,
+    CharacterPlannerMinors,
   },
   data() {
     return {
@@ -28,6 +35,9 @@ export default {
       selectedMajor: "",
       selectedMinor: "",
     };
+  },
+  computed: {
+    ...mapGetters("charPlanner", ["finalRace"]),
   },
   methods: {
     pressSlide() {
