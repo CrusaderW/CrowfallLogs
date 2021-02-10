@@ -8,10 +8,7 @@
     <div>
       <select v-model="selectedDiscipline">
         <option disabled value="">Choose Minor</option>
-        <option
-          v-for="discipline in getDisciplines"
-          :key="discipline"
-        >
+        <option v-for="discipline in finalDisciplines" :key="discipline">
           {{ discipline }}
         </option>
       </select>
@@ -23,6 +20,7 @@
 import data from "../../data/CPD_MinorsMajors.json";
 import { mapGetters } from "vuex"; // instead of using a computed function that only does: "return this.$store.getters.finalClass;"
 //we can use Mapper Helpers (in this case mapGetters) to receive getters from the store
+import {mapActions} from 'vuex';
 
 export default {
   name: "CharacterPlannerMinors",
@@ -40,18 +38,21 @@ export default {
       if (newClass !== oldClass) {
         this.arrayPerClass = [];
         this.filterPerClass();
+        this.changeFilteredDisciplines({newarray: this.getDisciplines});
       }
     },
     finalRace(newRace, oldRace) {
       if (newRace !== oldRace) {
         this.arrayPerRace = [];
         this.filterPerRace();
+        this.changeFilteredDisciplines({newarray: this.getDisciplines});
       }
     },
     finalDomain(newDomain, oldDomain) {
       if (newDomain !== oldDomain) {
         this.arrayPerDomain = [];
         this.filterPerDomain();
+        this.changeFilteredDisciplines({newarray: this.getDisciplines});
       }
     },
   },
@@ -59,11 +60,17 @@ export default {
     getDisciplines() {
       return this.arrayPerClass.concat(this.arrayPerRace, this.arrayPerDomain);
     },
-    ...mapGetters("charPlanner", ["finalClass", "finalRace", "finalDomain"]),
+    ...mapGetters("charPlanner", [
+      "finalClass",
+      "finalRace",
+      "finalDomain",
+      "finalDisciplines",
+    ]),
     // Note 1: can input the getters in an array list if need more than one
     // Note 2: when you have 'namespaced' a module in the store, you need to first refer to this module ('charPlanner') and only then can you get the data
   },
   methods: {
+    ...mapActions('charPlanner', ['changeFilteredDisciplines'] ),
     filterPerClass() {
       if (this.finalClass !== "") {
         var discipline;

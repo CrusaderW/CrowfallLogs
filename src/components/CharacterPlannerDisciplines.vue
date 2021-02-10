@@ -9,7 +9,7 @@
         <CharacterPlannerMinors />
         <CharacterPlannerMinors />
         <CharacterPlannerMinors />
-        <CharacterPlannerMinors v-if="finalRace === 'Human'" /> 
+        <CharacterPlannerMinors v-if="finalRace === 'Human' || finalRace === 'Half-Elf' " /> 
       </div>
     </transition>
   </div>

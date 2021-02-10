@@ -60,10 +60,6 @@ export default {
     },
   },
   methods: {
-    /* selectClass() {
-      this.$store.dispatch("changeClass", this.selectedClass); // commit() takes the name of the mutation you want to commit, and also to payload (data to append) if there is any. 
-      // BUT best practice is to use DISPATCH here, i.e. to go through actions (especialy needed if need asynchronous).
-    }, */
     ...mapActions('charPlanner', ['changeClass', 'changeRace', 'changeDomain'] )
   },
 };
