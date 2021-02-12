@@ -24,6 +24,7 @@
         </option>
       </select>
     </nav>
+    <div>{{checkChange}}</div>
   </div>
 </template>
 
@@ -44,6 +45,9 @@ export default {
     };
   },
   computed: {
+    checkChange() {
+      return this.$route.hash.split('_')[1];
+    },
     races_filtered() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
