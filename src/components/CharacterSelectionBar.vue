@@ -1,13 +1,19 @@
 <template>
   <div id="root">
     <nav>
-      <select v-model="selectedClass" @change="changeClass({classname: this.selectedClass})">
+      <select
+        v-model="selectedClass"
+        @change="changeClass({ classname: this.selectedClass })"
+      >
         <option disabled value="">Choose Class</option>
         <option v-for="item in data.classes_fulldata" :key="item">
           {{ item.classname }}
         </option>
       </select>
-      <select v-model="selectedRace" @change="changeRace({racename: this.selectedRace})">
+      <select
+        v-model="selectedRace"
+        @change="changeRace({ racename: this.selectedRace })"
+      >
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -17,21 +23,26 @@
           {{ promotion }}
         </option>
       </select>
-      <select v-model="selectedDomain" @change="changeDomain({domainname: this.selectedDomain})">
+      <select
+        v-model="selectedDomain"
+        @change="changeDomain({ domainname: this.selectedDomain })"
+      >
         <option disabled value="">Choose Domain</option>
         <option v-for="domain in data.domains_list" :key="domain">
           {{ domain }}
         </option>
       </select>
     </nav>
-    <div>{{checkChange}}</div>
+    <div>{{ classFromURL }}</div>
+    <div>{{ myLetter }}</div>
+    <div>{{ formattedClass() }}</div>
   </div>
 </template>
 
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
-import {mapActions} from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "CharacterSelectionBar",
@@ -45,8 +56,11 @@ export default {
     };
   },
   computed: {
-    checkChange() {
-      return this.$route.hash.split('_')[1];
+    myLetter() {
+      return this.classFromURL[0].toUpperCase();
+    },
+    classFromURL() {
+      return this.$route.hash.split("_")[1].split("");
     },
     races_filtered() {
       if (this.selectedClass !== "") {
@@ -64,7 +78,11 @@ export default {
     },
   },
   methods: {
-    ...mapActions('charPlanner', ['changeClass', 'changeRace', 'changeDomain'] )
+    formattedClass() {
+      this.classFromURL.splice(0, 1, this.myLetter);
+      return this.classFromURL.join("");
+    },
+    ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
   },
 };
 </script>
