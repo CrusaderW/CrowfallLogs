@@ -33,9 +33,10 @@
         </option>
       </select>
     </nav>
-    <div>{{ classFromURL }}</div>
-    <div>{{ myLetter }}</div>
+    <!-- <div>{{ classFromURL }}</div>
+    <div>{{ myLetter }}</div> -->
     <div>{{ formattedClass() }}</div>
+    <div>{{ selectedClass }}</div>
   </div>
 </template>
 
@@ -57,14 +58,15 @@ export default {
   },
   computed: {
     myLetter() {
-      console.log("works2");
       if (this.classFromURL == false) {
-        return "YO";
+        console.log("no class");
+        return "";
       }
+      console.log("there is a class");
+      //this.formattedClass();
       return this.classFromURL[0].toUpperCase();
     },
     classFromURL() {
-      console.log("works1");
       if (this.$route.hash != "") {
         return this.$route.hash.split("_")[1].split("");
       }
@@ -89,10 +91,10 @@ export default {
   },
   methods: {
     formattedClass() {
-      console.log("works3");
-      if (this.classFromURL == true) {
+      if (this.classFromURL != "") {
         this.classFromURL.splice(0, 1, this.myLetter);
-        return this.classFromURL.join("");
+        this.selectedClass = this.classFromURL.join("");
+        console.log("selected Class changed");
       }
     },
     ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
