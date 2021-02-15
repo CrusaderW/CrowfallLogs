@@ -57,10 +57,20 @@ export default {
   },
   computed: {
     myLetter() {
+      console.log("works2");
+      if (this.classFromURL == false) {
+        return "YO";
+      }
       return this.classFromURL[0].toUpperCase();
     },
     classFromURL() {
-      return this.$route.hash.split("_")[1].split("");
+      console.log("works1");
+      if (this.$route.hash != "") {
+        return this.$route.hash.split("_")[1].split("");
+      }
+      {
+        return "";
+      }
     },
     races_filtered() {
       if (this.selectedClass !== "") {
@@ -79,8 +89,11 @@ export default {
   },
   methods: {
     formattedClass() {
-      this.classFromURL.splice(0, 1, this.myLetter);
-      return this.classFromURL.join("");
+      console.log("works3");
+      if (this.classFromURL == true) {
+        this.classFromURL.splice(0, 1, this.myLetter);
+        return this.classFromURL.join("");
+      }
     },
     ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
   },
