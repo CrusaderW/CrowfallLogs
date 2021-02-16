@@ -33,10 +33,8 @@
         </option>
       </select>
     </nav>
-    <!-- <div>{{ classFromURL }}</div>
-    <div>{{ myLetter }}</div> -->
-    <div>{{ formattedClass() }}</div>
-    <div>{{ selectedClass }}</div>
+    <div>selectedClass: {{ selectedClass }}</div>
+    <div>ultimateClass: {{ ultimateClass }}</div>
   </div>
 </template>
 
@@ -54,7 +52,20 @@ export default {
       selectedRace: "",
       selectedPromotion: "",
       selectedDomain: "",
+      ultimateClass: "",
     };
+  },
+  watch: {
+    selectedClass(newClass, oldClass) {
+      if (newClass != oldClass) {
+        this.ultimateClassSelection();
+      }
+    },
+    classFromURL(newClass, oldClass) {
+      if (newClass != oldClass) {
+        this.ultimateClassURL();
+      }
+    }
   },
   computed: {
     myLetter() {
@@ -90,11 +101,13 @@ export default {
     },
   },
   methods: {
-    formattedClass() {
+    ultimateClassSelection() {
+      this.ultimateClass = this.selectedClass;
+    },
+    ultimateClassURL() {
       if (this.classFromURL != "") {
         this.classFromURL.splice(0, 1, this.myLetter);
-        this.selectedClass = this.classFromURL.join("");
-        console.log("selected Class changed");
+        this.ultimateClass = this.classFromURL.join("");
       }
     },
     ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
