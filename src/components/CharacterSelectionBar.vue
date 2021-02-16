@@ -1,10 +1,7 @@
 <template>
   <div id="root">
     <nav>
-      <select
-        v-model="selectedClass"
-        @change="changeClass({ classname: this.selectedClass })"
-      >
+      <select v-model="selectedClass">
         <option disabled value="">Choose Class</option>
         <option v-for="item in data.classes_fulldata" :key="item">
           {{ item.classname }}
@@ -34,14 +31,16 @@
       </select>
     </nav>
     <div>selectedClass: {{ selectedClass }}</div>
-    <div>ultimateClass: {{ ultimateClass }}</div>
+    <div>classFromURL: {{ urlClass }}</div>
+    <div>preFinalClass: {{ preFinalClass }}</div>
+    <div>finalClass: {{ finalClass }}</div>
   </div>
 </template>
 
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "CharacterSelectionBar",
@@ -52,36 +51,37 @@ export default {
       selectedRace: "",
       selectedPromotion: "",
       selectedDomain: "",
-      ultimateClass: "",
+      urlClass: "",
+      preFinalClass: "",
     };
   },
   watch: {
     selectedClass(newClass, oldClass) {
       if (newClass != oldClass) {
-        this.ultimateClassSelection();
+        this.classSelection();
+        this.changeClass({ classname: this.preFinalClass });
       }
     },
     classFromURL(newClass, oldClass) {
       if (newClass != oldClass) {
-        this.ultimateClassURL();
+        this.classURL();
+        this.changeClass({ classname: this.preFinalClass });
       }
-    }
+    },
   },
   computed: {
+    ...mapGetters("charPlanner", ["finalClass"]),
     myLetter() {
       if (this.classFromURL == false) {
-        console.log("no class");
         return "";
+      } else {
+        return this.classFromURL[0].toUpperCase();
       }
-      console.log("there is a class");
-      //this.formattedClass();
-      return this.classFromURL[0].toUpperCase();
     },
     classFromURL() {
       if (this.$route.hash != "") {
         return this.$route.hash.split("_")[1].split("");
-      }
-      {
+      } else {
         return "";
       }
     },
@@ -101,13 +101,16 @@ export default {
     },
   },
   methods: {
-    ultimateClassSelection() {
-      this.ultimateClass = this.selectedClass;
+    classSelection() {
+      this.preFinalClass = this.selectedClass;
     },
-    ultimateClassURL() {
+    classURL() {
       if (this.classFromURL != "") {
         this.classFromURL.splice(0, 1, this.myLetter);
-        this.ultimateClass = this.classFromURL.join("");
+        this.urlClass = this.classFromURL.join("");
+        this.preFinalClass = this.urlClass;
+      } else {
+        this.urlClass = "";
       }
     },
     ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
