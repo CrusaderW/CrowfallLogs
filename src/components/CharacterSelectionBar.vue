@@ -39,9 +39,18 @@
 </template>
 
 
+
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 import { mapActions, mapGetters } from "vuex";
+
+/* TODO: 
+  - clear everything on reload
+  - clear finalClass when move back / forth to page
+  - refactoring session with help?
+  - quick design improvement
+  - better design with Tailwind CSS
+ */
 
 export default {
   name: "CharacterSelectionBar",
