@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <nav>
-      <select v-model="selectedClass">
+      <select v-model="selectedClass" @click="classSelection()">
         <option disabled value="">Choose Class</option>
         <option v-for="item in data.classes_fulldata" :key="item">
           {{ item.classname }}
@@ -31,9 +31,10 @@
       </select>
     </nav>
     <div>selectedClass: {{ selectedClass }}</div>
-    <div>classFromURL: {{ urlClass }}</div>
+    <div>urlClass: {{ urlClass }}</div>
     <div>preFinalClass: {{ preFinalClass }}</div>
     <div>finalClass: {{ finalClass }}</div>
+    <!-- <div>{{ newURL() }}</div> -->
   </div>
 </template>
 
@@ -56,18 +57,13 @@ export default {
     };
   },
   watch: {
-    selectedClass(newClass, oldClass) {
-      if (newClass != oldClass) {
-        this.classSelection();
-        this.changeClass({ classname: this.preFinalClass });
-      }
-    },
-    classFromURL(newClass, oldClass) {
+     classFromURL(newClass, oldClass) {
       if (newClass != oldClass) {
         this.classURL();
+        this.selectedClass = this.urlClass;
         this.changeClass({ classname: this.preFinalClass });
       }
-    },
+    }, 
   },
   computed: {
     ...mapGetters("charPlanner", ["finalClass"]),
@@ -101,16 +97,44 @@ export default {
     },
   },
   methods: {
+    newURL() {
+      var urlArray = [];
+      var smallClass = "";
+      urlArray = this.$route.fullPath.split("_");
+      smallClass = this.lowerWord(this.selectedClass);
+      urlArray.splice(2, 1, smallClass);
+      return urlArray.join("_");
+    },
     classSelection() {
-      this.preFinalClass = this.selectedClass;
+      if (this.selectedClass != this.urlClass) {
+        this.preFinalClass = this.selectedClass;
+        this.changeClass({ classname: this.preFinalClass });
+        this.$router.push(this.newURL()); // TEST
+      }
     },
     classURL() {
       if (this.classFromURL != "") {
+        // need if here because .splice() will fail if array is empty
         this.classFromURL.splice(0, 1, this.myLetter);
         this.urlClass = this.classFromURL.join("");
-        this.preFinalClass = this.urlClass;
+        if (this.urlClass != this.selectedClass) {
+          this.preFinalClass = this.urlClass;
+        }
       } else {
         this.urlClass = "";
+      }
+    },
+    lowerWord(word) {
+      if (word) {
+        // need if here because .spli("") will fail if array is empty
+        var wordArray = []; // LOCAL VARs ARE CALLED WITHOUT ".THIS"
+        var firstLetter = "";
+        wordArray = word.split(""); // LOCAL VARIABLE, DON'T PUT "THIS." here!
+        firstLetter = wordArray[0].toLowerCase();
+        wordArray.splice(0, 1, firstLetter);
+        return wordArray.join("");
+      } else {
+        ("");
       }
     },
     ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
