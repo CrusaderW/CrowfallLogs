@@ -34,7 +34,9 @@
     <div>urlClass: {{ urlClass }}</div>
     <div>preFinalClass: {{ preFinalClass }}</div>
     <div>finalClass: {{ finalClass }}</div>
-    <!-- <div>{{ newURL() }}</div> -->
+    <div>selectedRace: {{ selectedRace }}</div>
+    <div>selectedPromotion: {{ selectedPromotion }}</div>
+    <div>selectedDomain: {{ selectedDomain }}</div>
   </div>
 </template>
 
@@ -47,6 +49,7 @@ import { mapActions, mapGetters } from "vuex";
 /* TODO: 
   - clear everything on reload
   - clear finalClass when move back / forth to page
+  - check query logic (not entirely clean)
   - refactoring session with help?
   - quick design improvement
   - better design with Tailwind CSS
@@ -58,9 +61,9 @@ export default {
     return {
       data,
       selectedClass: "",
-      selectedRace: "",
-      selectedPromotion: "",
-      selectedDomain: "",
+      selectedRace: this.$route.query.race || "",
+      selectedPromotion: this.$route.query.promotion || "",
+      selectedDomain: this.$route.query.domain || "",
       urlClass: "",
       preFinalClass: "",
     };
@@ -72,6 +75,24 @@ export default {
         this.selectedClass = this.urlClass;
         this.changeClass({ classname: this.preFinalClass });
       }
+    },
+    selectedRace() {
+      this.$router.replace({
+        ...this.$route,
+        query: { ...this.$route.query, race: this.selectedRace || undefined },
+      });
+    },
+    selectedPromotion() {
+      this.$router.replace({
+        ...this.$route,
+        query: { ...this.$route.query, promotion: this.selectedPromotion || undefined  },
+      });
+    },
+    selectedDomain() {
+      this.$router.replace({
+        ...this.$route,
+        query: { ...this.$route.query, domain: this.selectedDomain || undefined  },
+      });
     },
   },
   computed: {
