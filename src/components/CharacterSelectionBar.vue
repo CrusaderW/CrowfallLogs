@@ -34,6 +34,7 @@
     <div>urlClass: {{ urlClass }}</div>
     <div>preFinalClass: {{ preFinalClass }}</div>
     <div>finalClass: {{ finalClass }}</div>
+    <div>{{ $route.params }}</div>
     <!-- <div>{{ newURL() }}</div> -->
   </div>
 </template>
@@ -66,13 +67,13 @@ export default {
     };
   },
   watch: {
-     classFromURL(newClass, oldClass) {
+    classFromURL(newClass, oldClass) {
       if (newClass != oldClass) {
         this.classURL();
         this.selectedClass = this.urlClass;
         this.changeClass({ classname: this.preFinalClass });
       }
-    }, 
+    },
   },
   computed: {
     ...mapGetters("charPlanner", ["finalClass"]),
