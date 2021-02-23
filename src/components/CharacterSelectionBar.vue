@@ -34,7 +34,6 @@
     <div>urlClass: {{ urlClass }}</div>
     <div>preFinalClass: {{ preFinalClass }}</div>
     <div>finalClass: {{ finalClass }}</div>
-    <div>{{ $route.params }}</div>
     <!-- <div>{{ newURL() }}</div> -->
   </div>
 </template>

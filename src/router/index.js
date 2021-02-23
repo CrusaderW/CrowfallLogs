@@ -33,11 +33,6 @@ const routes = [
     path: "/character_planner",
     name: "CharacterPlannerRoute",
     component: () => import('../views/CharacterPlannerRoute.vue')
-  },
-  {
-    path: "/character_planner/:activeSelection",
-    name: "CharacterPlannerActiveSelection",
-    component: () => import('../components/CharacterPlanner.vue')
   }
 ]
 
