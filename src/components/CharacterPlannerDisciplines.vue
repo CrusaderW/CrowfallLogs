@@ -4,12 +4,14 @@
     <transition name="slide">
       <div v-if="isOpen">
         <div class="title">Disciplines</div>
-        <CharacterPlannerMajors />
-        <CharacterPlannerMajors />
+        <CharacterPlannerMajors queryname="major1" />
+        <CharacterPlannerMajors queryname="major2" />
         <CharacterPlannerMinors />
         <CharacterPlannerMinors />
         <CharacterPlannerMinors />
-        <CharacterPlannerMinors v-if="finalRace === 'Human' || finalRace === 'Half-Elf' " /> 
+        <CharacterPlannerMinors
+          v-if="finalRace === 'Human' || finalRace === 'Half-Elf'"
+        />
       </div>
     </transition>
   </div>

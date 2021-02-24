@@ -8,10 +8,7 @@
     <div>
       <select v-model="selectedDiscipline">
         <option disabled value="">Choose Major</option>
-        <option
-          v-for="discipline in getDisciplines"
-          :key="discipline"
-        >
+        <option v-for="discipline in getDisciplines" :key="discipline">
           {{ discipline }}
         </option>
       </select>
@@ -26,16 +23,26 @@ import { mapGetters } from "vuex"; // instead of using a computed function that 
 
 export default {
   name: "CharacterPlannerMajors",
+  props: ["queryname"],
   data() {
     return {
       data,
-      selectedDiscipline: "",
+      selectedDiscipline: this.$route.query[this.queryname] || "", // ? forces selectedDiscipline to take the value of the query when there?
       arrayPerClass: [],
       arrayPerRace: [],
       arrayPerDomain: [],
     };
   },
   watch: {
+    selectedDiscipline() {
+      this.$router.replace({
+        ...this.$route,
+        query: {
+          ...this.$route.query,
+          [this.queryname]: this.selectedDiscipline || undefined,
+        },
+      });
+    },
     finalClass(newClass, oldClass) {
       if (newClass !== oldClass) {
         this.arrayPerClass = [];
