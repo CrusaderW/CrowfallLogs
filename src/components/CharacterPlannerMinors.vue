@@ -24,16 +24,26 @@ import {mapActions} from 'vuex';
 
 export default {
   name: "CharacterPlannerMinors",
+  props: ["queryname"],
   data() {
     return {
       data,
-      selectedDiscipline: "",
+      selectedDiscipline: this.$route.query[this.queryname] || "",
       arrayPerClass: [],
       arrayPerRace: [],
       arrayPerDomain: [],
     };
   },
   watch: {
+    selectedDiscipline() {  
+      this.$router.replace({
+        ...this.$route,
+        query: {
+          ...this.$route.query,
+          [this.queryname]: this.selectedDiscipline || undefined
+        }
+      })
+    },
     finalClass(newClass, oldClass) {
       if (newClass !== oldClass) {
         this.arrayPerClass = [];

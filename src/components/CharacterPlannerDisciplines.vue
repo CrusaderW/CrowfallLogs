@@ -6,10 +6,11 @@
         <div class="title">Disciplines</div>
         <CharacterPlannerMajors queryname="major1" />
         <CharacterPlannerMajors queryname="major2" />
-        <CharacterPlannerMinors />
-        <CharacterPlannerMinors />
-        <CharacterPlannerMinors />
+        <CharacterPlannerMinors queryname="minor1" />
+        <CharacterPlannerMinors queryname="minor2" />
+        <CharacterPlannerMinors queryname="minor3" />
         <CharacterPlannerMinors
+          queryname="minor4"
           v-if="finalRace === 'Human' || finalRace === 'Half-Elf'"
         />
       </div>
