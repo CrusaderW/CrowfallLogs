@@ -7,10 +7,7 @@
           {{ item.classname }}
         </option>
       </select>
-      <select
-        v-model="selectedRace"
-        @change="changeRace({ racename: this.selectedRace })"
-      >
+      <select v-model="selectedRace" @change="raceSelection()">
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -35,8 +32,7 @@
     <div>preFinalClass: {{ preFinalClass }}</div>
     <div>finalClass: {{ finalClass }}</div>
     <div>selectedRace: {{ selectedRace }}</div>
-    <div>selectedPromotion: {{ selectedPromotion }}</div>
-    <div>selectedDomain: {{ selectedDomain }}</div>
+    <div>finalRace: {{ finalRace }}</div>
   </div>
 </template>
 
@@ -47,10 +43,9 @@ import data from "../../data/CPSB_ClassesRacesPromotions.json";
 import { mapActions, mapGetters } from "vuex";
 
 /* TODO: 
-  - clear everything on reload
-  - clear finalClass when move back / forth to page
-  - check query logic (not entirely clean)
-  - refactoring session with help?
+  - clear everything on reload // NOOO DON'T !!! need to be able to rebuild when get link!
+    - => INSTEAD = make a button to RESTART
+  - refactoring session with help? YAY, SOON!
   - quick design improvement
   - better design with Tailwind CSS
  */
@@ -67,6 +62,9 @@ export default {
       urlClass: "",
       preFinalClass: "",
     };
+  },
+  mounted() {
+    this.setRaceToQuery();
   },
   watch: {
     classFromURL(newClass, oldClass) {
@@ -85,18 +83,24 @@ export default {
     selectedPromotion() {
       this.$router.replace({
         ...this.$route,
-        query: { ...this.$route.query, promotion: this.selectedPromotion || undefined  },
+        query: {
+          ...this.$route.query,
+          promotion: this.selectedPromotion || undefined,
+        },
       });
     },
     selectedDomain() {
       this.$router.replace({
         ...this.$route,
-        query: { ...this.$route.query, domain: this.selectedDomain || undefined  },
+        query: {
+          ...this.$route.query,
+          domain: this.selectedDomain || undefined,
+        },
       });
     },
   },
   computed: {
-    ...mapGetters("charPlanner", ["finalClass"]),
+    ...mapGetters("charPlanner", ["finalClass", "finalRace"]),
     myLetter() {
       if (this.classFromURL == false) {
         return "";
@@ -134,6 +138,12 @@ export default {
       smallClass = this.lowerWord(this.selectedClass);
       urlArray.splice(2, 1, smallClass);
       return urlArray.join("_");
+    },
+    setRaceToQuery() {
+      this.changeRace({ racename: this.$route.query.race });
+    },
+    raceSelection() {
+      this.changeRace({ racename: this.selectedRace });
     },
     classSelection() {
       if (this.selectedClass != this.urlClass) {
