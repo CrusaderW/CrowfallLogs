@@ -1,6 +1,5 @@
 <template>
   <div id="root">
-    I'm the TALENTS part!
     <div class="talent-container">
       <cac-talent-container></cac-talent-container>
       <!-- contact Aedius (CAC) - can I communicate with this subcomponent to choose a class -->

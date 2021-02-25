@@ -1,6 +1,5 @@
 <template>
   <div id="root">
-    <div class="instruct">PLEASE SELECT YOUR CLASS, RACE AND PROMOTION.</div>
     <div class="overall">
       <div class="attributes">
       <CharacterPlannerAttributes />
@@ -36,11 +35,6 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: pink;
-  padding: 0.5em;
-  margin: 0.5em;
-}
-.instruct {
-  background-color: cadetblue;
   padding: 0.5em;
   margin: 0.5em;
 }

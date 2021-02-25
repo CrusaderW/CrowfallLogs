@@ -27,24 +27,15 @@
         </option>
       </select>
     </nav>
-    <div>selectedClass: {{ selectedClass }}</div>
-    <div>urlClass: {{ urlClass }}</div>
-    <div>preFinalClass: {{ preFinalClass }}</div>
-    <div>finalClass: {{ finalClass }}</div>
-    <div>selectedRace: {{ selectedRace }}</div>
-    <div>finalRace: {{ finalRace }}</div>
   </div>
 </template>
-
-
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 import { mapActions, mapGetters } from "vuex";
 
 /* TODO: 
-  - clear everything on reload // NOOO DON'T !!! need to be able to rebuild when get link!
-    - => INSTEAD = make a button to RESTART
+  - make a button to RESTART
   - refactoring session with help? YAY, SOON!
   - quick design improvement
   - better design with Tailwind CSS

@@ -30,7 +30,6 @@
       </div>
     </transition>
     <button @click="pressSlide()">{{ buttonLook }}</button>
-    <div>strength: {{ strAttribute }}</div>
   </div>
 </template>
 
