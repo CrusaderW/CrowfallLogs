@@ -22,6 +22,6 @@ export default {
 
 <style scoped>
 #root {
-  background-color: bisque;
+  background-color: none;
 }
 </style> 

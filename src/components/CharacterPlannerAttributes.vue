@@ -2,7 +2,7 @@
   <div id="root1">
     <transition name="slide">
       <div v-if="isOpen">
-        <div class="title">Attributes</div>
+        <div class="title">ATTRIBUTES</div>
         <table>
           <tr>
             <td>STR</td>
@@ -111,8 +111,8 @@ export default {
 <style scoped>
 #root1 {
   display: flex;
-  background-color: saddlebrown;
-  color: white;
+  background-color: none;
+  /* color: white; */
   flex-basis: 12em;
   overflow: hidden;
 }
@@ -125,11 +125,11 @@ export default {
   transform: translate(-100%, 0);
 }
 .title {
-  background-color: chocolate;
+  background-color: none;
   padding: 0.5em;
 }
 input {
-  background-color: crimson;
+  background-color: lightgrey;
   max-width: 4em;
 }
 :-ms-input-placeholder {
@@ -139,7 +139,10 @@ table {
   padding: 0.5em;
 }
 button {
-  background-color: orange;
+  background-color: lightgrey;
   flex-basis: 3em;
+}
+td {
+  padding: 0.5em;
 }
 </style> 

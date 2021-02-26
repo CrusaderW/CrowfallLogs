@@ -21,10 +21,10 @@ export default {
 
 <style scoped>
 #root {
-  background-color: rgb(61, 43, 30);
+  background-color: grey;
   color: white;
 }
 .talent-container {
-  background-color: burlywood;
+  background-color: none;
 }
 </style> 

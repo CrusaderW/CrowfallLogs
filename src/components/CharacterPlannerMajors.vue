@@ -131,12 +131,13 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: blue;
+  background-color: none;
   color: white;
   flex-basis: 12em;
   overflow: hidden;
 }
 img {
   max-width: 2em;
+  padding:0.5em;
 }
 </style> 

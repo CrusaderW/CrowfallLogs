@@ -179,7 +179,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: none;
   padding: 0.5em;
   margin: 0.5em;
 }

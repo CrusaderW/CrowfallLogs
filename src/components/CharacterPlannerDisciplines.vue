@@ -3,7 +3,7 @@
     <button @click="pressSlide()">{{ buttonLook }}</button>
     <transition name="slide">
       <div v-if="isOpen">
-        <div class="title">Disciplines</div>
+        <div class="title">DISCIPLINES</div>
         <CharacterPlannerMajors queryname="major1" />
         <CharacterPlannerMajors queryname="major2" />
         <CharacterPlannerMinors queryname="minor1" />
@@ -58,8 +58,8 @@ export default {
 <style scoped>
 #root2 {
   display: flex;
-  background-color: saddlebrown;
-  color: white;
+  background-color: none;
+  color: black;
   flex-basis: 12em;
   overflow: hidden;
 }
@@ -72,18 +72,17 @@ export default {
   transform: translate(100%, 0);
 }
 .title {
-  background-color: chocolate;
+  background-color: none;
   padding: 0.5em;
 }
 input {
-  background-color: crimson;
   max-width: 4em;
 }
 table {
   padding: 0.5em;
 }
 button {
-  background-color: orange;
+  background-color: lightgrey;
   flex-basis: 3em;
 }
 .discipline {

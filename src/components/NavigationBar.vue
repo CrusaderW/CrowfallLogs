@@ -31,7 +31,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: none;
 }
 nav ul {
   display: flex;
@@ -60,7 +60,7 @@ nav img {
 .playername {
   display: block;
   justify-content: flex-start;
-  background-color: hotpink;
+  background-color: none;
   padding: 0.5em;
   margin: 0.5em;
 }

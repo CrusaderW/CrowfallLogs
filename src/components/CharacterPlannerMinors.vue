@@ -5,7 +5,7 @@
         src="@/assets/pic/Minor_Disciplines/Icons/Icon_Disc_Minor_Blank.png"
       />
     </div>
-    <div>
+    <div class="selection">
       <select v-model="selectedDiscipline">
         <option disabled value="">Choose Minor</option>
         <option v-for="discipline in finalDisciplines" :key="discipline">
@@ -141,12 +141,15 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: blue;
+  background-color: none;
   color: white;
   flex-basis: 12em;
   overflow: hidden;
 }
 img {
   max-width: 2em;
+}
+.selection1{
+  flex-basis: 25em;
 }
 </style> 

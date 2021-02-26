@@ -34,7 +34,7 @@ export default {
 #root {
   display: flex;
   flex-direction: column;
-  background-color: pink;
+  background-color: none;
   padding: 0.5em;
   margin: 0.5em;
 }
@@ -43,9 +43,9 @@ export default {
   justify-content: space-between;
 }
 .attributes {
-  background-color: rgb(58, 36, 20);
+  background-color: none;
 }
 .disciplines {
-  background-color: rgb(58, 36, 20);
+  background-color: none;
 }
 </style> 
