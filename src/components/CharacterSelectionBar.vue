@@ -35,9 +35,10 @@ import data from "../../data/CPSB_ClassesRacesPromotions.json";
 import { mapActions, mapGetters } from "vuex";
 
 /* TODO: 
+  - bug with discipline selection when sharing link: because asynchronous?
   - make a button to RESTART
   - refactoring session with help? YAY, SOON!
-  - quick design improvement
+  - quick design improvement: not all divs separate color! XD
   - better design with Tailwind CSS
  */
 
