@@ -1,14 +1,14 @@
 <template>
   <div id="root">
     <nav>
-      <div class="playername">CRUSADERW</div>
+      <div class="playername">CROWFALL CHARACTER PLANNER</div>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Tools</a></li>
+        <!-- <li><a href="/">Home</a></li>
+        <li><a href="/">Tools</a></li> -->
         <li><a href="https://crusaderw.com" target="_blank">Guides</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Privacy</a></li>
-        <li><button>Sign Up</button></li>
+        <li><a href="https://crusaderw.com/about-me/" target="_blank">About</a></li>
+        <li><a href="https://crusaderw.com/datenschutzerklaerung/" target="_blank">Privacy</a></li>
+        <!-- <li><button>Sign Up</button></li> -->
       </ul>
     </nav>
   </div>
