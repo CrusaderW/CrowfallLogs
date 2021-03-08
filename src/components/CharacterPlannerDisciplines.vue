@@ -4,13 +4,34 @@
     <transition name="slide">
       <div v-if="isOpen">
         <div class="title">DISCIPLINES</div>
-        <CharacterPlannerMajors queryname="major1" />
-        <CharacterPlannerMajors queryname="major2" />
-        <CharacterPlannerMinors queryname="minor1" />
-        <CharacterPlannerMinors queryname="minor2" />
-        <CharacterPlannerMinors queryname="minor3" />
+
+        <CharacterPlannerMajorsNew
+          v-model="majorChoice1"
+          :options="majorOptions"
+        />
+        <CharacterPlannerMajorsNew
+          v-model="majorChoice2"
+          :options="majorOptions"
+        />
+
+        <!-- <CharacterPlannerMajors queryname="major1" /> -->
+        <!-- <CharacterPlannerMajors queryname="major2" /> -->
+
         <CharacterPlannerMinors
-          queryname="minor4"
+          v-model="minorChoice1"
+          :options="minorOptions"
+        />
+        <CharacterPlannerMinors
+          v-model="minorChoice2"
+          :options="minorOptions"
+        />
+        <CharacterPlannerMinors
+          v-model="minorChoice3"
+          :options="minorOptions"
+        />
+        <CharacterPlannerMinors
+          v-model="minorChoice4"
+          :options="minorOptions"
           v-if="finalRace === 'Human' || finalRace === 'Half-Elf'"
         />
       </div>
@@ -20,14 +41,16 @@
 
 <script>
 import data from "../../data/CPD_MinorsMajors.json";
-import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
+import CharacterPlannerMajorsNew from "./CharacterPlannerMajorsNew.vue";
+//import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
 import CharacterPlannerMinors from "./CharacterPlannerMinors.vue";
-import { mapGetters } from "vuex";
+// import { mapGetters } from "vuex";
 
 export default {
   name: "CharacterPlannerDisciplines",
   components: {
-    CharacterPlannerMajors,
+    CharacterPlannerMajorsNew,
+    //CharacterPlannerMajors,
     CharacterPlannerMinors,
   },
   data() {
@@ -37,11 +60,79 @@ export default {
       buttonLook: ">>",
       selectedMajor: "",
       selectedMinor: "",
+
+      // Sketching out refactored component
+      majorChoice1: this.$route.query.major1 || "",
+      majorChoice2: this.$route.query.major2 || "",
+
+      // Adding minor component in same style
+      minorChoice1: this.$route.query.minor1 || "",
+      minorChoice2: this.$route.query.minor2 || "",
+      minorChoice3: this.$route.query.minor3 || "",
+      minorChoice4: this.$route.query.minor4 || "",
     };
   },
   computed: {
-    ...mapGetters("charPlanner", ["finalRace"]),
+    // ...mapGetters("charPlanner", ['finalDomain', "finalRace", 'finalClass']),
+
+    finalClass() {
+      return this.$route.hash ? this.$route.hash.split("_")[1].split("") : "";
+    },
+    finalDomain() {
+      return this.$route.query.domain;
+    },
+    finalRace() {
+      return this.$route.query.race;
+    },
+
+    majorOptions() {
+      const options = Object.values(this.data.majors_list)
+        .filter(
+          (m) =>
+            (this.finalClass && m.classes_possible.includes(this.finalClass)) ||
+            (this.finalDomain &&
+              m.domains_possible.includes(this.finalDomain)) ||
+            (this.finalRace && m.races_possible.includes(this.finalRace))
+        )
+        .map((m) => m.majorname);
+      return options;
+    },
+
+    minorOptions() {
+      const options = Object.values(this.data.minors_list)
+        .filter(
+          (m) =>
+            (this.finalClass && m.classes_possible.includes(this.finalClass)) ||
+            (this.finalDomain &&
+              m.domains_possible.includes(this.finalDomain)) ||
+            (this.finalRace && m.races_possible.includes(this.finalRace))
+        )
+        .map((m) => m.minorname);
+      return options;
+    },
   },
+
+  watch: {
+    majorChoice1(choice) {
+      this.setQuery("major1", choice);
+    },
+    majorChoice2(choice) {
+      this.setQuery("major2", choice);
+    },
+    minorChoice1(choice) {
+      this.setQuery("minor1", choice);
+    },
+    minorChoice2(choice) {
+      this.setQuery("minor2", choice);
+    },
+    minorChoice3(choice) {
+      this.setQuery("minor3", choice);
+    },
+    minorChoice4(choice) {
+      this.setQuery("minor4", choice);
+    },
+  },
+
   methods: {
     pressSlide() {
       this.isOpen = !this.isOpen;
@@ -50,6 +141,16 @@ export default {
       } else {
         this.buttonLook = "<<";
       }
+    },
+
+    setQuery(key, value) {
+      this.$router.replace({
+        ...this.$route,
+        query: {
+          ...this.$route.query,
+          [key]: value || undefined,
+        },
+      });
     },
   },
 };

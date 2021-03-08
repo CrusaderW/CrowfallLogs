@@ -2,12 +2,12 @@
   <div id="root">
     <div>
       <img
-        src="@/assets/pic/Minor_Disciplines/Icons/Icon_Disc_Minor_Blank.png"
+        src="@/assets/pic/Major_Disciplines/Icons/Icon_Disc_Major_Blank.png"
       />
     </div>
     <div>
       <select v-model="internalSelection">
-        <option disabled value="">Choose Minor</option>
+        <option disabled value="">Choose Major</option>
         <option v-for="option in options" :key="option">
           {{ option }}
         </option>
@@ -17,9 +17,7 @@
 </template>
 
 <script>
-
 export default {
-  name: "CharacterPlannerMinors",
   props: {
     options: {
       type: Array,
@@ -30,17 +28,19 @@ export default {
       required: true,
     },
   },
+
   data() {
     return {
       internalSelection: this.modelValue,
-    };
+    }
   },
+
   watch: {
     internalSelection() {
       this.$emit('update:modelValue', this.internalSelection)
     },
   },
-};
+}
 </script>
 
 <style scoped>
