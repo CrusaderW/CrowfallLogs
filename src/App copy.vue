@@ -1,19 +1,25 @@
 <template>
   <CampaignOverview />
   <LeaderBoard />
+  <CharacterPlanner />
+  <NavigationBar />
 </template>
 
 <script>
-import CampaignOverview from './components/CampaignOverview.vue'
-import LeaderBoard from './components/LeaderBoard.vue'
+import CampaignOverview from "./components/CampaignOverview.vue";
+import LeaderBoard from "./components/LeaderBoard.vue";
+import CharacterPlanner from "./components/CharacterPlanner.vue";
+import NavigationBar from "./components/NavigationBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CampaignOverview,
-    LeaderBoard
-  }
-}
+    LeaderBoard,
+    CharacterPlanner,
+    NavigationBar,
+  },
+};
 </script>
 
 <style>

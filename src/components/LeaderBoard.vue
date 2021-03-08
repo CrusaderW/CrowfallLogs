@@ -20,12 +20,13 @@
             <td class="crafting">{{ scores.Crafting }}</td>
         </tr>
     </table>
+    <p> this is a test </p>
 
   </div>
 </template>
 
 <script>
-import data from '../../data/LB_PlayerScores.json'
+import data from '../../data/LB_PlayerScores.json';
 
 export default {
   name: "LeaderBoard",
