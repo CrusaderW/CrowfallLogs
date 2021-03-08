@@ -5,17 +5,14 @@
       <div v-if="isOpen">
         <div class="title">DISCIPLINES</div>
 
-        <CharacterPlannerMajorsNew
+        <CharacterPlannerMajors
           v-model="majorChoice1"
           :options="majorOptions"
         />
-        <CharacterPlannerMajorsNew
+        <CharacterPlannerMajors
           v-model="majorChoice2"
           :options="majorOptions"
         />
-
-        <!-- <CharacterPlannerMajors queryname="major1" /> -->
-        <!-- <CharacterPlannerMajors queryname="major2" /> -->
 
         <CharacterPlannerMinors
           v-model="minorChoice1"
@@ -41,16 +38,13 @@
 
 <script>
 import data from "../../data/CPD_MinorsMajors.json";
-import CharacterPlannerMajorsNew from "./CharacterPlannerMajorsNew.vue";
-//import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
+import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
 import CharacterPlannerMinors from "./CharacterPlannerMinors.vue";
-// import { mapGetters } from "vuex";
 
 export default {
   name: "CharacterPlannerDisciplines",
   components: {
-    CharacterPlannerMajorsNew,
-    //CharacterPlannerMajors,
+    CharacterPlannerMajors,
     CharacterPlannerMinors,
   },
   data() {
@@ -73,8 +67,6 @@ export default {
     };
   },
   computed: {
-    // ...mapGetters("charPlanner", ['finalDomain', "finalRace", 'finalClass']),
-
     finalClass() {
       return this.$route.hash ? this.$route.hash.split("_")[1].split("") : "";
     },
