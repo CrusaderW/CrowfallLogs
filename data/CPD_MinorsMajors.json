@@ -1339,13 +1339,13 @@
         "Thorny_Warrior": {
             "majorname": "Thorny Warrior",
             "classes_possible": [
-                "Ranger",
+                "Ranger"
             ],
             "domains_possible": [
                 ""
             ],
             "races_possible": [
-                "Human",
+                "Human"
             ],
             "Description": ""
         },
