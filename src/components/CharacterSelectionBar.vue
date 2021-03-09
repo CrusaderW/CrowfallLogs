@@ -26,6 +26,10 @@
           {{ domain }}
         </option>
       </select>
+      <button>
+        <router-link to="/">Reset</router-link> <!-- TODO: problem: need proper reset, MOST PROBABLY solved when Selection Bar clean -->
+      </button>
+      <router-view /> <!-- need router-view to see the router-link -->
     </nav>
   </div>
 </template>
@@ -182,6 +186,9 @@ nav {
   background-color: none;
   padding: 0.5em;
   margin: 0.5em;
+}
+a {
+  color: black;
 }
 select {
   padding: 0.5em;
