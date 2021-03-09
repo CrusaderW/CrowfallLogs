@@ -7,7 +7,7 @@
           {{ item.classname }}
         </option>
       </select>
-      <select v-model="selectedRace" @change="raceSelection()">
+      <select v-model="selectedRace" >
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -55,9 +55,9 @@ export default {
       preFinalClass: "",
     };
   },
-  mounted() {
+  /* mounted() {
     this.setRaceToQuery();
-  },
+  }, */
   watch: {
     classFromURL(newClass, oldClass) {
       if (newClass != oldClass) {
@@ -131,12 +131,12 @@ export default {
       urlArray.splice(2, 1, smallClass);
       return urlArray.join("_");
     },
-    setRaceToQuery() {
+    /* setRaceToQuery() {
       this.changeRace({ racename: this.$route.query.race });
-    },
-    raceSelection() {
+    }, */
+    /* raceSelection() {
       this.changeRace({ racename: this.selectedRace });
-    },
+    }, */
     classSelection() {
       if (this.selectedClass != this.urlClass) {
         this.preFinalClass = this.selectedClass;
