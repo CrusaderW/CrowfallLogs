@@ -7,7 +7,7 @@
           {{ item.classname }}
         </option>
       </select>
-      <select v-model="selectedRace" >
+      <select v-model="selectedRace">
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -17,10 +17,7 @@
           {{ promotion }}
         </option>
       </select>
-      <select
-        v-model="selectedDomain"
-        @change="changeDomain({ domainname: this.selectedDomain })"
-      >
+      <select v-model="selectedDomain">
         <option disabled value="">Choose Domain</option>
         <option v-for="domain in data.domains_list" :key="domain">
           {{ domain }}
@@ -33,14 +30,6 @@
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 import { mapActions, mapGetters } from "vuex";
-
-/* TODO: 
-  - bug with discipline selection when sharing link: because asynchronous?
-  - make a button to RESTART
-  - refactoring session with help? YAY, SOON!
-  - quick design improvement: not all divs separate color! XD
-  - better design with Tailwind CSS
- */
 
 export default {
   name: "CharacterSelectionBar",
@@ -55,9 +44,6 @@ export default {
       preFinalClass: "",
     };
   },
-  /* mounted() {
-    this.setRaceToQuery();
-  }, */
   watch: {
     classFromURL(newClass, oldClass) {
       if (newClass != oldClass) {
@@ -92,7 +78,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters("charPlanner", ["finalClass", "finalRace"]),
+    ...mapGetters("charPlanner", ["finalClass"]),
     myLetter() {
       if (this.classFromURL == false) {
         return "";
@@ -131,12 +117,6 @@ export default {
       urlArray.splice(2, 1, smallClass);
       return urlArray.join("_");
     },
-    /* setRaceToQuery() {
-      this.changeRace({ racename: this.$route.query.race });
-    }, */
-    /* raceSelection() {
-      this.changeRace({ racename: this.selectedRace });
-    }, */
     classSelection() {
       if (this.selectedClass != this.urlClass) {
         this.preFinalClass = this.selectedClass;
@@ -169,7 +149,7 @@ export default {
         ("");
       }
     },
-    ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
+    ...mapActions("charPlanner", ["changeClass"]),
   },
 };
 </script>
