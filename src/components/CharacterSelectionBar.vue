@@ -23,7 +23,7 @@
           {{ domain }}
         </option>
       </select>
-      <button>Reset</button>
+      <button @click="reSet()">Reset</button>
     </nav>
   </div>
 </template>
@@ -33,7 +33,9 @@ import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
 /* TO DO's:
   - Vuex store: empty - should it be deleted? how?
-  - simplify filter code and more? Best practice with coding review
+  - simplify filter code and more? Best practice with **coding review**
+  - check that my reset button logic is OK, and best practice **coding review**
+  - nice to have: reset selection bar to "choose race" etc. and disciplines to "choose major" etc. when class changes (instead of blank) 
 */
 
 export default {
@@ -49,7 +51,11 @@ export default {
   },
   watch: {
     $route() {
+      // should I add condition to only trigger if data does not exist yet?
       this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+      this.selectedRace = this.$route.query.race || "";
+      this.selectedPromotion = this.$route.query.promotion || "";
+      this.selectedDomain = this.$route.query.domain || "";
     },
     selectedClass() {
       this.$router.push(this.newURL());
@@ -58,7 +64,7 @@ export default {
       this.$router.replace({
         ...this.$route,
         query: { ...this.$route.query, race: this.selectedRace || undefined },
-      });
+      }); // add the or condition?
     },
     selectedPromotion() {
       this.$router.replace({
@@ -96,6 +102,9 @@ export default {
     },
   },
   methods: {
+    reSet() {
+      this.$router.push("/character_planner#2.0_");
+    },
     newURL() {
       var urlArray = [];
       var smallClass = "";
