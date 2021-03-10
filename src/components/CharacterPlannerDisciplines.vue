@@ -68,7 +68,7 @@ export default {
   },
   computed: {
     finalClass() {
-      return this.$route.hash ? this.$route.hash.split("_")[1].split("") : "";
+      return this.$route.hash ? this.upperWord(this.$route.hash.split("_")[1]) : "";
     },
     finalDomain() {
       return this.$route.query.domain;
@@ -126,6 +126,16 @@ export default {
   },
 
   methods: {
+    upperWord(word) {
+      if(word !== "") {
+        const wordArr = word.split("");
+        wordArr[0] = word[0].toUpperCase();
+        return wordArr.join("");
+      }
+      else {
+        return "";
+      }
+    },
     pressSlide() {
       this.isOpen = !this.isOpen;
       if (this.isOpen) {
