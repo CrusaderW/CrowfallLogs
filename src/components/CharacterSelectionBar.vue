@@ -33,13 +33,10 @@
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
-import { mapActions, mapGetters } from "vuex";
 
 /* TO DO's:
-  - test that everything works
-  - clean Vuex store of it (and mapGetters and mapActions here!)
-  - clean Vuex store of it
-  - simplify lowerWord code and filter code?
+  - Vuex store: empty - should it be deleted? how?
+  - simplify filter code and more? Best practice with coding review
 */
 
 export default {
@@ -86,7 +83,6 @@ export default {
     },
   },
   computed: {
-    ...mapGetters("charPlanner", ["finalClass"]),
     races_filtered() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
@@ -122,19 +118,15 @@ export default {
       }
     },
     lowerWord(word) {
-      if (word) {
-        // need if here because .split("") will fail if ""
-        var wordArray = []; // LOCAL VARs ARE CALLED WITHOUT ".THIS"
-        var firstLetter = "";
-        wordArray = word.split(""); // LOCAL VARIABLE, DON'T PUT "THIS." here!
-        firstLetter = wordArray[0].toLowerCase();
-        wordArray.splice(0, 1, firstLetter);
-        return wordArray.join("");
-      } else {
-        ("");
+      if(word !== "") {
+        const wordArr = word.split("");
+        wordArr[0] = word[0].toLowerCase();
+        return wordArr.join("");
+      }
+      else {
+        return "";
       }
     },
-    ...mapActions("charPlanner", ["changeClass"]),
   },
 };
 </script>
