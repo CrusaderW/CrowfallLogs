@@ -34,6 +34,7 @@ import { mapActions, mapGetters } from "vuex";
 /* TO DO's:
   - test that everything works
   - clean Vuex store of it (and mapGetters and mapActions here!)
+  - clean Vuex store of it
   - simplify lowerWord code and filter code?
 */
 
