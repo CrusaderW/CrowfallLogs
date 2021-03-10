@@ -26,10 +26,7 @@
           {{ domain }}
         </option>
       </select>
-      <button>
-        <router-link to="/">Reset</router-link> <!-- TODO: problem: need proper reset, MOST PROBABLY solved when Selection Bar clean -->
-      </button>
-      <router-view /> <!-- need router-view to see the router-link -->
+      <button>Reset</button>
     </nav>
   </div>
 </template>
