@@ -23,10 +23,6 @@
           {{ domain }}
         </option>
       </select>
-      <button>
-        <router-link to="/">Reset</router-link> <!-- TODO: problem: need proper reset, MOST PROBABLY solved when Selection Bar clean -->
-      </button>
-      <router-view /> <!-- need router-view to see the router-link -->
     </nav>
   </div>
 </template>
@@ -108,7 +104,7 @@ export default {
       return urlArray.join("_");
     },
     upperWord(word) {
-      if(word !== "") {
+      if(word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
@@ -118,7 +114,7 @@ export default {
       }
     },
     lowerWord(word) {
-      if(word !== "") {
+      if(word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toLowerCase();
         return wordArr.join("");
