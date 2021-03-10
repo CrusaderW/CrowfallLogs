@@ -32,10 +32,15 @@
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
 /* TO DO's:
-  - Vuex store: empty - should it be deleted? how?
+  - reset the attributes with the reset button!
+  - test driven development for Vue JS vs. JS (vs. Solidity?)
+  - Vuex store: empty - should it be deleted? how? **coding review**
   - simplify filter code and more? Best practice with **coding review**
   - check that my reset button logic is OK, and best practice **coding review**
-  - nice to have: reset selection bar to "choose race" etc. and disciplines to "choose major" etc. when class changes (instead of blank) 
+  - nice to have: 
+      reset when class changes (instead of blank) 
+          selection bar to "choose race" etc. and 
+          disciplines to "choose major" etc. 
 */
 
 export default {
