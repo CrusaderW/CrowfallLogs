@@ -773,10 +773,11 @@
                 ""
             ],
             "domains_possible": [
-                "Nature"
+                "Dark",
+		"Nature"
             ],
             "races_possible": [
-                ""
+                "Duelist"
             ],
             "Description": ""
         },
@@ -1338,14 +1339,13 @@
         "Thorny_Warrior": {
             "majorname": "Thorny Warrior",
             "classes_possible": [
-                ""
+                "Ranger"
             ],
             "domains_possible": [
                 ""
             ],
             "races_possible": [
-                "Human",
-                "Ranger"
+                "Human"
             ],
             "Description": ""
         },
@@ -1535,6 +1535,7 @@
                 ""
             ],
             "domains_possible": [
+		"Dark",
                 "Plague"
             ],
             "races_possible": [

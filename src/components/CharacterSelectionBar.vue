@@ -1,13 +1,13 @@
 <template>
   <div id="root">
     <nav>
-      <select v-model="selectedClass" @click="classSelection()">
+      <select v-model="selectedClass" >
         <option disabled value="">Choose Class</option>
         <option v-for="item in data.classes_fulldata" :key="item">
           {{ item.classname }}
         </option>
       </select>
-      <select v-model="selectedRace" @change="raceSelection()">
+      <select v-model="selectedRace">
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
@@ -17,10 +17,7 @@
           {{ promotion }}
         </option>
       </select>
-      <select
-        v-model="selectedDomain"
-        @change="changeDomain({ domainname: this.selectedDomain })"
-      >
+      <select v-model="selectedDomain">
         <option disabled value="">Choose Domain</option>
         <option v-for="domain in data.domains_list" :key="domain">
           {{ domain }}
@@ -33,39 +30,29 @@
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
-import { mapActions, mapGetters } from "vuex";
 
-/* TODO: 
-  - bug with discipline selection when sharing link: because asynchronous?
-  - make a button to RESTART
-  - refactoring session with help? YAY, SOON!
-  - quick design improvement: not all divs separate color! XD
-  - better design with Tailwind CSS
- */
+/* TO DO's:
+  - Vuex store: empty - should it be deleted? how?
+  - simplify filter code and more? Best practice with coding review
+*/
 
 export default {
   name: "CharacterSelectionBar",
   data() {
     return {
       data,
-      selectedClass: "",
+      selectedClass: this.upperWord(this.$route.hash.split("_")[1]) || "",
       selectedRace: this.$route.query.race || "",
       selectedPromotion: this.$route.query.promotion || "",
       selectedDomain: this.$route.query.domain || "",
-      urlClass: "",
-      preFinalClass: "",
     };
   },
-  mounted() {
-    this.setRaceToQuery();
-  },
   watch: {
-    classFromURL(newClass, oldClass) {
-      if (newClass != oldClass) {
-        this.classURL();
-        this.selectedClass = this.urlClass;
-        this.changeClass({ classname: this.preFinalClass });
-      }
+    $route() {
+      this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+    },
+    selectedClass() {
+      this.$router.push(this.newURL());
     },
     selectedRace() {
       this.$router.replace({
@@ -93,21 +80,6 @@ export default {
     },
   },
   computed: {
-    ...mapGetters("charPlanner", ["finalClass", "finalRace"]),
-    myLetter() {
-      if (this.classFromURL == false) {
-        return "";
-      } else {
-        return this.classFromURL[0].toUpperCase();
-      }
-    },
-    classFromURL() {
-      if (this.$route.hash != "") {
-        return this.$route.hash.split("_")[1].split("");
-      } else {
-        return "";
-      }
-    },
     races_filtered() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
@@ -132,45 +104,26 @@ export default {
       urlArray.splice(2, 1, smallClass);
       return urlArray.join("_");
     },
-    setRaceToQuery() {
-      this.changeRace({ racename: this.$route.query.race });
-    },
-    raceSelection() {
-      this.changeRace({ racename: this.selectedRace });
-    },
-    classSelection() {
-      if (this.selectedClass != this.urlClass) {
-        this.preFinalClass = this.selectedClass;
-        this.changeClass({ classname: this.preFinalClass });
-        this.$router.push(this.newURL()); // TEST
+    upperWord(word) {
+      if(word !== "") {
+        const wordArr = word.split("");
+        wordArr[0] = word[0].toUpperCase();
+        return wordArr.join("");
       }
-    },
-    classURL() {
-      if (this.classFromURL != "") {
-        // need if here because .splice() will fail if array is empty
-        this.classFromURL.splice(0, 1, this.myLetter);
-        this.urlClass = this.classFromURL.join("");
-        if (this.urlClass != this.selectedClass) {
-          this.preFinalClass = this.urlClass;
-        }
-      } else {
-        this.urlClass = "";
+      else {
+        return "";
       }
     },
     lowerWord(word) {
-      if (word) {
-        // need if here because .spli("") will fail if array is empty
-        var wordArray = []; // LOCAL VARs ARE CALLED WITHOUT ".THIS"
-        var firstLetter = "";
-        wordArray = word.split(""); // LOCAL VARIABLE, DON'T PUT "THIS." here!
-        firstLetter = wordArray[0].toLowerCase();
-        wordArray.splice(0, 1, firstLetter);
-        return wordArray.join("");
-      } else {
-        ("");
+      if(word !== "") {
+        const wordArr = word.split("");
+        wordArr[0] = word[0].toLowerCase();
+        return wordArr.join("");
+      }
+      else {
+        return "";
       }
     },
-    ...mapActions("charPlanner", ["changeClass", "changeRace", "changeDomain"]),
   },
 };
 </script>
