@@ -6,12 +6,15 @@
       />
     </div>
     <div>
-      <select v-model="internalSelection">
+      <select v-model="internalSelection" @mouseover="isHover()">
         <option disabled value="">Choose Major</option>
-        <option v-for="option in options" :key="option">
+        <option v-for="option in options" :key="option" >
           {{ option }}
         </option>
       </select>
+    </div>
+    <div>
+     <!--  {{ testVariable }} --> <!-- shows this on hover -->
     </div>
   </div>
 </template>
@@ -32,6 +35,8 @@ export default {
   data() {
     return {
       internalSelection: this.modelValue,
+      hover: false,
+      testVariable: ''
     }
   },
 
@@ -40,6 +45,12 @@ export default {
       this.$emit('update:modelValue', this.internalSelection)
     },
   },
+  methods: {
+    isHover() {
+      this.testVariable = "I'm working"
+      this.hover = true;
+    }
+  }
 }
 </script>
 
