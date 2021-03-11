@@ -33,10 +33,13 @@
         />
       </div>
     </transition>
-    <div class="tooltips">
-      SHOW LIST HERE
+  </div>
+  <div class="tooltips">
+    SHOW LIST HERE
+    <div class="image">
+      <img :src="imgmajor1" />
       <img
-        src="../../src/assets/pic/Major_Disciplines/Adjudicator_CLERIC_TEMPLAR.jpg"
+        src="@/assets/pic/Major_Disciplines/Adjudicator_CLERIC_TEMPLAR.jpg"
       />
     </div>
   </div>
@@ -70,6 +73,9 @@ export default {
       minorChoice2: this.$route.query.minor2 || "",
       minorChoice3: this.$route.query.minor3 || "",
       minorChoice4: this.$route.query.minor4 || "",
+
+      // src for tooltip images
+      imgmajor1: "",
     };
   },
   computed: {
@@ -115,6 +121,7 @@ export default {
   watch: {
     majorChoice1(choice) {
       this.setQuery("major1", choice);
+      this.setImg();
     },
     majorChoice2(choice) {
       this.setQuery("major2", choice);
@@ -161,6 +168,11 @@ export default {
         },
       });
     },
+
+    setImg() {
+      this.imgmajor1 = "Adjudicator" + "_CLERIC_TEMPLAR.jpg";
+      return require("@/assets/pic/Major_Disciplines/" + this.imgmajor1);
+    },
   },
 };
 </script>
@@ -168,7 +180,6 @@ export default {
 <style scoped>
 .selection {
   display: flex;
-  flex-direction: column;
   background-color: none;
   color: black;
   flex-basis: 12em;
@@ -202,7 +213,12 @@ button {
 .selection img {
   max-width: 2em;
 }
-.tooltips img {
+.tooltips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tooltips.image {
   min-width: 12em;
 }
 </style> 
