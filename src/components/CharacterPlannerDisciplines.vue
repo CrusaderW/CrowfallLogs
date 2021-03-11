@@ -1,5 +1,5 @@
 <template>
-  <div id="root2">
+  <div class="selection">
     <button @click="pressSlide()">{{ buttonLook }}</button>
     <transition name="slide">
       <div v-if="isOpen">
@@ -33,6 +33,12 @@
         />
       </div>
     </transition>
+    <div class="tooltips">
+      SHOW LIST HERE
+      <img
+        src="../../src/assets/pic/Major_Disciplines/Adjudicator_CLERIC_TEMPLAR.jpg"
+      />
+    </div>
   </div>
 </template>
 
@@ -68,7 +74,9 @@ export default {
   },
   computed: {
     finalClass() {
-      return this.$route.hash ? this.upperWord(this.$route.hash.split("_")[1]) : "";
+      return this.$route.hash
+        ? this.upperWord(this.$route.hash.split("_")[1])
+        : "";
     },
     finalDomain() {
       return this.$route.query.domain;
@@ -127,12 +135,11 @@ export default {
 
   methods: {
     upperWord(word) {
-      if(word !== "") {
+      if (word !== "") {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
-      }
-      else {
+      } else {
         return "";
       }
     },
@@ -159,8 +166,9 @@ export default {
 </script>
 
 <style scoped>
-#root2 {
+.selection {
   display: flex;
+  flex-direction: column;
   background-color: none;
   color: black;
   flex-basis: 12em;
@@ -191,7 +199,10 @@ button {
 .discipline {
   text-align: left;
 }
-img {
+.selection img {
   max-width: 2em;
+}
+.tooltips img {
+  min-width: 12em;
 }
 </style> 
