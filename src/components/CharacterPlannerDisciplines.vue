@@ -37,7 +37,7 @@
   <div class="tooltips">
     SHOW LIST HERE
     <div class="image">
-      <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator_CLERIC_TEMPLAR'+'.jpg')">
+      <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator'+'.jpg')">
       <!-- <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator_CLERIC_TEMPLAR.jpg')"> -->
     </div>
   </div>
