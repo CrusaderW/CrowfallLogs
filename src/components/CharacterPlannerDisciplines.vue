@@ -37,10 +37,8 @@
   <div class="tooltips">
     SHOW LIST HERE
     <div class="image">
-      <img :src="imgmajor1" />
-      <img
-        src="@/assets/pic/Major_Disciplines/Adjudicator_CLERIC_TEMPLAR.jpg"
-      />
+      <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator_CLERIC_TEMPLAR'+'.jpg')">
+      <!-- <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator_CLERIC_TEMPLAR.jpg')"> -->
     </div>
   </div>
 </template>
@@ -75,7 +73,7 @@ export default {
       minorChoice4: this.$route.query.minor4 || "",
 
       // src for tooltip images
-      imgmajor1: "",
+     
     };
   },
   computed: {
@@ -121,7 +119,6 @@ export default {
   watch: {
     majorChoice1(choice) {
       this.setQuery("major1", choice);
-      this.setImg();
     },
     majorChoice2(choice) {
       this.setQuery("major2", choice);
@@ -142,7 +139,7 @@ export default {
 
   methods: {
     upperWord(word) {
-      if (word !== "") {
+      if (word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
@@ -167,11 +164,6 @@ export default {
           [key]: value || undefined,
         },
       });
-    },
-
-    setImg() {
-      this.imgmajor1 = "Adjudicator" + "_CLERIC_TEMPLAR.jpg";
-      return require("@/assets/pic/Major_Disciplines/" + this.imgmajor1);
     },
   },
 };
@@ -217,8 +209,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: black solid 1px;
 }
-.tooltips.image {
-  min-width: 12em;
+.tooltips.image img {
+  display: flex;
+  max-width: 0.5em;
+  
 }
 </style> 
