@@ -1308,8 +1308,8 @@
             ],
             "Description": ""
         },
-        "Standard_Beater": {
-            "majorname": "Standard Beater",
+        "Standard_Bearer": {
+            "majorname": "Standard Bearer",
             "classes_possible": [
                 ""
             ],
@@ -1794,8 +1794,8 @@
             ],
             "Description": ""
         },
-        "Finih_Him": {
-            "minorname": "Finih Him",
+        "Finish_Him": {
+            "minorname": "Finish Him",
             "classes_possible": [
                 "Knight",
                 "Frostweaver"
