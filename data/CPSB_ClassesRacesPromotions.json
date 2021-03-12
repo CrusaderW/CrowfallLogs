@@ -76,11 +76,22 @@
                 "Centaur",
                 "Guinecean"
             ],
-            "promotions": [
-                "Swordsman",
-                "Secutor",
-                "Sentinel"
-            ]
+            "promotions": {
+                "g1":"Swordsman",
+                "g2":"Sentinel",
+                "g3":"Secutor"
+            },
+	    "domains":{
+                "j1":"War",
+                "j2":"Death",
+                "j3":"Battle",
+                "j4":"Battle",
+                "j5":"Justice",
+                "j6":"Music",
+                "j7":"Protection",
+                "j8":"Justice",
+                "j9":"Nature"
+	    }
         },
         "Confessor": {
             "classname": "Confessor",
@@ -89,11 +100,22 @@
                 "High-Elf",
                 "Elken"
             ],
-            "promotions": [
-                "Fanatic",
-                "Sanctifier",
-                "Inquisitor"
-            ]
+            "promotions": {
+                "g1":"Fanatic",
+                "g2":"Inquisitor",
+                "g3":"Sanctifier"
+            },
+	    "domains":{
+                "j1":"Justice",
+                "j2":"Fire",
+                "j3":"Music",
+                "j4":"Light",
+                "j5":"Fire",
+                "j6":"Storm",
+                "j7":"Music",
+                "j8":"Fire",
+                "j9":"Protection"
+	    }
         },
         "Templar": {
             "classname": "Templar",
@@ -102,11 +124,22 @@
                 "Nethari",
                 "Elken"
             ],
-            "promotions": [
-                "Vindicator",
-                "Paladin",
-                "Fury"
-            ]
+            "promotions": {
+                "g1":"Vindicator",
+                "g2":"Fury",
+                "g3":"Paladin"
+            },
+	    "domains":{
+                "j1":"Battle",
+                "j2":"Fire",
+                "j3":"Wind",
+                "j4":"Fire",
+                "j5":"Protection",
+                "j6":"Music",
+                "j7":"Light",
+                "j8":"Protection",
+                "j9":"Fire"
+	    }
         },
         "Ranger": {
             "classname": "Ranger",
@@ -117,12 +150,24 @@
                 "Elken",
                 "Minotaur"
             ],
-            "promotions": [
-                "Archer",
-                "Warden",
-                "Brigand"
-            ]
+            "promotions": {
+                "g1":"Archer",
+                "g2":"Warden",
+                "g3":"Brigand"
+            },
+	    "domains":{
+                "j1":"Music",
+                "j2":"Dark",
+                "j3":"Frost",
+                "j4":"Plague",
+                "j5":"Dark",
+                "j6":"Nature",
+                "j7":"Shadow",
+                "j8":"Dark",
+                "j9":"Plague"
+	    }
         },
+
         "Assassin": {
             "classname": "Assassin",
             "classraces": [
@@ -131,11 +176,22 @@
                 "Fae",
                 "High-Elf"
             ],
-            "promotions": [
-                "Cutthroat",
-                "Vandal",
-                "Blackguard"
-            ]
+            "promotions": {
+                "g1":"Cutthroat",
+                "g2":"Vandal",
+                "g3":"Blackguard"
+	    },
+	    "domains":{
+                "j1":"Death",
+                "j2":"Plague",
+                "j3":"Shadow",
+                "j4":"Wind",
+                "j5":"Plague",
+                "j6":"Shadow",
+                "j7":"War",
+                "j8":"Plague",
+                "j9":"Death"
+	    }
         },
         "Druid": {
             "classname": "Druid",
@@ -144,11 +200,22 @@
                 "Fae",
                 "Wood-Elf"
             ],
-            "promotions": [
-                "Stormcaller",
-                "Archdruid",
-                "Earthkeeper"
-            ]
+            "promotions": {
+                "g1":"Stormcaller",
+                "g2":"Archdruid",
+                "g3":"Earthkeeper"
+	    },
+	    "domains":{
+                "j1":"Frost",
+                "j2":"Storm",
+                "j3":"Protection",
+                "j4":"Dark",
+                "j5":"Storm",
+                "j6":"Nature",
+                "j7":"Nature",
+                "j8":"Protection",
+                "j9":"Light"
+	    }
         },
         "Frostweaver": {
             "classname": "Frostweaver",
@@ -157,11 +224,22 @@
                 "Wood-Elf",
                 "High-Elf"
             ],
-            "promotions": [
-                "Frostguard",
-                "Icecaller",
-                "Archmage"
-            ]
+            "promotions": {
+                "g1":"Archmage",
+                "g2":"Icecaller",
+                "g3":"Frostguard"
+	    },
+	    "domains":{
+                "j1":"Storm",
+                "j2":"Frost",
+                "j3":"Protection",
+                "j4":"Nature",
+                "j5":"Frost",
+                "j6":"Light",
+                "j7":"Dark",
+                "j8":"Frost",
+                "j9":"Death"
+	    }
         },
         "Champion": {
             "classname": "Champion",
@@ -171,11 +249,22 @@
                 "Minotaur",
                 "Centaur"
             ],
-            "promotions": [
-                "Alpha Warrior",
-                "Barbarian",
-                "Pit Fighter"
-            ]
+            "promotions": {
+                "g1":"Alpha Warrior",
+                "g2":"Barbarian",
+                "g3":"Pit Fighter"
+	    },
+	    "domains":{
+                "j1":"War",
+                "j2":"Battle",
+                "j3":"Justice",
+                "j4":"Wind",
+                "j5":"Battle",
+                "j6":"War",
+                "j7":"Music",
+                "j8":"Battle",
+                "j9":"Wind"
+	    }
         },
         "Myrmidon": {
             "classname": "Myrmidon",
@@ -184,11 +273,22 @@
                 "Half-Giant",
                 "Minotaur"
             ],
-            "promotions": [
-                "Titan",
-                "Battle Rager",
-                "Conqueror"
-            ]
+            "promotions": {
+                "g1":"Titan",
+                "g2":"Conqueror",
+                "g3":"Battle Rager"
+	    },
+	    "domains":{
+                "j1":"Battle",
+                "j2":"War",
+                "j3":"Wind",
+                "j4":"Death",
+                "j5":"War",
+                "j6":"Music",
+                "j7":"Justice",
+                "j8":"War",
+                "j9":"Battle"
+	    }
         },
         "Cleric": {
             "classname": "Cleric",
@@ -200,22 +300,45 @@
                 "Centaur",
                 "Guinecean"
             ],
-            "promotions": [
-                "Radical",
-                "Crusader",
-                "Arbiter"
-            ]
+            "promotions": {
+                "g1":"Radical",
+                "g2":"Arbiter",
+                "g3":"Crusader"
+	    },
+	    "domains":{
+                "j1":"Fire",
+                "j2":"Light",
+                "j3":"Storm",
+                "j4":"Frost",
+                "j5":"Light",
+                "j6":"Wind",
+                "j7":"Justice",
+                "j8":"Light",
+                "j9":"Protection"
+	    }
         },
         "Duelist": {
             "classname": "Duelist",
             "classraces": [
                 "Guinecean"
             ],
-            "promotions": [
-                "Slayer",
-                "Vanguard Scout",
-                "Dirge"
-            ]
+            "promotions": {
+                "g1":"Slayer",
+                "g2":"Dirge",
+                "g3":"Vanguard Scout"
+	    },
+	    "domains":{
+                "j1":"Death",
+                "j2":"Shadow",
+                "j3":"Music",
+                "j4":"Music",
+                "j5":"Shadow",
+                "j6":"War",
+                "j7":"Dark",
+                "j8":"Shadow",
+                "j9":"Wind"
+	    }
+
         }
     }
 }
