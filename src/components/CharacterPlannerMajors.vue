@@ -1,20 +1,31 @@
 <template>
-  <div id="root">
-    <div>
+  <div class="root">
+    <div class="symbol">
       <img
         src="@/assets/pic/Major_Disciplines/Icons/Icon_Disc_Major_Blank.png"
       />
     </div>
     <div>
-      <select v-model="internalSelection" @mouseover="isHover()">
+      <select
+        v-model="internalSelection"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+      >
         <option disabled value="">Choose Major</option>
-        <option v-for="option in options" :key="option" >
+        <option v-for="option in options" :key="option">
           {{ option }}
         </option>
       </select>
     </div>
-    <div>
-     <!--  {{ testVariable }} --> <!-- shows this on hover -->
+    <div class="tooltip" v-if="hover == true">
+      <img
+        v-if="internalSelection"
+        :src="
+          require('@/assets/pic/Major_Disciplines/' +
+            internalSelection +
+            '.jpg')
+        "
+      />
     </div>
   </div>
 </template>
@@ -36,36 +47,37 @@ export default {
     return {
       internalSelection: this.modelValue,
       hover: false,
-      testVariable: ''
-    }
+    };
   },
 
   watch: {
     internalSelection() {
-      this.$emit('update:modelValue', this.internalSelection)
+      this.$emit("update:modelValue", this.internalSelection);
     },
   },
-  methods: {
-    isHover() {
-      this.testVariable = "I'm working"
-      this.hover = true;
-    }
-  }
-}
+};
 </script>
 
 <style scoped>
-#root {
+.root {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: none;
-  color: white;
   flex-basis: 12em;
   overflow: hidden;
 }
-img {
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: 20em;
+}
+.tooltip img {
+  max-width: 12em;
+}
+.symbol img {
   max-width: 2em;
-  padding:0.5em;
+  padding: 0.5em;
 }
 </style> 
