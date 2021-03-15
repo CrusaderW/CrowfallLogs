@@ -35,10 +35,24 @@
     </transition>
   </div>
   <div class="tooltips">
-    SHOW LIST HERE
+    Selected Major and Minor Disciplines
     <div class="image">
-      <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator'+'.jpg')">
-      <!-- <img :src="require('@/assets/pic/Major_Disciplines/'+'Adjudicator_CLERIC_TEMPLAR.jpg')"> -->
+      <img v-if="majorChoice1" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="majorChoice2" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice1" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice2" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice3" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice3 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice4" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice4 +'.jpg')">
     </div>
   </div>
 </template>
@@ -59,8 +73,6 @@ export default {
       data,
       isOpen: true,
       buttonLook: ">>",
-      selectedMajor: "",
-      selectedMinor: "",
 
       // Sketching out refactored component
       majorChoice1: this.$route.query.major1 || "",
@@ -209,11 +221,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: black solid 1px;
+  /* border: black solid 1px; */
 }
-.tooltips.image img {
+.image img {
   display: flex;
-  max-width: 0.5em;
+  max-width: 20em;
+  margin: 1em;
   
 }
 </style> 

@@ -31,8 +31,7 @@
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
 /* TO DO's:
-  - Vuex store: empty - should it be deleted? how?
-  - simplify filter code and more? Best practice with coding review
+  -
 */
 
 export default {
