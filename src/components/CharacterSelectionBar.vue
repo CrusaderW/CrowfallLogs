@@ -26,7 +26,7 @@
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
 /* TO DO's:
- - reset the talent builder with reset button
+ - reset the talent builder with reset button (component in CharacterPlannerTalents)
 */
 
 export default {
@@ -42,7 +42,6 @@ export default {
   },
   watch: {
     '$route.hash': function() {
-      // should I add condition to only trigger if data does not exist yet?
       this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
     },
     selectedRace: 'setQuerySelections',
