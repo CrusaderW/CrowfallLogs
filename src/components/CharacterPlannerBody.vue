@@ -26,7 +26,9 @@ export default {
     CharacterPlannerDisciplines,
     CharacterPlannerTalents
   },
-  data() {},
+  data() {
+    return {}
+  },
 };
 </script>
 
