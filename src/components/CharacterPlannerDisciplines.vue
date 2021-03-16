@@ -1,5 +1,5 @@
 <template>
-  <div id="root2">
+  <div class="selection">
     <button @click="pressSlide()">{{ buttonLook }}</button>
     <transition name="slide">
       <div v-if="isOpen">
@@ -34,6 +34,27 @@
       </div>
     </transition>
   </div>
+  <div class="tooltips">
+    Selected Major and Minor Disciplines
+    <div class="image">
+      <img v-if="majorChoice1" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="majorChoice2" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice1" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice2" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice3" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice3 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice4" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice4 +'.jpg')">
+    </div>
+  </div>
 </template>
 
 <script>
@@ -52,10 +73,7 @@ export default {
       data,
       isOpen: true,
       buttonLook: ">>",
-      selectedMajor: "",
-      selectedMinor: "",
 
-      // Sketching out refactored component
       majorChoice1: this.$route.query.major1 || "",
       majorChoice2: this.$route.query.major2 || "",
 
@@ -64,11 +82,16 @@ export default {
       minorChoice2: this.$route.query.minor2 || "",
       minorChoice3: this.$route.query.minor3 || "",
       minorChoice4: this.$route.query.minor4 || "",
+
+      // src for tooltip images
+     
     };
   },
   computed: {
     finalClass() {
-      return this.$route.hash ? this.upperWord(this.$route.hash.split("_")[1]) : "";
+      return this.$route.hash
+        ? this.upperWord(this.$route.hash.split("_")[1])
+        : "";
     },
     finalDomain() {
       return this.$route.query.domain;
@@ -105,34 +128,32 @@ export default {
   },
 
   watch: {
-    majorChoice1(choice) {
-      this.setQuery("major1", choice);
+    majorChoice1: 'setQuery',
+    majorChoice2: 'setQuery',
+    minorChoice1: 'setQuery',
+    minorChoice2: 'setQuery',
+    minorChoice3: 'setQuery',
+    minorChoice4: 'setQuery',
+
+    majorOptions(options) {
+      if (!options.includes(this.majorChoice1)) this.majorChoice1 = ''
+      if (!options.includes(this.majorChoice2)) this.majorChoice2 = ''
     },
-    majorChoice2(choice) {
-      this.setQuery("major2", choice);
-    },
-    minorChoice1(choice) {
-      this.setQuery("minor1", choice);
-    },
-    minorChoice2(choice) {
-      this.setQuery("minor2", choice);
-    },
-    minorChoice3(choice) {
-      this.setQuery("minor3", choice);
-    },
-    minorChoice4(choice) {
-      this.setQuery("minor4", choice);
+    minorOptions(options) {
+      if (!options.includes(this.minorChoice1)) this.minorChoice1 = ''
+      if (!options.includes(this.minorChoice2)) this.minorChoice2 = ''
+      if (!options.includes(this.minorChoice3)) this.minorChoice3 = ''
+      if (!options.includes(this.minorChoice4)) this.minorChoice4 = ''
     },
   },
 
   methods: {
     upperWord(word) {
-      if(word !== "") {
+      if (word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
-      }
-      else {
+      } else {
         return "";
       }
     },
@@ -145,12 +166,17 @@ export default {
       }
     },
 
-    setQuery(key, value) {
+    setQuery() {
       this.$router.replace({
         ...this.$route,
         query: {
           ...this.$route.query,
-          [key]: value || undefined,
+          major1: this.majorChoice1 || undefined,
+          major2: this.majorChoice2 || undefined,
+          minor1: this.minorChoice1 || undefined,
+          minor2: this.minorChoice2 || undefined,
+          minor3: this.minorChoice3 || undefined,
+          minor4: this.minorChoice4 || undefined,
         },
       });
     },
@@ -159,7 +185,7 @@ export default {
 </script>
 
 <style scoped>
-#root2 {
+.selection {
   display: flex;
   background-color: none;
   color: black;
@@ -191,7 +217,19 @@ button {
 .discipline {
   text-align: left;
 }
-img {
+.selection img {
   max-width: 2em;
+}
+.tooltips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: black solid 1px; */
+}
+.image img {
+  display: flex;
+  max-width: 20em;
+  margin: 1em;
+  
 }
 </style> 
