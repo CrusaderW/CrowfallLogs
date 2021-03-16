@@ -132,9 +132,9 @@
                 "High-Elf"
             ],
             "promotions": [
-                "Swordsman",
-                "Secutor",
-                "Sentinel"
+                "Cutthroat",
+                "Vandal",
+                "Blackguard"
             ]
         },
         "Druid": {
@@ -172,9 +172,9 @@
                 "Centaur"
             ],
             "promotions": [
-                "Frostguard",
-                "Icecaller",
-                "Archmage"
+                "Alpha Warrior",
+                "Barbarian",
+                "Pit Fighter"
             ]
         },
         "Myrmidon": {

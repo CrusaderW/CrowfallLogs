@@ -83,7 +83,7 @@ export default {
       });
     },
     upperWord(word) {
-      if(word !== "") {
+      if(word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
@@ -93,7 +93,7 @@ export default {
       }
     },
     lowerWord(word) {
-      if(word !== "") {
+      if(word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toLowerCase();
         return wordArr.join("");
