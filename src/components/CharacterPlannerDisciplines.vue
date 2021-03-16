@@ -1,5 +1,5 @@
 <template>
-  <div id="root2">
+  <div class="selection">
     <button @click="pressSlide()">{{ buttonLook }}</button>
     <transition name="slide">
       <div v-if="isOpen">
@@ -34,6 +34,27 @@
       </div>
     </transition>
   </div>
+  <div class="tooltips">
+    Selected Major and Minor Disciplines
+    <div class="image">
+      <img v-if="majorChoice1" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="majorChoice2" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice1" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice1 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice2" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice2 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice3" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice3 +'.jpg')">
+    </div>
+    <div class="image">
+      <img v-if="minorChoice4" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice4 +'.jpg')">
+    </div>
+  </div>
 </template>
 
 <script>
@@ -52,8 +73,6 @@ export default {
       data,
       isOpen: true,
       buttonLook: ">>",
-      selectedMajor: "",
-      selectedMinor: "",
 
       majorChoice1: this.$route.query.major1 || "",
       majorChoice2: this.$route.query.major2 || "",
@@ -63,11 +82,16 @@ export default {
       minorChoice2: this.$route.query.minor2 || "",
       minorChoice3: this.$route.query.minor3 || "",
       minorChoice4: this.$route.query.minor4 || "",
+
+      // src for tooltip images
+     
     };
   },
   computed: {
     finalClass() {
-      return this.$route.hash ? this.upperWord(this.$route.hash.split("_")[1]) : "";
+      return this.$route.hash
+        ? this.upperWord(this.$route.hash.split("_")[1])
+        : "";
     },
     finalDomain() {
       return this.$route.query.domain;
@@ -125,12 +149,11 @@ export default {
 
   methods: {
     upperWord(word) {
-      if(word !== "") {
+      if (word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
-      }
-      else {
+      } else {
         return "";
       }
     },
@@ -162,7 +185,7 @@ export default {
 </script>
 
 <style scoped>
-#root2 {
+.selection {
   display: flex;
   background-color: none;
   color: black;
@@ -194,7 +217,19 @@ button {
 .discipline {
   text-align: left;
 }
-img {
+.selection img {
   max-width: 2em;
+}
+.tooltips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: black solid 1px; */
+}
+.image img {
+  display: flex;
+  max-width: 20em;
+  margin: 1em;
+  
 }
 </style> 

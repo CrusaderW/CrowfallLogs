@@ -25,10 +25,6 @@
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
 
-/* TO DO's:
- - reset the talent builder with reset button (component in CharacterPlannerTalents)
-*/
-
 export default {
   name: "CharacterSelectionBar",
   data() {
