@@ -22,7 +22,6 @@
     "vue-chartjs": "^3.5.0",
     "vue-gtag-next": "^1.14.0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

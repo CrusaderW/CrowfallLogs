@@ -51,6 +51,9 @@ export default {
     };
   },
   watch: {
+    modelValue() {
+      this.internalSelection = this.modelValue
+    },
     internalSelection() {
       this.$emit('update:modelValue', this.internalSelection)
     },

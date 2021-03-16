@@ -74,7 +74,6 @@ export default {
       isOpen: true,
       buttonLook: ">>",
 
-      // Sketching out refactored component
       majorChoice1: this.$route.query.major1 || "",
       majorChoice2: this.$route.query.major2 || "",
 
@@ -129,23 +128,22 @@ export default {
   },
 
   watch: {
-    majorChoice1(choice) {
-      this.setQuery("major1", choice);
+    majorChoice1: 'setQuery',
+    majorChoice2: 'setQuery',
+    minorChoice1: 'setQuery',
+    minorChoice2: 'setQuery',
+    minorChoice3: 'setQuery',
+    minorChoice4: 'setQuery',
+
+    majorOptions(options) {
+      if (!options.includes(this.majorChoice1)) this.majorChoice1 = ''
+      if (!options.includes(this.majorChoice2)) this.majorChoice2 = ''
     },
-    majorChoice2(choice) {
-      this.setQuery("major2", choice);
-    },
-    minorChoice1(choice) {
-      this.setQuery("minor1", choice);
-    },
-    minorChoice2(choice) {
-      this.setQuery("minor2", choice);
-    },
-    minorChoice3(choice) {
-      this.setQuery("minor3", choice);
-    },
-    minorChoice4(choice) {
-      this.setQuery("minor4", choice);
+    minorOptions(options) {
+      if (!options.includes(this.minorChoice1)) this.minorChoice1 = ''
+      if (!options.includes(this.minorChoice2)) this.minorChoice2 = ''
+      if (!options.includes(this.minorChoice3)) this.minorChoice3 = ''
+      if (!options.includes(this.minorChoice4)) this.minorChoice4 = ''
     },
   },
 
@@ -168,12 +166,17 @@ export default {
       }
     },
 
-    setQuery(key, value) {
+    setQuery() {
       this.$router.replace({
         ...this.$route,
         query: {
           ...this.$route.query,
-          [key]: value || undefined,
+          major1: this.majorChoice1 || undefined,
+          major2: this.majorChoice2 || undefined,
+          minor1: this.minorChoice1 || undefined,
+          minor2: this.minorChoice2 || undefined,
+          minor3: this.minorChoice3 || undefined,
+          minor4: this.minorChoice4 || undefined,
         },
       });
     },
