@@ -16,6 +16,7 @@ export default {
     CharacterPlannerBody
     },
   data() {
+    return {}
   },
 };
 </script>

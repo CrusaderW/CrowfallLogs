@@ -6,23 +6,18 @@
       />
     </div>
     <div>
-      <select
+      <custom-select
         v-model="internalSelection"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
-      >
-        <option disabled value="">Choose Major</option>
-        <option v-for="option in options" :key="option">
-          {{ option }}
-        </option>
-      </select>
+        :options="options"
+        :initialValue="internalSelection" 
+        @hover-option-update="showTooltip"
+      />
     </div>
-    <div class="tooltip" v-if="hover == true">
+    <div class="tooltip" v-if="previewTooltip && previewTooltip.length > 0">
       <img
-        v-if="internalSelection"
         :src="
           require('@/assets/pic/Major_Disciplines/' +
-            internalSelection +
+            previewTooltip +
             '.jpg')
         "
       />
@@ -31,22 +26,34 @@
 </template>
 
 <script>
+import CustomSelect from "./utility/CustomSelect.vue";
+
 export default {
+  name: "CharacterPlannerMajors",
+  components: {
+    CustomSelect
+  },
   props: {
     options: {
       type: Array,
-      required: true,
+      required: true
     },
     modelValue: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
+  },
+
+  methods: {
+    showTooltip(discipline) {      
+      this.previewTooltip = discipline;
+    }
   },
 
   data() {
     return {
-      internalSelection: this.modelValue,
-      hover: false,
+      previewTooltip: null,
+      internalSelection: this.modelValue ? this.modelValue : 'Choose Major'
     };
   },
 
@@ -55,8 +62,8 @@ export default {
       this.internalSelection = this.modelValue
     },
     internalSelection() {
-      this.$emit("update:modelValue", this.internalSelection);
-    },
+      this.$emit('update:modelValue', this.internalSelection)
+    }
   },
 };
 </script>
@@ -64,11 +71,9 @@ export default {
 <style scoped>
 .root {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background-color: none;
   flex-basis: 12em;
-  overflow: hidden;
 }
 .tooltip {
   display: inline-block;
