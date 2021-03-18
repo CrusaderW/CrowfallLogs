@@ -12,6 +12,7 @@
           {{ promotion }}
         </option>
       </select>
+      <div class="output">Domain: {{ chosenDomain }}</div>
       <select v-model="selectedDomain">
         <option disabled value="">Choose Domain</option>
         <option v-for="domain in data.domains_list" :key="domain">
@@ -35,17 +36,19 @@ export default {
       selectedRace: this.$route.query.race || "",
       selectedPromotion: this.$route.query.promotion || "",
       selectedDomain: this.$route.query.domain || "",
-      chosenPromotion: this.findPromotion(this.$route.hash), 
+      chosenPromotion: this.findPromotion(this.$route.hash) || "",
+      chosenDomain: this.findDomain(this.$route.hash) || "",
     };
   },
   watch: {
-    '$route.hash': function() {
+    "$route.hash": function () {
       this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
       this.chosenPromotion = this.findPromotion(this.$route.hash);
+      this.chosenDomain = this.findDomain(this.$route.hash);
     },
-    selectedRace: 'setQuerySelections',
-    selectedPromotion: 'setQuerySelections',
-    selectedDomain: 'setQuerySelections',
+    selectedRace: "setQuerySelections",
+    selectedPromotion: "setQuerySelections",
+    selectedDomain: "setQuerySelections",
   },
   computed: {
     races_filtered() {
@@ -65,17 +68,29 @@ export default {
   },
   methods: {
     findPromotion(myhash) {
-      if(myhash.split("g0-")[1]) { 
-        return this.chosenPromotion = this.data.classes_fulldata[this.selectedClass].promotions[myhash.split("g0-")[1].substring(0, 2)];
+      if (myhash.split("g0-")[1] && this.selectedClass) {
+        return (this.chosenPromotion = this.data.classes_fulldata[
+          this.selectedClass
+        ].promotions[myhash.split("g0-")[1].substring(0, 2)]);
       } else {
         return "";
       }
-      
+    },
+    findDomain(myhash) {
+      if (myhash && this.selectedClass && this.data.classes_fulldata[
+          this.selectedClass
+        ].domains[myhash.substring(myhash.length - 2, myhash.length)]) {
+        return this.data.classes_fulldata[
+          this.selectedClass
+        ].domains[myhash.substring(myhash.length - 2, myhash.length)];
+      } else {
+        return "";
+      }
     },
     reSet() {
-      this.selectedDomain = ''
-      this.selectedPromotion = ''
-      this.selectedRace = ''
+      this.selectedDomain = "";
+      this.selectedPromotion = "";
+      this.selectedRace = "";
       this.$router.push("/character_planner#2.0_");
     },
     setQuerySelections() {
@@ -90,22 +105,20 @@ export default {
       });
     },
     upperWord(word) {
-      if(word) {
+      if (word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toUpperCase();
         return wordArr.join("");
-      }
-      else {
+      } else {
         return "";
       }
     },
     lowerWord(word) {
-      if(word) {
+      if (word) {
         const wordArr = word.split("");
         wordArr[0] = word[0].toLowerCase();
         return wordArr.join("");
-      }
-      else {
+      } else {
         return "";
       }
     },
