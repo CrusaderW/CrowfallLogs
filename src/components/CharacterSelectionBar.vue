@@ -5,6 +5,7 @@
         <option disabled value="">Choose Race</option>
         <option v-for="race in races_filtered" :key="race">{{ race }}</option>
       </select>
+      <div class="output">Promotion: {{ chosenPromotion }}</div>
       <select v-model="selectedPromotion">
         <option disabled value="">Choose Promotion</option>
         <option v-for="promotion in promotions_filtered" :key="promotion">
@@ -34,11 +35,13 @@ export default {
       selectedRace: this.$route.query.race || "",
       selectedPromotion: this.$route.query.promotion || "",
       selectedDomain: this.$route.query.domain || "",
+      chosenPromotion: this.findPromotion(this.$route.hash), 
     };
   },
   watch: {
     '$route.hash': function() {
       this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+      this.chosenPromotion = this.findPromotion(this.$route.hash);
     },
     selectedRace: 'setQuerySelections',
     selectedPromotion: 'setQuerySelections',
@@ -61,6 +64,14 @@ export default {
     },
   },
   methods: {
+    findPromotion(myhash) {
+      if(myhash.split("g0-")[1]) { 
+        return this.chosenPromotion = this.data.classes_fulldata[this.selectedClass].promotions[myhash.split("g0-")[1].substring(0, 2)];
+      } else {
+        return "";
+      }
+      
+    },
     reSet() {
       this.selectedDomain = ''
       this.selectedPromotion = ''
@@ -115,6 +126,11 @@ a {
   color: black;
 }
 select {
+  padding: 0.5em;
+}
+.output {
+  border-color: black;
+  border-style: double;
   padding: 0.5em;
 }
 </style> 
