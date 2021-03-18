@@ -2,7 +2,7 @@
   <div class="selection">
     <button @click="pressSlide()">{{ buttonLook }}</button>
     <transition name="slide">
-      <div v-if="isOpen">
+      <div id="discipline-container" v-if="isOpen">
         <div class="title">DISCIPLINES</div>
 
         <CharacterPlannerMajors
@@ -230,6 +230,10 @@ button {
   display: flex;
   max-width: 20em;
   margin: 1em;
-  
+}
+
+#discipline-container {
+  overflow: auto;
+  width: 100%;
 }
 </style> 

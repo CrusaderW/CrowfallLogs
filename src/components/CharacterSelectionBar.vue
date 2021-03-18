@@ -88,10 +88,13 @@ export default {
       }
     },
     reSet() {
-      this.selectedDomain = "";
-      this.selectedPromotion = "";
-      this.selectedRace = "";
-      this.$router.push("/character_planner#2.0_");
+      /* this.selectedDomain = ''
+      this.selectedPromotion = ''
+      this.selectedRace = '' */
+      // are those (above) still necessary?
+      window.location.href="/character_planner#2.0_"; 
+      // used this instead of  this.$router.push() because want to force reload (resetting the component of Aedius)
+      // Question: why does the component of Aedius reset WITHOUT reload and not ours
     },
     setQuerySelections() {
       this.$router.replace({
