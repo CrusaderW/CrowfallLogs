@@ -121,3 +121,6 @@ dist
 .tern-port
 *.json~
 *.un~
+
+# NPM package-lock.json
+package-lock.json
