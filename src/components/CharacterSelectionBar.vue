@@ -35,7 +35,6 @@ export default {
     "$route.hash": function () {
       if (this.$route.hash.split("_")[1]) {
         this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
-        console.log('hash watcher');
       }
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
@@ -62,7 +61,6 @@ export default {
     },
     findPromotion(myhash) { // this.selectedClass was undefined on reload => so I used mounted()
       if (myhash.split("g0-")[1] && this.selectedClass) {
-        console.log("it works");
         return (this.selectedPromotion = this.data.classes_fulldata[
           this.selectedClass
         ].promotions[myhash.split("g0-")[1].substring(0, 2)]);
