@@ -66,7 +66,7 @@ export default {
       this.selectedPromotion = ''
       this.selectedRace = '' */
       // are those (above) still necessary?
-      window.location.href="/character_planner#2.0_"; 
+      window.location.href="/character_planner#2.0__"; 
       // used this instead of  this.$router.push() because want to force reload (resetting the component of Aedius)
       // Question: why does the component of Aedius reset WITHOUT reload and not ours
     },
