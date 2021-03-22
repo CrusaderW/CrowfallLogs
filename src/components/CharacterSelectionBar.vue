@@ -8,7 +8,7 @@
       </select>
       <div class="output">Promotion: {{ selectedPromotion }}</div>
       <div class="output">Domain: {{ selectedDomain }}</div>
-      <button @click="reSet()">Reset</button>
+      <button type="reset" @click="reSet()">Reset</button>
     </nav>
   </div>
 </template>
@@ -29,7 +29,9 @@ export default {
   },
   watch: {
     "$route.hash": function () {
-      this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+      if (this.$route.hash.split("_")[1]) {
+        this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+      }
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
     },
@@ -55,22 +57,27 @@ export default {
       }
     },
     findDomain(myhash) {
-      if (myhash && this.selectedClass && this.data.classes_fulldata[
-          this.selectedClass
-        ].domains[myhash.substring(myhash.length - 2, myhash.length)]) {
-        return this.data.classes_fulldata[
-          this.selectedClass
-        ].domains[myhash.substring(myhash.length - 2, myhash.length)];
+      let conditionSatisfied = 0;
+      for (var i = 0; i < 9; i++) {
+        conditionSatisfied += myhash.indexOf("j"+i);
+      }
+      //conditionSatisfied = myhash.includes("j1" || "j5");// || "j3" || "j4" || "j5" || "j6" || "j7" || "j8" || "j9"); 
+      //console.log(conditionSatisfied);
+      if ( conditionSatisfied && this.selectedClass) {
+        return this.data.classes_fulldata[this.selectedClass].domains[
+          myhash.substring(myhash.length - 2, myhash.length)
+        ];
       } else {
         return "";
       }
     },
     reSet() {
-      /* this.selectedDomain = ''
-      this.selectedPromotion = ''
-      this.selectedRace = '' */
+      this.selectedClass = "";
+      this.selectedDomain = "";
+      this.selectedPromotion = "";
+      this.selectedRace = "";
       // are those (above) still necessary?
-      window.location.href="/character_planner#2.0_"; 
+      window.location.href = "/character_planner#2.0__"; // my problem was: a typo! I forgot the second underscore "_"
       // used this instead of  this.$router.push() because want to force reload (resetting the component of Aedius)
       // Question: why does the component of Aedius reset WITHOUT reload and not ours
     },
@@ -80,8 +87,6 @@ export default {
         query: {
           ...this.$route.query,
           race: this.selectedRace || undefined,
-          promotion: this.selectedPromotion || undefined,
-          domain: this.selectedDomain || undefined,
         },
       });
     },
