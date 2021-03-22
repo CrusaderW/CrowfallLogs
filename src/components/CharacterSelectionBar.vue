@@ -82,8 +82,8 @@ export default {
       }
     },
     reSet() {
-      /* this.selectedClass = "";
-      this.selectedDomain = "";
+      this.selectedClass = "";
+      /* this.selectedDomain = "";
       this.selectedPromotion = "";
       this.selectedRace = ""; */
       // are those (above) still necessary?
