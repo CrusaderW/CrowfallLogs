@@ -4,7 +4,7 @@
       <div class="output">Class: {{ selectedClass }}</div>
       <select v-model="selectedRace">
         <option disabled value="">Choose Race</option>
-        <option v-for="race in races_filtered" :key="race">{{ race }}</option>
+        <option v-for="race in racesFiltered()" :key="race">{{ race }}</option>
       </select>
       <div class="output">Promotion: {{ selectedPromotion }}</div>
       <div class="output">Domain: {{ selectedDomain }}</div>
@@ -23,32 +23,46 @@ export default {
       data,
       selectedClass: this.upperWord(this.$route.hash.split("_")[1]) || "",
       selectedRace: this.$route.query.race || "",
-      selectedPromotion: this.findPromotion(this.$route.hash) || "",
-      selectedDomain: this.findDomain(this.$route.hash) || "",
+      selectedPromotion: "", 
+      selectedDomain: "",
     };
+  },
+  mounted() {
+    this.selectedPromotion = this.findPromotion(this.$route.hash);
+    this.selectedDomain = this.findDomain(this.$route.hash);
   },
   watch: {
     "$route.hash": function () {
       if (this.$route.hash.split("_")[1]) {
         this.selectedClass = this.upperWord(this.$route.hash.split("_")[1]);
+        console.log('hash watcher');
       }
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
+      this.racesFiltered();
     },
     selectedRace: "setQuerySelections",
   },
-  computed: {
-    races_filtered() {
+  /* computed: { // QUESTION: wasn't working anymore, had to watch the hash and trigger the method racesFiltered when hash changes
+    racesFiltered() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
         return this.data.races_list;
       }
     },
-  },
+  }, */
   methods: {
-    findPromotion(myhash) {
+    racesFiltered() {
+      if (this.selectedClass !== "") {
+        return this.data.classes_fulldata[this.selectedClass].classraces;
+      } else {
+        return this.data.races_list;
+      }
+    },
+    findPromotion(myhash) { // this.selectedClass was undefined on reload => so I used mounted()
       if (myhash.split("g0-")[1] && this.selectedClass) {
+        console.log("it works");
         return (this.selectedPromotion = this.data.classes_fulldata[
           this.selectedClass
         ].promotions[myhash.split("g0-")[1].substring(0, 2)]);
@@ -59,11 +73,9 @@ export default {
     findDomain(myhash) {
       let conditionSatisfied = 0;
       for (var i = 0; i < 9; i++) {
-        conditionSatisfied += myhash.indexOf("j"+i);
+        conditionSatisfied += myhash.indexOf("j" + i);
       }
-      //conditionSatisfied = myhash.includes("j1" || "j5");// || "j3" || "j4" || "j5" || "j6" || "j7" || "j8" || "j9"); 
-      //console.log(conditionSatisfied);
-      if ( conditionSatisfied && this.selectedClass) {
+      if (conditionSatisfied && this.selectedClass) {
         return this.data.classes_fulldata[this.selectedClass].domains[
           myhash.substring(myhash.length - 2, myhash.length)
         ];
@@ -72,10 +84,10 @@ export default {
       }
     },
     reSet() {
-      this.selectedClass = "";
+      /* this.selectedClass = "";
       this.selectedDomain = "";
       this.selectedPromotion = "";
-      this.selectedRace = "";
+      this.selectedRace = ""; */
       // are those (above) still necessary?
       window.location.href = "/character_planner#2.0__"; // my problem was: a typo! I forgot the second underscore "_"
       // used this instead of  this.$router.push() because want to force reload (resetting the component of Aedius)
