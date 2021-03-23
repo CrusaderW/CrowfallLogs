@@ -6,6 +6,20 @@
         <option disabled value="">Choose Race</option>
         <option v-for="race in racesFiltered()" :key="race">{{ race }}</option>
       </select>
+      <div>
+        <custom-select
+          v-model="selectedRace"
+          :options="racesFiltered()"
+          @hover-option-update="showTooltip"
+        />
+      </div>
+      <div class="tooltip" v-if="previewTooltip && previewTooltip.length > 0">
+        <img
+          :src="
+            require('@/assets/pic/Races_tooltips/' + previewTooltip + '.jpg')
+          "
+        />
+      </div>
       <div class="output">Promotion: {{ selectedPromotion }}</div>
       <div class="output">Domain: {{ selectedDomain }}</div>
       <button type="reset" @click="reSet()">Reset</button>
@@ -15,16 +29,21 @@
 
 <script>
 import data from "../../data/CPSB_ClassesRacesPromotions.json";
+import CustomSelect from "./utility/CustomSelect.vue";
 
 export default {
   name: "CharacterSelectionBar",
+  components: {
+    CustomSelect,
+  },
   data() {
     return {
       data,
       selectedClass: this.upperWord(this.$route.hash.split("_")[1]) || "",
-      selectedRace: this.$route.query.race || "",
-      selectedPromotion: "", 
+      selectedRace: this.$route.query.race || "Choose Race",
+      selectedPromotion: "",
       selectedDomain: "",
+      previewTooltip: null,
     };
   },
   mounted() {
@@ -52,6 +71,9 @@ export default {
     },
   }, */
   methods: {
+    showTooltip(race) {
+      this.previewTooltip = race;
+    },
     racesFiltered() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
@@ -59,7 +81,8 @@ export default {
         return this.data.races_list;
       }
     },
-    findPromotion(myhash) { // this.selectedClass was undefined on reload => so I used mounted()
+    findPromotion(myhash) {
+      // this.selectedClass was undefined on reload => so I used mounted()
       if (myhash.split("g0-")[1] && this.selectedClass) {
         return (this.selectedPromotion = this.data.classes_fulldata[
           this.selectedClass
@@ -132,5 +155,14 @@ select {
   border-color: black;
   border-style: double;
   padding: 0.5em;
+}
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: 20em;
+}
+.tooltip img {
+  max-width: 12em;
 }
 </style> 
