@@ -59,7 +59,6 @@ export default {
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
       this.racesFiltered();
-      //console.log(this.racesFiltered().includes(this.$route.query.race));
       this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "Choose Race";
     },
     selectedRace: "setQuerySelections",

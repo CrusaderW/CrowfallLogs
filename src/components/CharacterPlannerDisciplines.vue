@@ -179,14 +179,14 @@ export default {
     minorChoice4: "setQuery",
 
     majorOptions(options) {
-      if (!options.includes(this.majorChoice1)) this.majorChoice1 = "";
-      if (!options.includes(this.majorChoice2)) this.majorChoice2 = "";
+      if (!options.includes(this.majorChoice1)) this.majorChoice1 = "Choose Major";
+      if (!options.includes(this.majorChoice2)) this.majorChoice2 = "Choose Major";
     },
     minorOptions(options) {
-      if (!options.includes(this.minorChoice1)) this.minorChoice1 = "";
-      if (!options.includes(this.minorChoice2)) this.minorChoice2 = "";
-      if (!options.includes(this.minorChoice3)) this.minorChoice3 = "";
-      if (!options.includes(this.minorChoice4)) this.minorChoice4 = "";
+      if (!options.includes(this.minorChoice1)) this.minorChoice1 = "Choose Minor";
+      if (!options.includes(this.minorChoice2)) this.minorChoice2 = "Choose Minor";
+      if (!options.includes(this.minorChoice3)) this.minorChoice3 = "Choose Minor";
+      if (!options.includes(this.minorChoice4)) this.minorChoice4 = "Choose Minor";
     },
   },
   methods: {
@@ -213,12 +213,12 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          major1: this.majorChoice1 || undefined,
-          major2: this.majorChoice2 || undefined,
-          minor1: this.minorChoice1 || undefined,
-          minor2: this.minorChoice2 || undefined,
-          minor3: this.minorChoice3 || undefined,
-          minor4: this.minorChoice4 || undefined,
+          major1: this.majorChoice1 !== "Choose Major" && this.majorChoice1 !== "" ? this.majorChoice1 : undefined,
+          major2: this.majorChoice2 !== "Choose Major" && this.majorChoice2 !== "" ? this.majorChoice2 : undefined,
+          minor1: this.minorChoice1 !== "Choose Minor" && this.minorChoice1 !== "" ? this.minorChoice1 : undefined,
+          minor2: this.minorChoice2 !== "Choose Minor" && this.minorChoice2 !== "" ? this.minorChoice2 : undefined,
+          minor3: this.minorChoice3 !== "Choose Minor" && this.minorChoice3 !== "" ? this.minorChoice3 : undefined,
+          minor4: this.minorChoice4 !== "Choose Minor" && this.minorChoice4 !== "" ? this.minorChoice4 : undefined,
         },
       });
     },
