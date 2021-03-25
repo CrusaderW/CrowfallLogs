@@ -1,35 +1,48 @@
 <template>
-  <div id="root1">
-    <transition name="slide">
-      <div v-if="isOpen">
-        <div class="title">ATTRIBUTES</div>
-        <table>
-          <tr>
-            <td>STR</td>
-            <td>
-              <input type="text" v-model="strAttribute" />
-            </td>
-          </tr>
-          <tr>
-            <td>DEX</td>
-            <td><input type="text" v-model="dexAttribute" /></td>
-          </tr>
-          <tr>
-            <td>INT</td>
-            <td><input type="text" v-model="intAttribute" /></td>
-          </tr>
-          <tr>
-            <td>SPR</td>
-            <td><input type="text" v-model="sprAttribute" /></td>
-          </tr>
-          <tr>
-            <td>CON</td>
-            <td><input type="text" v-model="conAttribute" /></td>
-          </tr>
-        </table>
+  <div class="root">
+    <div class="sliding">
+      <transition name="slide">
+        <div v-if="isOpen">
+          <div class="title">ATTRIBUTES</div>
+          <table>
+            <tr>
+              <td>STR</td>
+              <td>
+                <input type="text" v-model="strAttribute" />
+              </td>
+            </tr>
+            <tr>
+              <td>DEX</td>
+              <td><input type="text" v-model="dexAttribute" /></td>
+            </tr>
+            <tr>
+              <td>INT</td>
+              <td><input type="text" v-model="intAttribute" /></td>
+            </tr>
+            <tr>
+              <td>SPR</td>
+              <td><input type="text" v-model="sprAttribute" /></td>
+            </tr>
+            <tr>
+              <td>CON</td>
+              <td><input type="text" v-model="conAttribute" /></td>
+            </tr>
+          </table>
+        </div>
+      </transition>
+      <button @click="pressSlide()">{{ buttonLook }}</button>
+    </div>
+    <div>
+      Selected Race
+      <div class="image">
+        <img
+          v-if="$route.query.race"
+          :src="
+            require('@/assets/pic/Races_tooltips/' + $route.query.race + '.jpg')
+          "
+        />
       </div>
-    </transition>
-    <button @click="pressSlide()">{{ buttonLook }}</button>
+    </div>
   </div>
 </template>
 
@@ -109,12 +122,16 @@ export default {
 </script>
 
 <style scoped>
-#root1 {
+.root {
   display: flex;
+  flex-direction: column;
   background-color: none;
   /* color: white; */
   flex-basis: 12em;
   overflow: hidden;
+}
+.sliding {
+  display: flex;
 }
 .slide-leave-active,
 .slide-enter-active {
