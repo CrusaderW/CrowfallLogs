@@ -113,7 +113,9 @@ export default {
       this.selectedPromotion = "";
       this.selectedRace = ""; */
       // are those (above) still necessary?
+
       window.location.href = "/character_planner#2.0__"; // my problem was: a typo! I forgot the second underscore "_"
+
       // used this instead of  this.$router.push() because want to force reload (resetting the component of Aedius)
       // Question: why does the component of Aedius reset WITHOUT reload and not ours
     },
