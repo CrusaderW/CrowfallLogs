@@ -59,7 +59,7 @@ export default {
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
       this.racesFiltered();
-      this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "Choose Race";
+      this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "";
     },
     selectedRace: "setQuerySelections",
   },
@@ -123,7 +123,7 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          race: this.selectedRace !== "Choose Race" && this.selectedRace !== "" ? this.selectedRace : undefined,
+          race: this.selectedRace !== "" ? this.selectedRace : undefined,
         },
       });
     },
