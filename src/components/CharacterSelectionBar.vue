@@ -4,22 +4,21 @@
       <div class="output">Class: {{ selectedClass }}</div>
       <!-- <select v-model="selectedRace">
         <option disabled value="">Choose Race</option>
-        <option v-for="race in racesFiltered()" :key="race">{{ race }}</option>
+        <option v-for="race in getFilteredRaces()" :key="race">{{ race }}</option>
       </select> -->
       <div>
         <custom-select
           v-model="selectedRace"
-          :options="racesFiltered()"
-          :initialValue="selectedRace"
+          :options="getFilteredRaces()"
           @hover-option-update="showTooltip"
         />
-      </div>
-      <div class="tooltip" v-if="previewTooltip && previewTooltip.length > 0">
-        <img
-          :src="
-            require('@/assets/pic/Races_tooltips/' + previewTooltip + '.jpg')
-          "
-        />
+        <div id="race-tooltip" class="tooltip" v-if="previewTooltip?.length > 0">
+          <img
+            :src="
+              require('@/assets/pic/Races_tooltips/' + previewTooltip + '.jpg')
+            "
+          />
+        </div>
       </div>
       <div class="output">Promotion: {{ selectedPromotion }}</div>
       <div class="output">Domain: {{ selectedDomain }}</div>
@@ -58,13 +57,13 @@ export default {
       }
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
-      this.racesFiltered();
-      this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "";
+
+      this.selectedRace = this.getFilteredRaces().includes(this.$route.query.race) ? this.$route.query.race : "Choose Race";
     },
     selectedRace: "setQuerySelections",
   },
-  /* computed: { // QUESTION: wasn't working anymore, had to watch the hash and trigger the method racesFiltered when hash changes
-    racesFiltered() {
+  /* computed: { // QUESTION: wasn't working anymore, had to watch the hash and trigger the method getFilteredRaces when hash changes
+    getFilteredRaces() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
@@ -76,7 +75,7 @@ export default {
     showTooltip(race) {
       this.previewTooltip = race;
     },
-    racesFiltered() {
+    getFilteredRaces() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
@@ -160,13 +159,17 @@ select {
   border-style: double;
   padding: 0.5em;
 }
+
 .tooltip {
   display: inline-block;
   position: absolute;
   z-index: 1;
-  right: 20em;
 }
 .tooltip img {
   max-width: 12em;
+}
+
+.tooltip#race-tooltip {
+  left: 23em;
 }
 </style> 
