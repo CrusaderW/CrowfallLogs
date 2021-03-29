@@ -729,7 +729,7 @@
             "Description": ""
         },
         "Lazarus_Disciple": {
-            "majorname": "Lazaru's Disciple",
+            "majorname": "Lazarus' Disciple",
             "classes_possible": [
                 "Cleric"
             ],
@@ -1093,8 +1093,8 @@
             ],
             "Description": ""
         },
-        "Reality_Wrapper": {
-            "majorname": "Reality Wrapper",
+        "Reality_Warper": {
+            "majorname": "Reality Warper",
             "classes_possible": [
                 ""
             ],
@@ -1739,8 +1739,8 @@
             ],
             "Description": ""
         },
-        "Emminently_Punchable": {
-            "minorname": "Emminently Punchable",
+        "Eminently_Punchable": {
+            "minorname": "Eminently Punchable",
             "classes_possible": [
                 ""
             ],
