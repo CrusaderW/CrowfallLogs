@@ -7,9 +7,9 @@
     <div
       class="selected"
       :class="{open: open}"
-      @click="open = !open"
+      @click="showOptions"
     >
-      {{ value }}
+      {{ options?.length > 0 ? value : placeholder }}
     </div>
     <div
       class="items"
@@ -40,10 +40,15 @@ export default {
       type: String,
       required: false
     },
-    tabindex:{
+    tabindex: {
       type: Number,
       required: false,
       default: 0
+    },
+    placeholder: {
+      type: String,
+      required: false,
+      default: 'No options'
     }
   },
 
@@ -53,6 +58,16 @@ export default {
     },
     value() {
       this.$emit("update:modelValue", this.value)
+    }
+  },
+
+  methods: {
+    showOptions() {
+      if (this.options?.length > 0) {
+        this.open = !this.open;
+      } else {
+        this.open = false;
+      }
     }
   },
 

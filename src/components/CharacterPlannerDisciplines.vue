@@ -37,28 +37,59 @@
   <div class="tooltips">
     Selected Major and Minor Disciplines
     <div class="image">
-      <img v-if="majorChoice1" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice1 +'.jpg')">
+      <img
+        v-if="majorChoice1"
+        :src="
+          require('@/assets/pic/Major_Disciplines/' + majorChoice1 + '.jpg')
+        "
+      />
     </div>
     <div class="image">
-      <img v-if="majorChoice2" :src="require('@/assets/pic/Major_Disciplines/'+ majorChoice2 +'.jpg')">
+      <img
+        v-if="majorChoice2"
+        :src="
+          require('@/assets/pic/Major_Disciplines/' + majorChoice2 + '.jpg')
+        "
+      />
     </div>
     <div class="image">
-      <img v-if="minorChoice1" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice1 +'.jpg')">
+      <img
+        v-if="minorChoice1"
+        :src="
+          require('@/assets/pic/Minor_Disciplines/' + minorChoice1 + '.jpg')
+        "
+      />
     </div>
     <div class="image">
-      <img v-if="minorChoice2" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice2 +'.jpg')">
+      <img
+        v-if="minorChoice2"
+        :src="
+          require('@/assets/pic/Minor_Disciplines/' + minorChoice2 + '.jpg')
+        "
+      />
     </div>
     <div class="image">
-      <img v-if="minorChoice3" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice3 +'.jpg')">
+      <img
+        v-if="minorChoice3"
+        :src="
+          require('@/assets/pic/Minor_Disciplines/' + minorChoice3 + '.jpg')
+        "
+      />
     </div>
     <div class="image">
-      <img v-if="minorChoice4" :src="require('@/assets/pic/Minor_Disciplines/'+ minorChoice4 +'.jpg')">
+      <img
+        v-if="minorChoice4"
+        :src="
+          require('@/assets/pic/Minor_Disciplines/' + minorChoice4 + '.jpg')
+        "
+      />
     </div>
   </div>
 </template>
 
 <script>
 import data from "../../data/CPD_MinorsMajors.json";
+import dataDomains from "../../data/CPSB_ClassesRacesPromotions.json";
 import CharacterPlannerMajors from "./CharacterPlannerMajors.vue";
 import CharacterPlannerMinors from "./CharacterPlannerMinors.vue";
 
@@ -71,6 +102,7 @@ export default {
   data() {
     return {
       data,
+      dataDomains,
       isOpen: true,
       buttonLook: ">>",
 
@@ -84,18 +116,28 @@ export default {
       minorChoice4: this.$route.query.minor4 || "",
 
       // src for tooltip images
-     
     };
   },
+  /* mounted() {
+    console.log(this.finalClass);
+    this.finalDomain();
+  }, */
   computed: {
     finalClass() {
       return this.$route.hash
         ? this.upperWord(this.$route.hash.split("_")[1])
         : "";
     },
+
     finalDomain() {
-      return this.$route.query.domain;
+      // getting the domain info from the hash
+      return this.$route.hash.slice(-2)[0] == "j"
+        ? this.dataDomains.classes_fulldata[this.finalClass].domains[
+            this.$route.hash.slice(-2)
+          ]
+        : "";
     },
+
     finalRace() {
       return this.$route.query.race;
     },
@@ -128,25 +170,25 @@ export default {
   },
 
   watch: {
-    majorChoice1: 'setQuery',
-    majorChoice2: 'setQuery',
-    minorChoice1: 'setQuery',
-    minorChoice2: 'setQuery',
-    minorChoice3: 'setQuery',
-    minorChoice4: 'setQuery',
+
+    majorChoice1: "setQuery",
+    majorChoice2: "setQuery",
+    minorChoice1: "setQuery",
+    minorChoice2: "setQuery",
+    minorChoice3: "setQuery",
+    minorChoice4: "setQuery",
 
     majorOptions(options) {
-      if (!options.includes(this.majorChoice1)) this.majorChoice1 = ''
-      if (!options.includes(this.majorChoice2)) this.majorChoice2 = ''
+      if (!options.includes(this.majorChoice1)) this.majorChoice1 = "";
+      if (!options.includes(this.majorChoice2)) this.majorChoice2 = "";
     },
     minorOptions(options) {
-      if (!options.includes(this.minorChoice1)) this.minorChoice1 = ''
-      if (!options.includes(this.minorChoice2)) this.minorChoice2 = ''
-      if (!options.includes(this.minorChoice3)) this.minorChoice3 = ''
-      if (!options.includes(this.minorChoice4)) this.minorChoice4 = ''
+      if (!options.includes(this.minorChoice1)) this.minorChoice1 = "";
+      if (!options.includes(this.minorChoice2)) this.minorChoice2 = "";
+      if (!options.includes(this.minorChoice3)) this.minorChoice3 = "";
+      if (!options.includes(this.minorChoice4)) this.minorChoice4 = "";
     },
   },
-
   methods: {
     upperWord(word) {
       if (word) {
@@ -171,12 +213,12 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          major1: this.majorChoice1 || undefined,
-          major2: this.majorChoice2 || undefined,
-          minor1: this.minorChoice1 || undefined,
-          minor2: this.minorChoice2 || undefined,
-          minor3: this.minorChoice3 || undefined,
-          minor4: this.minorChoice4 || undefined,
+          major1: this.majorChoice1 !== "" ? this.majorChoice1 : undefined,
+          major2: this.majorChoice2 !== "" ? this.majorChoice2 : undefined,
+          minor1: this.minorChoice1 !== "" ? this.minorChoice1 : undefined,
+          minor2: this.minorChoice2 !== "" ? this.minorChoice2 : undefined,
+          minor3: this.minorChoice3 !== "" ? this.minorChoice3 : undefined,
+          minor4: this.minorChoice4 !== "" ? this.minorChoice4 : undefined,
         },
       });
     },

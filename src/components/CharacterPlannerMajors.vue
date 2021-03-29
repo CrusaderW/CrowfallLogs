@@ -9,11 +9,9 @@
       <custom-select
         v-model="internalSelection"
         :options="options"
-        :initialValue="internalSelection" 
         @hover-option-update="showTooltip"
       />
-    </div>
-    <div class="tooltip" v-if="previewTooltip && previewTooltip.length > 0">
+      <div class="tooltip" v-if="previewTooltip?.length > 0">
       <img
         :src="
           require('@/assets/pic/Major_Disciplines/' +
@@ -21,6 +19,7 @@
             '.jpg')
         "
       />
+    </div>
     </div>
   </div>
 </template>
@@ -79,7 +78,7 @@ export default {
   display: inline-block;
   position: absolute;
   z-index: 1;
-  right: 20em;
+  right: 19em;
 }
 .tooltip img {
   max-width: 12em;
