@@ -2,14 +2,15 @@
   <div id="root">
     <nav>
       <div class="output">Class: {{ selectedClass }}</div>
-      <select v-model="selectedRace">
+      <!-- <select v-model="selectedRace">
         <option disabled value="">Choose Race</option>
         <option v-for="race in racesFiltered()" :key="race">{{ race }}</option>
-      </select>
+      </select> -->
       <div>
         <custom-select
           v-model="selectedRace"
           :options="racesFiltered()"
+          :initialValue="selectedRace"
           @hover-option-update="showTooltip"
         />
       </div>
@@ -58,6 +59,7 @@ export default {
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
       this.racesFiltered();
+      this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "";
     },
     selectedRace: "setQuerySelections",
   },
@@ -121,7 +123,7 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          race: this.selectedRace || undefined,
+          race: this.selectedRace !== "" ? this.selectedRace : undefined,
         },
       });
     },
