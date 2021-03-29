@@ -5,9 +5,11 @@
       <ul>
         <!-- <li><a href="/">Home</a></li>
         <li><a href="/">Tools</a></li> -->
+        <li><a href="https://discord.gg/ukKmXVP" target="_blank">Discord</a></li>
         <li><a href="https://crusaderw.com" target="_blank">Guides</a></li>
         <li><a href="https://crusaderw.com/about-me/" target="_blank">About</a></li>
         <li><a href="https://crusaderw.com/datenschutzerklaerung/" target="_blank">Privacy</a></li>
+        <li><a href="https://github.com/CrusaderW/CrowfallLogs/issues/new" target="_blank">Report a bug</a></li>
         <!-- <li><button>Sign Up</button></li> -->
       </ul>
     </nav>
