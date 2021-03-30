@@ -36,7 +36,6 @@
     </transition>
   </div>
   <div class="tooltips">
-    Selected Major and Minor Disciplines
     <div class="image">
       <img
         v-if="majorChoice1"
@@ -277,6 +276,6 @@ button {
 
 #discipline-container {
   overflow: auto;
-  width: 100%;
+  width: 20em;
 }
 </style> 
