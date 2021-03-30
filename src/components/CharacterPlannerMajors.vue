@@ -6,7 +6,8 @@
       />
     </div>
     <div>
-      <custom-select class="custom-select"
+      <custom-select
+        class="custom-select"
         v-model="internalSelection"
         :options="options"
         @hover-option-update="showTooltip"
@@ -42,17 +43,21 @@ export default {
     },
   },
 
-  methods: {
-    showTooltip(discipline) {
-      this.previewTooltip = discipline;
-    },
-  },
-
   data() {
     return {
       previewTooltip: null,
       internalSelection: this.modelValue ? this.modelValue : "Choose Major",
     };
+  },
+
+  computed: {
+    chooseIcon() {
+      if( this.internalSelection == "Choose Major" || !!this.internalSelection) {
+        return "Blank";
+      } else {
+        return this.internalSelection;
+      }
+    }
   },
 
   watch: {
@@ -63,6 +68,13 @@ export default {
       this.$emit("update:modelValue", this.internalSelection);
     },
   },
+
+  methods: {
+    showTooltip(discipline) {
+      this.previewTooltip = discipline;
+    },
+  },
+
 };
 </script>
 
