@@ -1,12 +1,8 @@
 <template>
   <div class="root">
-    <div class="symbol">
-      <img
-        src="@/assets/pic/Minor_Disciplines/Icons/Icon_Disc_Minor_Blank.png"
-      />
-    </div>
     <div>
-      <custom-select class="custom-select"
+      <custom-select
+        class="custom-select"
         v-model="internalSelection"
         :options="options"
         @hover-option-update="showTooltip"
@@ -66,22 +62,18 @@ export default {
 </script>
 
 <style scoped>
-.root {
+/* .root {
   display: flex;
   align-items: center;
   background-color: none;
   padding: 0 0 0 2em;
-}
+} */
 .tooltip {
   display: inline-block;
   position: absolute;
   z-index: 1;
   right: 21em;
   top: 0em;
-}
-.symbol img {
-  max-width: 2em;
-  padding: 0.5em;
 }
 .custom-select {
   width: 10em;

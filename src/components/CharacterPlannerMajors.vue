@@ -1,10 +1,5 @@
 <template>
   <div class="root">
-    <div class="symbol">
-      <img
-        src="@/assets/pic/Major_Disciplines/Icons/Icon_Disc_Major_Blank.png"
-      />
-    </div>
     <div>
       <custom-select
         class="custom-select"
@@ -50,15 +45,7 @@ export default {
     };
   },
 
-  computed: {
-    chooseIcon() {
-      if( this.internalSelection == "Choose Major" || !!this.internalSelection) {
-        return "Blank";
-      } else {
-        return this.internalSelection;
-      }
-    }
-  },
+  computed: {},
 
   watch: {
     modelValue() {
@@ -74,27 +61,21 @@ export default {
       this.previewTooltip = discipline;
     },
   },
-
 };
 </script>
 
 <style scoped>
-.root {
+/* .root {
   display: flex;
   align-items: center;
   background-color: none;
-  padding: 0 0 0 2em;
-}
+} */
 .tooltip {
   display: inline-block;
   position: absolute;
   z-index: 1;
   right: 21em;
   top: 0em;
-}
-.symbol img {
-  max-width: 2em;
-  padding: 0.5em;
 }
 .custom-select {
   width: 10em;
