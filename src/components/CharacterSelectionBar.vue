@@ -5,17 +5,17 @@
       <div>
         <custom-select
           v-model="selectedRace"
-          :options="racesFiltered()"
-          :initialValue="selectedRace"
+          :options="getFilteredRaces()"
           @hover-option-update="showTooltip"
         />
-      </div>
-      <div class="tooltip" v-if="previewTooltip && previewTooltip.length > 0">
-        <img
-          :src="
-            require('@/assets/pic/Races_tooltips/' + previewTooltip + '.jpg')
-          "
-        />
+
+        <div class="tooltip" v-if="previewTooltip?.length > 0">
+          <img
+            :src="
+              require('@/assets/pic/Races_tooltips/' + previewTooltip + '.jpg')
+            "
+          />
+        </div>
       </div>
       <div class="output">Promotion: {{ selectedPromotion }}</div>
       <div class="output">Domain: {{ selectedDomain }}</div>
@@ -54,13 +54,15 @@ export default {
       }
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
-      this.racesFiltered();
-      this.selectedRace = this.racesFiltered().includes(this.$route.query.race) ? this.$route.query.race : "";
+      /* this.getFilteredRaces(); */
+      this.selectedRace = this.getFilteredRaces().includes(this.$route.query.race)
+        ? this.$route.query.race
+        : "Choose Race";
     },
     selectedRace: "setQuerySelections",
   },
-  /* computed: { // QUESTION: wasn't working anymore, had to watch the hash and trigger the method racesFiltered when hash changes
-    racesFiltered() {
+  /* computed: { // QUESTION: wasn't working anymore, had to watch the hash and trigger the method getFilteredRaces when hash changes
+    getFilteredRaces() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
@@ -72,7 +74,7 @@ export default {
     showTooltip(race) {
       this.previewTooltip = race;
     },
-    racesFiltered() {
+    getFilteredRaces() {
       if (this.selectedClass !== "") {
         return this.data.classes_fulldata[this.selectedClass].classraces;
       } else {
