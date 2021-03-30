@@ -2,7 +2,7 @@
   <div class="root">
     <div class="sliding">
       <transition name="slide">
-        <div v-if="isOpen">
+        <div class="attributes" v-if="isOpen">
           <div class="title">ATTRIBUTES</div>
           <table>
             <tr>
@@ -32,16 +32,13 @@
       </transition>
       <button @click="pressSlide()">{{ buttonLook }}</button>
     </div>
-    <div>
-      Selected Race
-      <div class="image">
-        <img
-          v-if="$route.query.race"
-          :src="
-            require('@/assets/pic/Races_tooltips/' + $route.query.race + '.jpg')
-          "
-        />
-      </div>
+    <div class="image">
+      <img
+        v-if="$route.query.race"
+        :src="
+          require('@/assets/pic/Races_tooltips/' + $route.query.race + '.jpg')
+        "
+      />
     </div>
   </div>
 </template>
@@ -122,6 +119,12 @@ export default {
 </script>
 
 <style scoped>
+.attributes {
+  width: 20em;
+}
+.image {
+  margin: 1em;
+}
 .root {
   display: flex;
   flex-direction: column;
@@ -147,13 +150,13 @@ export default {
 }
 input {
   background-color: lightgrey;
-  max-width: 4em;
+  max-width: 15em;
 }
 :-ms-input-placeholder {
   color: black;
 }
 table {
-  padding: 0.5em;
+  padding: 0 0 0 1em;
 }
 button {
   background-color: lightgrey;

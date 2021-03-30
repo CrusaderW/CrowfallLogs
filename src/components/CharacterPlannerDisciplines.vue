@@ -5,37 +5,109 @@
       <div id="discipline-container" v-if="isOpen">
         <div class="title">DISCIPLINES</div>
 
-        <CharacterPlannerMajors
-          v-model="majorChoice1"
-          :options="majorOptions"
-        />
-        <CharacterPlannerMajors
-          v-model="majorChoice2"
-          :options="majorOptions"
-        />
+        <div class="box">
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Major_Disciplines/Icons/' +
+                  chooseIcon(majorChoice1) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMajors
+            v-model="majorChoice1"
+            :options="majorOptions"
+          />
+        </div>
 
-        <CharacterPlannerMinors
-          v-model="minorChoice1"
-          :options="minorOptions"
-        />
-        <CharacterPlannerMinors
-          v-model="minorChoice2"
-          :options="minorOptions"
-        />
-        <CharacterPlannerMinors
-          v-model="minorChoice3"
-          :options="minorOptions"
-        />
-        <CharacterPlannerMinors
-          v-model="minorChoice4"
-          :options="minorOptions"
+        <div class="box">
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Major_Disciplines/Icons/' +
+                  chooseIcon(majorChoice2) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMajors
+            v-model="majorChoice2"
+            :options="majorOptions"
+          />
+        </div>
+
+        <div class="box">
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Minor_Disciplines/Icons/' +
+                  chooseIcon(minorChoice1) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMinors
+            v-model="minorChoice1"
+            :options="minorOptions"
+          />
+        </div>
+
+        <div class="box">
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Minor_Disciplines/Icons/' +
+                  chooseIcon(minorChoice2) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMinors
+            v-model="minorChoice2"
+            :options="minorOptions"
+          />
+        </div>
+
+        <div class="box" v-if="$route.hash?.includes('c2')">
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Minor_Disciplines/Icons/' +
+                  chooseIcon(minorChoice3) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMinors
+            v-model="minorChoice3"
+            :options="minorOptions"
+          />
+        </div>
+
+        <div
+          class="box"
           v-if="finalRace === 'Human' || finalRace === 'Half-Elf'"
-        />
+        >
+          <div class="symbol">
+            <img
+              :src="
+                require('@/assets/pic/Minor_Disciplines/Icons/' +
+                  chooseIcon(minorChoice4) +
+                  '.png')
+              "
+            />
+          </div>
+          <CharacterPlannerMinors
+            v-model="minorChoice4"
+            :options="minorOptions"
+          />
+        </div>
+      
       </div>
     </transition>
   </div>
   <div class="tooltips">
-    Selected Major and Minor Disciplines
     <div class="image">
       <img
         v-if="majorChoice1"
@@ -123,6 +195,7 @@ export default {
     this.finalDomain();
   }, */
   computed: {
+
     finalClass() {
       return this.$route.hash
         ? this.upperWord(this.$route.hash.split("_")[1])
@@ -170,7 +243,6 @@ export default {
   },
 
   watch: {
-
     majorChoice1: "setQuery",
     majorChoice2: "setQuery",
     minorChoice1: "setQuery",
@@ -190,6 +262,9 @@ export default {
     },
   },
   methods: {
+    chooseIcon(discipline) {
+      return discipline ? discipline : 'Blank';
+    },
     upperWord(word) {
       if (word) {
         const wordArr = word.split("");
@@ -227,6 +302,16 @@ export default {
 </script>
 
 <style scoped>
+.box {
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+  background-color: none;
+}
+.symbol img {
+  max-width: 2em;
+  padding: 0.5em;
+}
 .selection {
   display: flex;
   background-color: none;
@@ -276,6 +361,6 @@ button {
 
 #discipline-container {
   overflow: auto;
-  width: 100%;
+  width: 20em;
 }
 </style> 

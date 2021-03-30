@@ -2150,8 +2150,8 @@
             ],
             "Description": ""
         },
-        "Resurection": {
-            "minorname": "Resurection",
+        "Resurrection": {
+            "minorname": "Resurrection",
             "classes_possible": [
                 "Druid",
                 "Templar"
