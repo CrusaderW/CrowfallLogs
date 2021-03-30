@@ -2,10 +2,6 @@
   <div id="root">
     <nav>
       <div class="output">Class: {{ selectedClass }}</div>
-      <!-- <select v-model="selectedRace">
-        <option disabled value="">Choose Race</option>
-        <option v-for="race in racesFiltered()" :key="race">{{ race }}</option>
-      </select> -->
       <div>
         <custom-select
           v-model="selectedRace"
@@ -164,9 +160,7 @@ select {
   display: inline-block;
   position: absolute;
   z-index: 1;
-  right: 20em;
-}
-.tooltip img {
-  max-width: 12em;
+  left: 0em;
+  top: 0em;
 }
 </style> 

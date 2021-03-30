@@ -80,9 +80,7 @@ export default {
   position: absolute;
   z-index: 1;
   right: 20em;
-}
-.tooltip img {
-  max-width: 12em;
+  top: 0em;
 }
 .symbol img {
   max-width: 2em;
