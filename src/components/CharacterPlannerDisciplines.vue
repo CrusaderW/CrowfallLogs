@@ -25,6 +25,7 @@
         <CharacterPlannerMinors
           v-model="minorChoice3"
           :options="minorOptions"
+          v-if="$route.hash?.includes('c2')"
         />
         <CharacterPlannerMinors
           v-model="minorChoice4"
