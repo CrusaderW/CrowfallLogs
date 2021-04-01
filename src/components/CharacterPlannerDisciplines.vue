@@ -291,12 +291,12 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          major1: this.majorChoice1 !== "" ? this.majorChoice1 : undefined,
-          major2: this.majorChoice2 !== "" ? this.majorChoice2 : undefined,
-          minor1: this.minorChoice1 !== "" ? this.minorChoice1 : undefined,
-          minor2: this.minorChoice2 !== "" ? this.minorChoice2 : undefined,
-          minor3: this.minorChoice3 !== "" && this.$route.hash?.includes('c2') ? this.minorChoice3 : undefined,
-          minor4: this.minorChoice4 !== "" ? this.minorChoice4 : undefined,
+          major1: this.majorChoice1 ? this.majorChoice1 : undefined,
+          major2: this.majorChoice2 ? this.majorChoice2 : undefined,
+          minor1: this.minorChoice1 ? this.minorChoice1 : undefined,
+          minor2: this.minorChoice2 ? this.minorChoice2 : undefined,
+          minor3: this.minorChoice3 && this.$route.hash?.includes('c2') ? this.minorChoice3 : undefined,
+          minor4: this.minorChoice4 ? this.minorChoice4 : undefined,
         },
       });
     },
