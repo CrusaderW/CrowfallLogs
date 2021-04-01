@@ -2,8 +2,10 @@
   <div id="root">
     <nav>
       <div class="output">Class: {{ selectedClass }}</div>
-      <div>
+      <div class="output">
+        Race:  
         <custom-select
+          class="custom-select"
           v-model="selectedRace"
           :options="getFilteredRaces()"
           @hover-option-update="showTooltip"
@@ -55,7 +57,9 @@ export default {
       this.selectedPromotion = this.findPromotion(this.$route.hash);
       this.selectedDomain = this.findDomain(this.$route.hash);
       /* this.getFilteredRaces(); */
-      this.selectedRace = this.getFilteredRaces().includes(this.$route.query.race)
+      this.selectedRace = this.getFilteredRaces().includes(
+        this.$route.query.race
+      )
         ? this.$route.query.race
         : "Choose Race";
     },
@@ -150,13 +154,21 @@ nav {
 a {
   color: black;
 }
+.custom-select {
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 7em;
+}
 select {
   padding: 0.5em;
 }
 .output {
+  display: flex;
+  align-items: center;
   border-color: black;
   border-style: double;
   padding: 0.5em;
+  /* min-width: 12em; */
 }
 .tooltip {
   display: inline-block;
