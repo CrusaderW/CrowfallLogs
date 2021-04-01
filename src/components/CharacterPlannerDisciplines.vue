@@ -142,7 +142,7 @@
     </div>
     <div class="image">
       <img
-        v-if="minorChoice3"
+        v-if="$route.query.minor3"
         :src="
           require('@/assets/pic/Minor_Disciplines/' + minorChoice3 + '.jpg')
         "
@@ -243,6 +243,9 @@ export default {
   },
 
   watch: {
+    '$route.hash': function() {
+      this.setQuery();
+    },
     majorChoice1: "setQuery",
     majorChoice2: "setQuery",
     minorChoice1: "setQuery",
@@ -292,7 +295,7 @@ export default {
           major2: this.majorChoice2 !== "" ? this.majorChoice2 : undefined,
           minor1: this.minorChoice1 !== "" ? this.minorChoice1 : undefined,
           minor2: this.minorChoice2 !== "" ? this.minorChoice2 : undefined,
-          minor3: this.minorChoice3 !== "" ? this.minorChoice3 : undefined,
+          minor3: this.minorChoice3 !== "" && this.$route.hash?.includes('c2') ? this.minorChoice3 : undefined,
           minor4: this.minorChoice4 !== "" ? this.minorChoice4 : undefined,
         },
       });
