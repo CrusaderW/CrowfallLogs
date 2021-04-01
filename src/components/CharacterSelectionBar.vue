@@ -125,7 +125,7 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          race: this.selectedRace !== "" ? this.selectedRace : undefined,
+          race: this.selectedRace && this.selectedRace !== "Choose Race" ? this.selectedRace : undefined,
         },
       });
     },
