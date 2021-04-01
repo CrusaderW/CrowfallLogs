@@ -178,14 +178,14 @@ export default {
       isOpen: true,
       buttonLook: ">>",
 
-      majorChoice1: this.$route.query.major1 || "",
-      majorChoice2: this.$route.query.major2 || "",
+      majorChoice1: this.$route.query.major1,
+      majorChoice2: this.$route.query.major2,
 
       // Adding minor component in same style
-      minorChoice1: this.$route.query.minor1 || "",
-      minorChoice2: this.$route.query.minor2 || "",
-      minorChoice3: this.$route.query.minor3 || "",
-      minorChoice4: this.$route.query.minor4 || "",
+      minorChoice1: this.$route.query.minor1,
+      minorChoice2: this.$route.query.minor2,
+      minorChoice3: this.$route.query.minor3,
+      minorChoice4: this.$route.query.minor4,
 
       // src for tooltip images
     };
@@ -254,14 +254,14 @@ export default {
     minorChoice4: "setQuery",
 
     majorOptions(options) {
-      if (!options.includes(this.majorChoice1)) this.majorChoice1 = "";
-      if (!options.includes(this.majorChoice2)) this.majorChoice2 = "";
+      if (!options.includes(this.majorChoice1)) this.majorChoice1 = undefined;
+      if (!options.includes(this.majorChoice2)) this.majorChoice2 = undefined;
     },
     minorOptions(options) {
-      if (!options.includes(this.minorChoice1)) this.minorChoice1 = "";
-      if (!options.includes(this.minorChoice2)) this.minorChoice2 = "";
-      if (!options.includes(this.minorChoice3)) this.minorChoice3 = "";
-      if (!options.includes(this.minorChoice4)) this.minorChoice4 = "";
+      if (!options.includes(this.minorChoice1)) this.minorChoice1 = undefined;
+      if (!options.includes(this.minorChoice2)) this.minorChoice2 = undefined;
+      if (!options.includes(this.minorChoice3)) this.minorChoice3 = undefined;
+      if (!options.includes(this.minorChoice4)) this.minorChoice4 = undefined;
     },
   },
   methods: {
@@ -291,12 +291,12 @@ export default {
         ...this.$route,
         query: {
           ...this.$route.query,
-          major1: this.majorChoice1 ? this.majorChoice1 : undefined,
-          major2: this.majorChoice2 ? this.majorChoice2 : undefined,
-          minor1: this.minorChoice1 ? this.minorChoice1 : undefined,
-          minor2: this.minorChoice2 ? this.minorChoice2 : undefined,
+          major1: this.majorChoice1,
+          major2: this.majorChoice2,
+          minor1: this.minorChoice1,
+          minor2: this.minorChoice2,
           minor3: this.minorChoice3 && this.$route.hash?.includes('c2') ? this.minorChoice3 : undefined,
-          minor4: this.minorChoice4 ? this.minorChoice4 : undefined,
+          minor4: this.minorChoice4,
         },
       });
     },
