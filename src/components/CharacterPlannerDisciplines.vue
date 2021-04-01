@@ -103,7 +103,6 @@
             :options="minorOptions"
           />
         </div>
-      
       </div>
     </transition>
   </div>
@@ -195,7 +194,6 @@ export default {
     this.finalDomain();
   }, */
   computed: {
-
     finalClass() {
       return this.$route.hash
         ? this.upperWord(this.$route.hash.split("_")[1])
@@ -243,7 +241,7 @@ export default {
   },
 
   watch: {
-    '$route.hash': function() {
+    "$route.hash": function () {
       this.setQuery();
     },
     majorChoice1: "setQuery",
@@ -266,7 +264,7 @@ export default {
   },
   methods: {
     chooseIcon(discipline) {
-      return discipline ? discipline : 'Blank';
+      return discipline ? discipline : "Blank";
     },
     upperWord(word) {
       if (word) {
@@ -287,16 +285,28 @@ export default {
     },
 
     setQuery() {
+      let disciplines = {
+        major1: this.majorChoice1,
+        major2: this.majorChoice2,
+        minor1: this.minorChoice1,
+        minor2: this.minorChoice2,
+        minor3:
+          this.minorChoice3 && this.$route.hash?.includes("c2")
+            ? this.minorChoice3
+            : undefined,
+        minor4: this.minorChoice4,
+      };
+      let filteredDisciplines = {};
+      for (let key in disciplines) {
+        if (disciplines[key]) {
+          filteredDisciplines[key] = disciplines[key];
+          console.log(filteredDisciplines);
+        }
+      }
       this.$router.replace({
         ...this.$route,
         query: {
-          ...this.$route.query,
-          major1: this.majorChoice1,
-          major2: this.majorChoice2,
-          minor1: this.minorChoice1,
-          minor2: this.minorChoice2,
-          minor3: this.minorChoice3 && this.$route.hash?.includes('c2') ? this.minorChoice3 : undefined,
-          minor4: this.minorChoice4,
+          ...filteredDisciplines,
         },
       });
     },
