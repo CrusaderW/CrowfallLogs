@@ -49,7 +49,7 @@ export default {
 
   watch: {
     modelValue() {
-      this.internalSelection = this.modelValue;
+      this.internalSelection = this.modelValue ? this.modelValue : "Choose Major";
     },
     internalSelection() {
       this.$emit("update:modelValue", this.internalSelection);
