@@ -1,10 +1,10 @@
 <template>
   <div id="root">
     <nav>
-      <div class="playername">CROWFALL CHARACTER PLANNER</div>
+      <div class="playername">CROWFALLLOGS</div>
       <ul>
-        <!-- <li><a href="/">Home</a></li>
-        <li><a href="/">Tools</a></li> -->
+        <!-- <li><a href="/">Home</a></li> -->
+        <li><a href="/">Tools</a></li>
         <li><a href="https://discord.gg/ukKmXVP" target="_blank">Discord</a></li>
         <li><a href="https://crusaderw.com" target="_blank">Guides</a></li>
         <li><a href="https://crusaderw.com/about-me/" target="_blank">About</a></li>

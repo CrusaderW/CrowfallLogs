@@ -3,7 +3,7 @@ import { trackRouter } from "vue-gtag-next";
 
 const routes = [
   {
-    path: '/', redirect: '/character_planner',
+    path: '/', // redirect: '/character_planner',
     name: 'Home',
     component: () => import('../views/Home.vue')
   },
@@ -34,6 +34,11 @@ const routes = [
     path: "/character_planner",
     name: "CharacterPlannerRoute",
     component: () => import('../views/CharacterPlannerRoute.vue')
+  },
+  {
+    path: "/resource_calculator",
+    name: "ResourceCalculatorRoute",
+    component: () => import('../views/ResourceCalculatorRoute.vue')
   }
 ]
 
